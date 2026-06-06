@@ -16,7 +16,7 @@ import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
 import CheckSvg from '~/lib/icons/checkmark.svg?raw'
 import Checkmark2Svg from '~/lib/icons/checkmark-2.svg?raw'
 import CloseXIcon from '~/lib/icons/close-x.png'
-import { formatSpeed as formatEngageSpeed, formatWeight } from '~/lib/utils'
+import { formatSpeed as formatEngageSpeed } from '~/lib/utils'
 import { getACCDescription, getAutoResumeDescription } from '~/data/descriptions'
 
 const RED_PNG_FILTER = "brightness(0) saturate(90%) invert(23%) sepia(89%) saturate(3520%) hue-rotate(352deg) brightness(85%) contrast(95%)"
@@ -24,21 +24,6 @@ const RED_PNG_FILTER = "brightness(0) saturate(90%) invert(23%) sepia(89%) satur
 type CardProps = {
   car: Car
   searchQuery: string
-}
-
-type InfoBoxProps = {
-  label: string
-  value: string
-  class?: string
-}
-
-const InfoBox = (props: InfoBoxProps) => {
-  return (
-    <div class={cn('flex flex-col justify-center min-h-[80px] px-4 py-4 border border-black bg-surface', props.class)}>
-      <div class="text-sm font-medium">{props.label}</div>
-      <div class="mt-1 text-lg font-semibold">{props.value}</div>
-    </div>
-  )
 }
 
 type ExpandableRowProps = {
@@ -360,20 +345,6 @@ const Card: Component<CardProps> = (props) => {
                 isExpanded={expandedRow() === "resume"}
                 onToggle={() => toggleRow("resume")}
               />
-
-              {/* Two info boxes side by side */}
-              <div class="flex gap-2">
-                <InfoBox
-                  label="curb weight"
-                  value={formatWeight(props.car.mass_curb_weight)}
-                  class="flex-1 border-2 border-border-soft"
-                />
-                <InfoBox
-                  label="wheelbase"
-                  value={`${props.car.wheelbase.toFixed(2)} m`}
-                  class="flex-1 border-2 border-border-soft"
-                />
-              </div>
 
               {/* Row 2 */}
               <ExpandableRow
