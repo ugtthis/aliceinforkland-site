@@ -2,13 +2,12 @@ import { useSearchParams, useNavigate } from '@solidjs/router'
 import { createMemo, For, Show, createSignal, onMount, onCleanup, createEffect } from 'solid-js'
 import type { Car } from '~/types/CarDataTypes'
 import { getSupportTypeColor } from '~/types/supportType'
-import { cn, slugify, hasObjectEntries } from '~/lib/utils'
+import { cn, hasObjectEntries, slugify } from '~/lib/utils'
 import metadata from '~/data/metadata.json'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 import { SPECS_BY_CATEGORY } from '~/data/specs'
 import { openSupportTypeModal } from '~/contexts/SupportTypeModalContext'
 import UpArrowSvg from '~/lib/icons/up-arrow.svg?raw'
-import OpenFolderSvg from '~/lib/icons/open-folder.svg?raw'
 import RightArrowSvg from '~/lib/icons/right-arrow.svg?raw'
 import RotateLeftSvg from '~/lib/icons/rotate-left.svg?raw'
 import ZoomOutSvg from '~/lib/icons/zoom-out.svg?raw'
@@ -400,20 +399,10 @@ export default function ComparePage() {
 
                           {/* Action Buttons */}
                           <div class="flex">
-                            <a
-                              href={`/cars/${slugify(car.name)}`}
-                              class={cn(
-                                'flex flex-[7] items-center justify-center border-r border-black bg-[#A8A8A8]',
-                                'py-1.5 transition-colors hover:bg-[#8B8B8B]',
-                              )}
-                              title="View full details"
-                            >
-                              <div class="size-4" innerHTML={OpenFolderSvg} />
-                            </a>
                             <button
                               onClick={() => removeCar(car.name)}
                               class={cn(
-                                'flex flex-[3] items-center justify-center py-1.5 bg-[#A07878] text-sm font-medium text-white',
+                                'flex flex-1 items-center justify-center py-1.5 bg-[#A07878] text-sm font-medium text-white',
                                 'transition-colors cursor-pointer hover:bg-[#8B6B6B]',
                               )}
                               title="Remove from comparison"
@@ -482,7 +471,7 @@ export default function ComparePage() {
                               const isObject = hasObjectEntries(value)
 
                               const getDisplayValue = () => {
-                                if (spec.format && value != null) return spec.format(value as any)
+                                if (spec.format && value != null) return spec.format(value as unknown)
                                 if (value != null && typeof value === 'object') return 'N/A'
                                 return value?.toString() ?? 'N/A'
                               }

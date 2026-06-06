@@ -2,15 +2,13 @@ import { type Component, createSignal, createEffect, createMemo } from 'solid-js
 
 import type { Car } from '~/types/CarDataTypes'
 
-import GradientButton from '~/components/ui/GradientButton'
 import HighlightText from '~/components/ui/HighlightText'
 import { getSupportTypeColor } from '~/types/supportType'
-import { cn, slugify } from '~/lib/utils'
+import { cn } from '~/lib/utils'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 import { openSupportTypeModal } from '~/contexts/SupportTypeModalContext'
 
 import DownChevronSvg from '~/lib/icons/down-chevron.svg?raw'
-import OpenFolderSvg from '~/lib/icons/open-folder.svg?raw'
 import VideoCameraSvg from '~/lib/icons/video-camera.svg?raw'
 import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
 import CheckSvg from '~/lib/icons/checkmark.svg?raw'
@@ -240,17 +238,6 @@ const Card: Component<CardProps> = (props) => {
             </span>
           </button>
 
-          {/* Arrow button to detailed page */}
-          <a
-            href={`/cars/${slugify(props.car.name)}`}
-            class={cn(
-              'flex items-center justify-center min-w-[48px] bg-accent px-3 py-2.5',
-              'transition-colors cursor-pointer hover:bg-[#727272] hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)] md:px-4',
-            )}
-            title="View details"
-          >
-            <div class="h-5 w-5 text-white md:h-6 md:w-6" innerHTML={OpenFolderSvg} />
-          </a>
         </div>
       </div>
 
@@ -361,18 +348,6 @@ const Card: Component<CardProps> = (props) => {
               />
             </div>
 
-            {/* Gradient Button */}
-            <div class="mt-4">
-              <GradientButton href={`/cars/${slugify(props.car.name)}`}>
-                <div
-                  class={cn(
-                    'h-[24px] w-[28px] translate-y-[-1px] text-black transition-all duration-200 ease-in',
-                    'group-hover:translate-x-[2px] group-hover:text-surface',
-                  )}
-                  innerHTML={OpenFolderSvg}
-                />
-              </GradientButton>
-            </div>
           </div>
         </div>
 
