@@ -131,14 +131,6 @@ const Card: Component<CardProps> = (props) => {
     class: "border-2 border-border-soft"
   }
 
-  const steeringRowProps = {
-    label: "Steering Ratio",
-    value: props.car.steer_ratio.toFixed(2),
-    description: "The steering ratio is the relationship between steering wheel rotation and front wheel angle. " +
-      "A lower ratio means more responsive steering - less steering wheel input needed for the same wheel movement.",
-    class: "border-2 border-border-soft"
-  }
-
   const toggleRow = (rowId: string) => {
     setExpandedRow(expandedRow() === rowId ? null : rowId)
   }
@@ -330,13 +322,6 @@ const Card: Component<CardProps> = (props) => {
                 {...accRowProps}
                 isExpanded={expandedRow() === "acc"}
                 onToggle={() => toggleRow("acc")}
-              />
-
-              {/* Row 3 */}
-              <ExpandableRow
-                {...steeringRowProps}
-                isExpanded={expandedRow() === "steering"}
-                onToggle={() => toggleRow("steering")}
               />
             </div>
 
