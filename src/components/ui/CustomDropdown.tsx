@@ -46,14 +46,14 @@ const CustomDropdown: Component<CustomDropdownProps> = (props) => {
 
   return (
     <div class="space-y-2" ref={dropdownRef}>
-      <span class="block font-medium text-black">{props.label}</span>
+      <span class="block font-medium text-white/85">{props.label}</span>
       <div class="w-full">
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen())}
           class={cn(
-            'flex w-full items-center justify-between border border-black bg-white',
-            'p-4 text-left transition-colors cursor-pointer hover:bg-surface',
+            'flex w-full items-center justify-between border border-[#4a3439] bg-[#0f0b0c] text-white',
+            'p-4 text-left transition-colors cursor-pointer hover:bg-[#24191c]',
           )}
         >
           <span>{props.value || 'All'}</span>
@@ -63,18 +63,18 @@ const CustomDropdown: Component<CustomDropdownProps> = (props) => {
             width="24"
             height="24"
             class={cn(
-              'opacity-60 transition-transform',
+              'opacity-60 invert transition-transform',
               isOpen() && 'rotate-180',
             )}
           />
         </button>
 
         <Show when={isOpen()}>
-          <div class="max-h-[200px] w-full overflow-y-auto border border-t-0 border-black bg-white">
+          <div class="max-h-[200px] w-full overflow-y-auto border border-t-0 border-[#4a3439] bg-[#0f0b0c] text-white">
             <button
               class={cn(
-                'h-[40px] w-full px-4 text-left cursor-pointer hover:bg-gray-100',
-                !props.value && 'bg-gray-100',
+                'h-[40px] w-full px-4 text-left cursor-pointer hover:bg-[#24191c]',
+                !props.value && 'bg-[#2b2023]',
               )}
               onClick={() => handleSelect('')}
             >
@@ -84,8 +84,8 @@ const CustomDropdown: Component<CustomDropdownProps> = (props) => {
               {(option) => (
                 <button
                   class={cn(
-                    'h-[40px] w-full px-4 text-left cursor-pointer hover:bg-gray-100',
-                    props.value === option && 'bg-gray-100',
+                    'h-[40px] w-full px-4 text-left cursor-pointer hover:bg-[#24191c]',
+                    props.value === option && 'bg-[#2b2023]',
                   )}
                   onClick={() => handleSelect(option)}
                 >

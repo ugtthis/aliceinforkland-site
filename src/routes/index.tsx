@@ -18,21 +18,21 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main class="mx-auto max-w-7xl px-4 pt-4 pb-16">
+      <main class="mx-auto max-w-7xl px-4 pt-4 pb-16 text-[#e7dadd]">
         <div class="flex items-center justify-between mb-1.5">
-          <div class="text-md text-gray-600 md:text-lg">
+          <div class="text-md text-white/70 md:text-lg">
             {resultCount()} of {metadata.length} cars
           </div>
 
-          <div class="flex border-5 border-[#dcded6] bg-white shadow-sm">
+          <div class="flex border-5 border-[#2a1d20] bg-[#0b0708] shadow-sm">
             <button
               type="button"
               onClick={() => setIsCompareMode(false)}
               class={cn(
                 'flex items-center justify-center p-2 transition-colors cursor-pointer',
                 !isCompareMode()
-                  ? 'bg-[#242424] text-white border-2 border-[#65e063] shadow-md/70'
-                  : 'bg-[#bbbbbbcd] text-white/70 hover:bg-[#aeaeae]'
+                  ? 'bg-[#242424] text-white border-2 border-[#b84a57] shadow-md/70'
+                  : 'bg-[#34282b] text-white/55 hover:bg-[#4a393d] hover:text-white/80'
               )}
               aria-label="Grid view"
             >
@@ -44,8 +44,8 @@ export default function Home() {
               class={cn(
                 'flex items-center justify-center p-2 transition-colors cursor-pointer',
                 isCompareMode()
-                  ? 'bg-[#242424] text-white border-2 border-[#65e063] shadow-md/70'
-                  : 'bg-[#bbbbbbcd] text-white/70 hover:bg-[#aeaeae]'
+                  ? 'bg-[#242424] text-white border-2 border-[#b84a57] shadow-md/70'
+                  : 'bg-[#34282b] text-white/55 hover:bg-[#4a393d] hover:text-white/80'
               )}
               aria-label="List view"
             >

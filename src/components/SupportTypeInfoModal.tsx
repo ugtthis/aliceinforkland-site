@@ -328,7 +328,7 @@ const SupportTypeInfoModal: Component<SupportTypeInfoModalProps> = (props) => {
           <Drawer.Content
             class={cn(
               'mobile-drawer-viewport-safe fixed inset-x-0 bottom-0 z-50 flex flex-col',
-              'rounded-t-4xl bg-[#FBFBFB]',
+              'rounded-t-4xl bg-surface text-white',
               'shadow-[0_-6px_20px_rgba(0,0,0,0.6)]',
               'data-[transitioning]:transition-transform data-[transitioning]:duration-300',
               'data-[transitioning]:ease-[cubic-bezier(0.32,0.72,0,1)]',
@@ -349,9 +349,9 @@ const SupportTypeInfoModal: Component<SupportTypeInfoModalProps> = (props) => {
                 <Drawer.Close
                   class={cn(
                     'flex items-center justify-center size-8',
-                    'bg-surface-secondary border border-black',
-                    'hover:bg-white transition-colors',
-                    'text-lg font-bold text-black cursor-pointer',
+                    'bg-surface-secondary border border-white/20',
+                    'hover:bg-[#3a2b2f] transition-colors',
+                    'text-lg font-bold text-white cursor-pointer',
                   )}
                 >
                   ×
@@ -383,7 +383,7 @@ const SupportTypeInfoModal: Component<SupportTypeInfoModalProps> = (props) => {
           class={cn(
             'fixed left-1/2 top-1/2 z-50 w-full max-w-2xl',
             '-translate-x-1/2 -translate-y-1/2',
-            'border-4 border-black bg-[#FBFBFB]',
+            'border-4 border-black bg-surface text-white',
             'shadow-[0_6px_20px_rgba(0,0,0,0.6)]',
             'data-[opening]:animate-in data-[opening]:fade-in-0',
             'data-[opening]:zoom-in-95 data-[opening]:slide-in-from-top-2',
@@ -400,9 +400,9 @@ const SupportTypeInfoModal: Component<SupportTypeInfoModalProps> = (props) => {
             <Dialog.Close
               class={cn(
                 'flex items-center justify-center size-8',
-                'bg-[#D9D9D9] border border-black',
-                'hover:bg-white transition-colors',
-                'text-lg font-bold text-black cursor-pointer',
+                'bg-surface-secondary border border-white/20',
+                'hover:bg-[#3a2b2f] transition-colors',
+                'text-lg font-bold text-white cursor-pointer',
               )}
             >
               ×

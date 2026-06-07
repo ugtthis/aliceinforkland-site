@@ -53,16 +53,16 @@ const ExpandableRow = (props: ExpandableRowProps) => {
   }
 
   return (
-    <div class={cn('border border-black bg-surface', props.class)}>
+    <div class={cn('border border-[#6a4d54] bg-[#21191d] text-[#eee2e5]', props.class)}>
       {/* Toggle header */}
       <div
         class={cn(
           'flex items-center justify-between px-4 py-4',
-          'transition-colors duration-200 cursor-pointer hover:bg-white',
+          'transition-colors duration-200 cursor-pointer hover:bg-[#2d2227]',
         )}
         onClick={props.onToggle}
       >
-        <div class="text-sm font-medium">{props.label}</div>
+        <div class="text-sm font-medium text-[#eadde0]">{props.label}</div>
         <div class="flex items-center gap-3">
           {props.icon ? (
             <div class="w-5 h-5" innerHTML={props.icon} />
@@ -71,7 +71,7 @@ const ExpandableRow = (props: ExpandableRowProps) => {
               <img src={props.iconUrl} alt="" class="w-full h-full" style={{ filter: RED_PNG_FILTER }} />
             </div>
           ) : (
-            <div class="text-sm font-semibold">{props.value}</div>
+            <div class="text-sm font-semibold text-[#f1e7e9]">{props.value}</div>
           )}
           <div
             class={cn('h-2 w-2 transition-transform duration-200', props.isExpanded && 'rotate-180')}
@@ -85,7 +85,7 @@ const ExpandableRow = (props: ExpandableRowProps) => {
         <div class="relative">
           <div
             ref={scrollRef}
-            class="h-row-height overflow-y-auto bg-surface-secondary px-4 py-3 text-sm text-black"
+            class="h-row-height overflow-y-auto bg-[#2a2024] px-4 py-3 text-sm text-[#ddcfd3]"
             onScroll={handleScroll}
           >
             {props.description}
@@ -144,14 +144,14 @@ const Card: Component<CardProps> = (props) => {
   }
 
   const supportLabelClass = cn(
-    'py-1 px-6 inline-block border border-black border-b-0 text-center bg-[#3a3a3a] text-white',
+    'py-1 px-6 inline-block border border-[#6a4d54] border-b-0 text-center bg-[#2d2227] text-[#efe3e6]',
   )
 
   return (
     <>
       {/* Compare mode card */}
       <div class="card-compare-mode">
-        <div class="flex w-full border border-black bg-surface shadow-elev-1">
+        <div class="flex w-full border border-[#6a4d54] bg-[#21191d] text-[#eee2e5] shadow-elev-1">
           {/* Checkbox */}
           <div class="flex items-center justify-center px-2 md:px-3">
             <label class="inline-block relative cursor-pointer select-none size-7">
@@ -162,7 +162,7 @@ const Card: Component<CardProps> = (props) => {
                 disabled={isDisabled()}
                 autocomplete="off" // Firefox browser fix to prevent restoring form state on refresh
                 class={cn(
-                  'peer relative size-7 border-3 border-black/70 appearance-none',
+                  'peer relative size-7 border-3 border-[#8a7076] appearance-none bg-[#171215]',
                   'checked:border-[#102f0c] checked:bg-[#2e5232] checked:shadow-elev-1',
                   'transition-colors cursor-pointer',
                   'hover:bg-[#2e5232] disabled:cursor-not-allowed disabled:opacity-40',
@@ -176,9 +176,9 @@ const Card: Component<CardProps> = (props) => {
           </div>
 
           {/* Mobile wrapper - stacks vertically below 370px, horizontal at 370px+ */}
-          <div class="flex flex-1 flex-col border-l border-r border-black md:hidden min-[370px]:flex-row">
+          <div class="flex flex-1 flex-col border-l border-r border-[#6a4d54] md:hidden min-[370px]:flex-row">
             {/* Year and Model - Mobile only */}
-            <div class="flex flex-1 items-center border-b border-black px-2 py-2.5 min-[370px]:border-b-0 min-[370px]:border-r">
+            <div class="flex flex-1 items-center border-b border-[#6a4d54] px-2 py-2.5 min-[370px]:border-b-0 min-[370px]:border-r">
               <h1 class="text-xs font-semibold leading-tight">
                 <HighlightText text={props.car.years} query={props.searchQuery} yearList={props.car.year_list as string[]} />
                 {' '}
@@ -189,7 +189,7 @@ const Card: Component<CardProps> = (props) => {
             {/* Support type - Mobile only */}
             <div
               class={cn(
-                'flex w-full items-center justify-center px-2 py-1.5 text-center bg-[#3a3a3a] text-white',
+                'flex w-full items-center justify-center px-2 py-1.5 text-center bg-[#2d2227] text-[#efe3e6]',
                 'min-[370px]:w-[100px] min-[370px]:py-2.5',
               )}
             >
@@ -200,14 +200,14 @@ const Card: Component<CardProps> = (props) => {
           </div>
 
           {/* Year - Desktop only */}
-          <div class="hidden items-center w-[110px] border-l border-r border-black px-3 py-2.5 md:flex">
+          <div class="hidden items-center w-[110px] border-l border-r border-[#6a4d54] px-3 py-2.5 md:flex">
             <h2 class="text-base font-medium leading-tight">
               <HighlightText text={props.car.years} query={props.searchQuery} yearList={props.car.year_list as string[]} />
             </h2>
           </div>
 
           {/* Model name - Desktop only */}
-          <div class="hidden flex-1 items-center border-r border-black px-3 py-2.5 md:flex">
+          <div class="hidden flex-1 items-center border-r border-[#6a4d54] px-3 py-2.5 md:flex">
             <h1 class="text-lg font-semibold">
               <HighlightText text={`${props.car.make} ${props.car.model}`} query={props.searchQuery} />
             </h1>
@@ -216,8 +216,8 @@ const Card: Component<CardProps> = (props) => {
           {/* Support type - Desktop only */}
           <div
             class={cn(
-              'hidden items-center justify-center w-[160px] border-r border-black px-3 py-2.5',
-              'text-center bg-[#3a3a3a] text-white md:flex',
+              'hidden items-center justify-center w-[160px] border-r border-[#6a4d54] px-3 py-2.5',
+              'text-center bg-[#2d2227] text-[#efe3e6] md:flex',
             )}
           >
             <span class="text-sm font-semibold leading-tight uppercase whitespace-nowrap">
@@ -238,11 +238,16 @@ const Card: Component<CardProps> = (props) => {
       </div>
 
       {/* Card body */}
-      <div class="flex flex-col min-h-[180px] border border-black bg-surface shadow-elev-1">
+      <div
+        class={cn(
+          'flex flex-col min-h-[180px] border border-[#6a4d54] bg-[#21191d] text-[#eee2e5]',
+          'shadow-[0_14px_28px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.04)]',
+        )}
+      >
         <div class="flex-grow">
           {/* Year and Model */}
-          <div class="flex border-b border-black">
-            <div class="flex items-center px-2 py-2.5 border-r border-black">
+          <div class="flex border-b border-[#6a4d54]">
+            <div class="flex items-center px-2 py-2.5 border-r border-[#6a4d54]">
               <h2 class="text-lg">
                 <HighlightText text={props.car.years} query={props.searchQuery} yearList={props.car.year_list as string[]} />
               </h2>
@@ -257,7 +262,7 @@ const Card: Component<CardProps> = (props) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   class={cn(
-                    'group flex items-center bg-accent p-2 text-white transition-all duration-300 cursor-pointer',
+                    'group flex items-center bg-[#5c4a50] p-2 text-[#f1e7e9] transition-all duration-300 cursor-pointer',
                     'hover:bg-red-600 hover:shadow-xl',
                   )}
                 >
@@ -268,12 +273,12 @@ const Card: Component<CardProps> = (props) => {
             </div>
           </div>
 
-          <div class="min-h-[60px] border-b border-black px-2 py-2.5">
-            <p class="font-sans text-sm">
+          <div class="min-h-[60px] border-b border-[#6a4d54] px-2 py-2.5">
+            <p class="font-sans text-sm text-[#e1d4d7]">
               <strong>ADAS Package:</strong> <HighlightText text={props.car.package} query={props.searchQuery} />
             </p>
           </div>
-          <div class="@container flex border-b border-black p-3">
+          <div class="@container flex border-b border-[#6a4d54] p-3">
             <div class="flex flex-1 items-center min-w-0">
               <p class="leading-tight text-md">
                 <strong>
@@ -283,17 +288,17 @@ const Card: Component<CardProps> = (props) => {
               </p>
             </div>
             <div class="flex flex-col gap-2 flex-[1.618]">
-              <div class="flex flex-1 flex-col justify-center border border-black bg-white px-2 py-1">
+              <div class="flex flex-1 flex-col justify-center border border-[#5f454c] bg-[#181316] px-2 py-1">
                 <p class="text-sm">
                   <strong>ALC:</strong> {formatEngageSpeed(props.car.min_steer_speed)}
                 </p>
-                <p class="text-xs text-gray-500">Automated Lane Centering</p>
+                <p class="text-xs text-[#c9bbbf]">Automated Lane Centering</p>
               </div>
-              <div class="flex flex-1 flex-col justify-center border border-black bg-white px-2 py-1">
+              <div class="flex flex-1 flex-col justify-center border border-[#5f454c] bg-[#181316] px-2 py-1">
                 <p class="text-sm">
                   <strong>ACC:</strong> {formatEngageSpeed(props.car.min_enable_speed)}
                 </p>
-                <p class="text-xs text-gray-500">Adaptive Cruise Control</p>
+                <p class="text-xs text-[#c9bbbf]">Adaptive Cruise Control</p>
               </div>
             </div>
           </div>
@@ -308,7 +313,7 @@ const Card: Component<CardProps> = (props) => {
         <div
           class={cn(
             'max-h-0 overflow-hidden bg-surface-secondary transition-all duration-300',
-            'peer-checked:max-h-card-height peer-checked:border-t peer-checked:border-black',
+            'peer-checked:max-h-card-height peer-checked:border-t peer-checked:border-[#6a4d54]',
           )}
         >
           <div class="p-4">
@@ -342,10 +347,10 @@ const Card: Component<CardProps> = (props) => {
         <label
           for={`toggle-${props.car.name}`}
           class={cn(
-            'flex justify-center py-1 border-t border-black bg-accent cursor-pointer',
+            'flex justify-center py-1 border-t border-[#6a4d54] bg-[#2b2025] text-[#ddcfd3] cursor-pointer',
             'peer-checked:bg-surface-secondary peer-checked:[&>div]:rotate-180',
-            'hover:bg-[#727272] hover:duration-300 hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
-            'max-md:bg-[#727272] max-md:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
+            'hover:bg-[#3a2a30] hover:text-[#f1e7e9] hover:duration-300 hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
+            'max-md:bg-[#3a2a30] max-md:text-[#f1e7e9] max-md:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
             'peer-checked:max-md:shadow-none',
           )}
         >

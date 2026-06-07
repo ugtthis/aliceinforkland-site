@@ -5,21 +5,23 @@
   --font-mono: "JetBrains Mono", ui-monospace, Menlo;
   --font-sans: "Inter", system-ui, "Segoe UI";
 
-  --color-surface: #F3F3F3;
-  --color-surface-secondary: #D9D9D9;
-  --color-accent: #969696;
-  --color-border-soft: #CDCDCD;
+  --color-surface: #181416;
+  --color-surface-secondary: #24191c;
+  --color-accent: #8f8f8f;
+  --color-border-soft: #5c4247;
   --spacing-card-height: 600px;
   --spacing-row-height: 80px;
 }
 
 :root {
-  --background-rgb: 196 196 196;
-  --foreground-rgb: 0 0 0;
+  --background-rgb: 9 5 6;
+  --foreground-rgb: 231 218 221;
 }
 
 body {
-  background: rgb(var(--background-rgb));
+  background:
+    radial-gradient(ellipse 100% 34% at 50% 0%, rgba(90, 20, 24, 0.12) 0%, transparent 72%),
+    linear-gradient(180deg, #090708 0%, #0b0809 42%, rgb(var(--background-rgb)) 100%);
   color: rgb(var(--foreground-rgb));
   font-family: var(--font-mono);
 }

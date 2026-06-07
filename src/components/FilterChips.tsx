@@ -24,7 +24,7 @@ const FilterChips: Component = () => {
     <div
       class={cn(
         'flex items-center gap-1.5 max-w-full px-3 py-1.5',
-        'border border-black bg-accent text-sm text-white shadow-elev-1',
+        'border border-[#3d2b2f] bg-accent text-sm text-white shadow-elev-1',
         props.bgColor,
       )}
     >
@@ -33,8 +33,8 @@ const FilterChips: Component = () => {
       <button
         onClick={props.onRemove}
         class={cn(
-          'flex items-center justify-center size-6 shrink-0 ml-4 border border-black',
-          'bg-surface-secondary text-lg font-bold text-black transition-colors cursor-pointer hover:bg-white',
+          'flex items-center justify-center size-6 shrink-0 ml-4 border border-white/20',
+          'bg-surface-secondary text-lg font-bold text-white transition-colors cursor-pointer hover:bg-[#3a2b2f]',
         )}
         aria-label={`Remove ${props.label}`}
       >
@@ -45,8 +45,8 @@ const FilterChips: Component = () => {
 
   return (
     <Show when={hasActiveFilters()}>
-      <div class="mb-4 flex flex-wrap items-center gap-2 p-4 border border-black bg-surface shadow-elev-1">
-        <span class="mr-2 text-sm font-semibold text-black">Active filters:</span>
+      <div class="mb-4 flex flex-wrap items-center gap-2 p-4 border border-[#3d2b2f] bg-surface text-white shadow-elev-1">
+        <span class="mr-2 text-sm font-semibold text-white/75">Active filters:</span>
 
         <Show when={searchQuery().trim()}>
           <Chip
@@ -71,8 +71,8 @@ const FilterChips: Component = () => {
         <button
           onClick={clearAllFilters}
           class={cn(
-            'flex items-center justify-center gap-2 px-3 py-1.5 border border-black bg-white',
-            'text-sm font-semibold text-black shadow-elev-1 transition-colors cursor-pointer hover:bg-surface',
+            'flex items-center justify-center gap-2 px-3 py-1.5 border border-white/20 bg-[#0f0b0c]',
+            'text-sm font-semibold text-white shadow-elev-1 transition-colors cursor-pointer hover:bg-[#24191c]',
           )}
         >
           Clear all

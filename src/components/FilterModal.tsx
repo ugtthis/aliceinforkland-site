@@ -108,7 +108,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
   const FilterContent = () => (
     <>
       {/* Scrollable content area */}
-      <div class="flex-1 overflow-y-auto px-6 pt-4 pb-11">
+      <div class="flex-1 overflow-y-auto px-6 pt-4 pb-11 text-white">
         {/* Sort Section */}
         <div class="mb-6">
           <h2 class="mb-4 text-lg font-semibold">SORT BY:</h2>
@@ -118,8 +118,8 @@ const FilterModal: Component<FilterModalProps> = (props) => {
                 type="button"
                 onClick={() => setOpenSort(!openSort())}
                 class={cn(
-                  'flex h-[56px] w-full items-center justify-between border border-black bg-white',
-                  'p-4 text-left transition-colors cursor-pointer hover:bg-surface',
+                  'flex h-[56px] w-full items-center justify-between border border-[#4a3439] bg-[#0f0b0c]',
+                  'p-4 text-left text-white transition-colors cursor-pointer hover:bg-[#24191c]',
                 )}
               >
                 <span>
@@ -131,18 +131,18 @@ const FilterModal: Component<FilterModalProps> = (props) => {
                   alt=""
                   width="24"
                   height="24"
-                  class={cn('opacity-60 transition-transform', openSort() && 'rotate-180')}
+                  class={cn('opacity-60 invert transition-transform', openSort() && 'rotate-180')}
                 />
               </button>
 
               <Show when={openSort()}>
-                <div class="w-full border border-t-0 border-black bg-white">
+                <div class="w-full border border-t-0 border-[#4a3439] bg-[#0f0b0c] text-white">
                   <div class="max-h-[200px] overflow-y-auto">
                     {sortOptions.map((option) => (
                       <button
                         class={cn(
-                          'h-[40px] w-full px-4 text-left cursor-pointer hover:bg-gray-100',
-                          sortConfig().field === option.value && 'bg-gray-100',
+                          'h-[40px] w-full px-4 text-left cursor-pointer hover:bg-[#24191c]',
+                          sortConfig().field === option.value && 'bg-[#2b2023]',
                         )}
                         onClick={() => {
                           setSortConfig((prev) => ({
@@ -167,8 +167,8 @@ const FilterModal: Component<FilterModalProps> = (props) => {
                 }))
               }
               class={cn(
-                'flex h-[56px] w-1/3 items-center justify-center self-start border border-black',
-                'p-4 transition-colors cursor-pointer hover:bg-surface',
+                'flex h-[56px] w-1/3 items-center justify-center self-start border border-[#4a3439] bg-[#0f0b0c]',
+                'p-4 transition-colors cursor-pointer hover:bg-[#24191c]',
               )}
               aria-label={`Toggle sort order: currently ${sortConfig().order === 'ASC' ? 'Ascending' : 'Descending'}`}
             >
@@ -177,14 +177,14 @@ const FilterModal: Component<FilterModalProps> = (props) => {
                 alt=""
                 width="32"
                 height="28"
-                class={cn(sortConfig().order === 'DESC' && 'rotate-180')}
+                class={cn('invert', sortConfig().order === 'DESC' && 'rotate-180')}
                 aria-hidden="true"
               />
             </button>
           </div>
         </div>
 
-        <div class="my-4 h-[1px] w-full bg-gray-200" />
+        <div class="my-4 h-[1px] w-full bg-white/10" />
 
         {/* Filter Section */}
         <div>
@@ -257,7 +257,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
       </div>
 
       {/* Fixed Footer section */}
-      <div class="flex-shrink-0 p-6 border-t border-gray-200 bg-surface shadow-[0_-6px_16px_rgba(0,0,0,0.2)]">
+      <div class="flex-shrink-0 p-6 border-t border-white/10 bg-surface text-white shadow-[0_-6px_16px_rgba(0,0,0,0.2)]">
         <div
           class="p-3 mb-4 font-semibold text-center bg-black border border-white"
           style={{ color: getResultsColor(resultCount() || 0) }}
@@ -269,9 +269,9 @@ const FilterModal: Component<FilterModalProps> = (props) => {
             onClick={() => hasActiveFilters() && clearAllFilters()}
             disabled={!hasActiveFilters()}
             class={cn(
-              'flex flex-1 items-center justify-center gap-2 border border-black bg-white',
-              'p-3 font-medium transition-colors cursor-pointer hover:bg-gray-50',
-              !hasActiveFilters() && 'cursor-not-allowed opacity-50 hover:bg-white',
+              'flex flex-1 items-center justify-center gap-2 border border-[#4a3439] bg-[#0f0b0c]',
+              'p-3 font-medium transition-colors cursor-pointer hover:bg-[#24191c]',
+              !hasActiveFilters() && 'cursor-not-allowed opacity-50 hover:bg-[#0f0b0c]',
             )}
           >
             <img
@@ -279,7 +279,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
               alt=""
               width="24"
               height="24"
-              class="opacity-90"
+              class="opacity-90 invert"
               aria-hidden="true"
             />
             <span>RESET</span>
@@ -288,8 +288,8 @@ const FilterModal: Component<FilterModalProps> = (props) => {
             onClick={() => props.onOpenChange(false)}
             class="relative flex flex-1 items-center justify-center gap-2 border-2 border-black p-3 font-medium transition-colors cursor-pointer"
             style={{
-              color: `color-mix(in srgb, ${getResultsColor(resultCount() || 0)} 90%, black 10%)`,
-              'background-color': `color-mix(in srgb, ${getResultsColor(resultCount() || 0)} 20%, white 80%)`
+              color: '#ffffff',
+              'background-color': `color-mix(in srgb, ${getResultsColor(resultCount() || 0)} 35%, #12090b 65%)`
             }}
           >
             <span class="font-bold">VIEW</span>
@@ -297,6 +297,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
               src={rightArrowIcon}
               width="24"
               height="24"
+              class="invert"
               aria-hidden="true"
             />
           </button>
@@ -323,7 +324,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
           <Drawer.Content
             class={cn(
               'mobile-drawer-viewport-safe fixed inset-x-0 bottom-0 z-50',
-              'flex flex-col rounded-t-4xl bg-[#FBFBFB] shadow-[0_-6px_20px_rgba(0,0,0,0.6)]',
+              'flex flex-col rounded-t-4xl bg-surface shadow-[0_-6px_20px_rgba(0,0,0,0.6)]',
               'data-[transitioning]:transition-transform data-[transitioning]:duration-300',
               'data-[transitioning]:ease-[cubic-bezier(0.32,0.72,0,1)]',
             )}
@@ -346,9 +347,9 @@ const FilterModal: Component<FilterModalProps> = (props) => {
                 <Drawer.Close
                   class={cn(
                     'flex items-center justify-center size-8',
-                    'bg-surface-secondary border border-black',
-                    'hover:bg-white transition-colors',
-                    'text-lg font-bold text-black cursor-pointer',
+                    'bg-surface-secondary border border-white/20',
+                    'hover:bg-[#3a2b2f] transition-colors',
+                    'text-lg font-bold text-white cursor-pointer',
                   )}
                 >
                   ×
@@ -374,7 +375,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
           class={cn(
             'fixed left-1/2 top-1/2 z-50 flex w-full max-w-2xl flex-col',
             '-translate-x-1/2 -translate-y-1/2',
-            'border-4 border-black bg-[#FBFBFB]',
+            'border-4 border-black bg-surface text-white',
             'max-h-[min(85vh,850px)] shadow-[0_6px_20px_rgba(0,0,0,0.6)]',
             'data-[opening]:animate-in data-[opening]:fade-in-0',
             'data-[opening]:zoom-in-95 data-[opening]:slide-in-from-top-2',
@@ -389,8 +390,8 @@ const FilterModal: Component<FilterModalProps> = (props) => {
             </Dialog.Label>
             <Dialog.Close
               class={cn(
-                'flex items-center justify-center size-8 border border-black bg-[#D9D9D9]',
-                'text-lg font-bold text-black cursor-pointer hover:bg-white transition-colors',
+                'flex items-center justify-center size-8 border border-white/20 bg-surface-secondary',
+                'text-lg font-bold text-white cursor-pointer hover:bg-[#3a2b2f] transition-colors',
               )}
             >
               ×
