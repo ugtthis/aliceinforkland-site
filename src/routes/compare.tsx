@@ -43,23 +43,23 @@ export default function ComparePage() {
 
   const HIGHLIGHT_STYLES = {
     card: {
-      selected: 'ring-4 ring-amber-400 shadow-lg shadow-amber-400/50',
-      hovered: 'ring-4 ring-gray-400 shadow-[0_0_20px_rgba(59,130,246,0.3)]',
+      selected: 'ring-4 ring-[#c76a78] shadow-lg shadow-[#c76a78]/45',
+      hovered: 'ring-4 ring-[#7b748d] shadow-[0_0_20px_rgba(123,116,141,0.35)]',
       default: 'shadow-elev-1',
     },
     cell: {
-      selected: 'bg-amber-50 text-yellow-700 font-semibold outline outline-[3px] outline-amber-400 shadow-xl',
-      columnSelected: 'bg-[#4C7C69]/20 text-green-900',
-      columnHovered: 'bg-gray-500/10',
+      selected: 'bg-[#c76a78]/20 text-[#f7e7eb] font-semibold outline outline-[3px] outline-[#c76a78] shadow-xl',
+      columnSelected: 'bg-[#7b748d]/30 text-[#ece9f5]',
+      columnHovered: 'bg-white/10',
     },
     row: {
-      selected: 'bg-amber-50',
-      hovered: 'bg-gray-500/30',
-      stripeEven: 'bg-gray-100',
-      stripeOdd: 'bg-white',
+      selected: 'bg-[#c76a78]/14',
+      hovered: 'bg-white/12',
+      stripeEven: 'bg-[#1b1517]',
+      stripeOdd: 'bg-[#120e10]',
     },
     label: {
-      selected: 'text-yellow-700',
+      selected: 'text-[#f1c7cf]',
     },
   } as const
 
@@ -282,7 +282,7 @@ export default function ComparePage() {
   }
 
   return (
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen text-[#e7dadd]">
       {/* Header */}
       <header class="py-4 border-b-[3px] border-black gradient-dark-red shadow-[0_6px_20px_rgba(0,0,0,0.6)] md:py-6">
         <div class="px-4 mx-auto md:px-6 max-w-[2200px]">
@@ -341,7 +341,7 @@ export default function ComparePage() {
                   'flex items-center gap-2.5 py-2 px-4 w-fit text-sm font-medium border-2 border-black',
                   'cursor-pointer shadow-md/30 inset-shadow-[0_1px_2px_rgba(0,0,0,0.5)] hover:opacity-80',
                   isZoomedOut()
-                    ? 'border-3 border-gray-300 bg-gradient-to-b from-white to-gray-100 text-black'
+                    ? 'border-3 border-[#4a3439] bg-gradient-to-b from-[#24191c] to-[#0f0b0c] text-white'
                     : 'border-3 border-green-900 bg-gradient-to-b from-[#4A9B6F] to-[#005925] text-white',
                 )}
                 title={isZoomedOut() ? 'Reset zoom' : 'Zoom out to view full table'}
@@ -386,15 +386,15 @@ export default function ComparePage() {
                         {/* Card */}
                         <div
                           class={cn(
-                            'relative flex w-full flex-1 flex-col border-2 border-black bg-white transition-all duration-200',
+                            'relative flex w-full flex-1 flex-col border-2 border-[#3d2b2f] bg-surface transition-all duration-200',
                             getCardHighlightClass(columnIndex()),
                           )}
                         >
                           {/* Car Info */}
                           <div class="flex flex-col flex-grow p-2 border-b border-black">
                             <h3 class="text-sm font-bold leading-tight">{car.make}</h3>
-                            <p class="text-xs font-semibold leading-tight text-gray-700">{car.model}</p>
-                            <p class="mt-0.5 text-xs text-gray-600">{car.years}</p>
+                            <p class="text-xs font-semibold leading-tight text-white/75">{car.model}</p>
+                            <p class="mt-0.5 text-xs text-white/55">{car.years}</p>
                           </div>
 
                           {/* Action Buttons */}
@@ -418,7 +418,7 @@ export default function ComparePage() {
 
               {/* Comparison Table */}
               <div
-                class="min-w-fit w-full bg-white border-2 border-black shadow-elev-1"
+                class="min-w-fit w-full bg-surface border-2 border-[#3d2b2f] shadow-elev-1"
                 onMouseLeave={clearCellHover}
               >
               {/* Render specs grouped by category */}
@@ -457,7 +457,7 @@ export default function ComparePage() {
                           <div
                             data-spec-label
                             class={cn(
-                              'flex items-center py-3 pl-4 pr-3 font-medium border-r border-gray-300',
+                              'flex items-center py-3 pl-4 pr-3 font-medium border-r border-white/10 text-white/85',
                               getLabelHighlightClass(spec.key),
                             )}
                           >
@@ -490,7 +490,23 @@ export default function ComparePage() {
                                 >
                                   <Show
                                     when={isObject}
-                                    fallback={<span class="leading-snug">{getDisplayValue()}</span>}
+                                    fallback={(() => {
+                                      const displayValue = getDisplayValue()
+                                      const isUrl = /^https?:\/\//i.test(displayValue)
+
+                                      return isUrl ? (
+                                        <a
+                                          href={displayValue}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          class="leading-snug text-blue-300 underline hover:text-blue-200"
+                                        >
+                                          {displayValue}
+                                        </a>
+                                      ) : (
+                                        <span class="leading-snug">{displayValue}</span>
+                                      )
+                                    })()}
                                   >
                                     <div class="text-sm leading-relaxed">
                                       <For each={Object.entries(value as Record<string, string>)}>
@@ -518,7 +534,7 @@ export default function ComparePage() {
 
           {/* Helper Text */}
           <div class="mt-4 text-center">
-            <p class="text-sm text-gray-600">
+            <p class="text-sm text-white/55">
               Hover or click any spec to highlight its row and column
             </p>
           </div>
@@ -529,7 +545,7 @@ export default function ComparePage() {
             <h2 class="mb-4 text-xl font-bold">
               {selectedCars().length === 0 ? 'No cars selected' : `Need at least ${MIN_CARS_FOR_COMPARISON} cars to compare`}
             </h2>
-            <p class="mb-6 text-gray-600">
+            <p class="mb-6 text-white/65">
               {selectedCars().length === 0
                 ? 'Select cars from the list to compare them'
                 : 'Add more cars to start comparing'}

@@ -31,8 +31,8 @@ const CompareFooter: Component = () => {
   return (
     <Show when={selectedCars().length > 0}>
       <div class={cn(
-        'fixed bottom-0 left-0 right-0 z-50 bg-[#202020]/90 backdrop-blur-sm',
-        'shadow-[0_-6px_18px_rgba(0,0,0,0.6),inset_0_10px_60px_rgba(82,255,10,0.1)]',
+        'fixed bottom-0 left-0 right-0 z-50 bg-[#1b1518]/90 backdrop-blur-sm',
+        'shadow-[0_-6px_18px_rgba(0,0,0,0.6),inset_0_10px_60px_rgba(184,74,87,0.12)]',
       )}>
         <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4">
           {/* Selection Indicators */}
@@ -64,9 +64,9 @@ const CompareFooter: Component = () => {
             <button
               onClick={clearSelectedCars}
               class={cn(
-                'flex items-center gap-1 px-2 py-2 border-4 border-white/60 bg-transparent',
-                'text-xs uppercase tracking-wider text-white',
-                'transition-colors cursor-pointer hover:bg-white/10',
+                'flex items-center gap-1 px-2 py-2 border-4 border-[#8d6a72] bg-transparent',
+                'text-xs uppercase tracking-wider text-[#efe3e6]',
+                'transition-colors cursor-pointer hover:bg-[#3a2a30]',
                 'max-[370px]:border-2 max-[370px]:px-1 max-[370px]:py-3.5 md:text-md',
               )}
             >
@@ -77,10 +77,10 @@ const CompareFooter: Component = () => {
               onClick={handleCompare}
               disabled={selectedCars().length < 2}
               class={cn(
-                'flex items-center px-2 py-2 border-4 border-[#6AFF72] bg-[#336233]',
-                'text-white shadow-sm/40 shadow-[#4aff4a]',
+                'flex items-center px-2 py-2 border-4 border-[#b84a57] bg-[#5a2a32]',
+                'text-[#f3e7ea] shadow-sm/40 shadow-[#b84a57]',
                 'transition-colors cursor-pointer',
-                'hover:border-[#22FF00] hover:bg-[#0e1c0e] hover:shadow-[inset_0_2px_8px_rgba(34,255,0,0.9)]',
+                'hover:border-[#d16b79] hover:bg-[#442127] hover:shadow-[inset_0_2px_8px_rgba(209,107,121,0.45)]',
                 'disabled:cursor-not-allowed disabled:opacity-35 max-[370px]:p-1',
               )}
             >
