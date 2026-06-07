@@ -21,14 +21,6 @@ const Header: Component = () => {
           'shadow-[0_6px_20px_rgba(0,0,0,0.6)] gradient-dark-red md:py-8',
         )}
       >
-        <img
-          src="/opendbc-logo.png"
-          role="presentation"
-          width="200"
-          height="59"
-          class="w-[200px] h-auto"
-        />
-
         <div class="flex w-full justify-center px-14 max-[410px]:px-8">
           <div class="flex max-w-full items-center gap-2 md:gap-3.5">
             <div class="min-w-0">
