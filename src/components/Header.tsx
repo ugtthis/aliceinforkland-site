@@ -18,7 +18,7 @@ const Header: Component = () => {
         role="banner"
         class={cn(
           'flex flex-col items-center gap-4 py-6 border-b-[3px] border-black',
-          'shadow-[0_6px_20px_rgba(0,0,0,0.6)] gradient-dark-forrest md:py-8',
+          'shadow-[0_6px_20px_rgba(0,0,0,0.6)] gradient-dark-red md:py-8',
         )}
       >
         <img

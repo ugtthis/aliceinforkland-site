@@ -84,10 +84,10 @@ body {
   animation: subtle-slide 3s linear infinite;
 }
 
-.gradient-dark-forrest {
+.gradient-dark-red {
   background:
-    radial-gradient(ellipse at center, #2d4a35 20%, #1e3a28 35%, #0a0f0e 80%),
-    linear-gradient(135deg, #0a0f0e 0%, #1a2f1e 25%, #2d4a35 50%, #1e3a28 75%, #0a0f0e 100%);
+    radial-gradient(ellipse at center, #5a1418 18%, #3a0f12 36%, #11080a 82%),
+    linear-gradient(135deg, #090506 0%, #260b0e 24%, #4a1116 50%, #2d0c10 74%, #080405 100%);
 }
 
 /* Hide scrollbar while allowing scroll */

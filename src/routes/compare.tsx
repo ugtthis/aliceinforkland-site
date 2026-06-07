@@ -284,7 +284,7 @@ export default function ComparePage() {
   return (
     <div class="min-h-screen bg-gray-100">
       {/* Header */}
-      <header class="py-4 border-b-[3px] border-black gradient-dark-forrest shadow-[0_6px_20px_rgba(0,0,0,0.6)] md:py-6">
+      <header class="py-4 border-b-[3px] border-black gradient-dark-red shadow-[0_6px_20px_rgba(0,0,0,0.6)] md:py-6">
         <div class="px-4 mx-auto md:px-6 max-w-[2200px]">
           <nav class="flex items-center text-sm font-medium text-white">
             <button
@@ -307,7 +307,7 @@ export default function ComparePage() {
               onClick={scrollToTop}
               class={cn(
                 'fixed top-0 right-0 left-0 z-40 py-3 md:py-4',
-                'gradient-dark-forrest shadow-[0_6px_20px_rgba(0,0,0,0.6)] cursor-pointer',
+                'gradient-dark-red shadow-[0_6px_20px_rgba(0,0,0,0.6)] cursor-pointer',
               )}
             >
               <div class="flex justify-between items-center px-4 mx-auto md:px-6 max-w-[2200px]">
