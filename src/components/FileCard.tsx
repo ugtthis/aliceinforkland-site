@@ -324,7 +324,6 @@ const Card: Component<CardProps> = (props) => {
                 onToggle={() => toggleRow("acc")}
               />
             </div>
-
           </div>
         </div>
 
