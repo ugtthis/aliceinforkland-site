@@ -3,10 +3,8 @@ import { type Component, createSignal, createEffect, createMemo } from 'solid-js
 import type { Car } from '~/types/CarDataTypes'
 
 import HighlightText from '~/components/ui/HighlightText'
-import { getSupportTypeColor } from '~/types/supportType'
 import { cn } from '~/lib/utils'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
-import { openSupportTypeModal } from '~/contexts/SupportTypeModalContext'
 
 import DownChevronSvg from '~/lib/icons/down-chevron.svg?raw'
 import VideoCameraSvg from '~/lib/icons/video-camera.svg?raw'
@@ -112,12 +110,6 @@ const Card: Component<CardProps> = (props) => {
   const isSelected = createMemo(() => selectedCars().includes(props.car.name))
   const isDisabled = createMemo(() => !isSelected() && selectedCars().length >= 6)
 
-  const handleSupportTypeClick = (e: MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    openSupportTypeModal(props.car.support_type)
-  }
-
   const getResumeIcon = () => {
     if (props.car.auto_resume === true) return { icon: CheckSvg }
     if (props.car.auto_resume === false) return { iconUrl: CloseXIcon }
@@ -152,8 +144,7 @@ const Card: Component<CardProps> = (props) => {
   }
 
   const supportLabelClass = cn(
-    'py-1 px-6 inline-block border border-black border-b-0 text-center transition-opacity cursor-pointer hover:opacity-80',
-    getSupportTypeColor(props.car.support_type),
+    'py-1 px-6 inline-block border border-black border-b-0 text-center bg-[#3a3a3a] text-white',
   )
 
   return (
@@ -196,18 +187,16 @@ const Card: Component<CardProps> = (props) => {
             </div>
 
             {/* Support type - Mobile only */}
-            <button
-              onClick={handleSupportTypeClick}
+            <div
               class={cn(
-                'flex w-full items-center justify-center px-2 py-1.5 text-center',
-                'transition-opacity cursor-pointer hover:opacity-80 min-[370px]:w-[100px] min-[370px]:py-2.5',
-                getSupportTypeColor(props.car.support_type),
+                'flex w-full items-center justify-center px-2 py-1.5 text-center bg-[#3a3a3a] text-white',
+                'min-[370px]:w-[100px] min-[370px]:py-2.5',
               )}
             >
               <span class="text-xs font-semibold leading-tight uppercase">
-                <HighlightText text={props.car.support_type} query={props.searchQuery} />
+                sunnypilot
               </span>
-            </button>
+            </div>
           </div>
 
           {/* Year - Desktop only */}
@@ -225,18 +214,16 @@ const Card: Component<CardProps> = (props) => {
           </div>
 
           {/* Support type - Desktop only */}
-          <button
-            onClick={handleSupportTypeClick}
+          <div
             class={cn(
               'hidden items-center justify-center w-[160px] border-r border-black px-3 py-2.5',
-              'text-center transition-opacity cursor-pointer hover:opacity-80 md:flex',
-              getSupportTypeColor(props.car.support_type),
+              'text-center bg-[#3a3a3a] text-white md:flex',
             )}
           >
             <span class="text-sm font-semibold leading-tight uppercase whitespace-nowrap">
-              <HighlightText text={props.car.support_type} query={props.searchQuery} />
+              sunnypilot
             </span>
-          </button>
+          </div>
 
         </div>
       </div>
@@ -244,11 +231,11 @@ const Card: Component<CardProps> = (props) => {
       {/* Regular card (grid mode) */}
       <div class="card-grid-mode">
         {/* Support label */}
-      <button onClick={handleSupportTypeClick} class={supportLabelClass}>
+      <div class={supportLabelClass}>
         <p class="uppercase text-[16px]">
-          <HighlightText text={props.car.support_type} query={props.searchQuery} />
+          sunnypilot
         </p>
-      </button>
+      </div>
 
       {/* Card body */}
       <div class="flex flex-col min-h-[180px] border border-black bg-surface shadow-elev-1">
