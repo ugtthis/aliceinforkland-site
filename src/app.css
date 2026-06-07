@@ -72,7 +72,7 @@ body {
 
 .shine-border-overlay {
   animation: shine 30s infinite linear;
-  background: linear-gradient(90deg, transparent, #b90000, #002a08, transparent);
+  background: linear-gradient(90deg, transparent, #b90000, #2a0000, transparent);
   background-size: 200% 100%;
 }
 
