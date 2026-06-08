@@ -3,8 +3,6 @@
  * Organized by: Spec Descriptions, Support Type Content, and Feature Descriptions
  */
 
-import { formatSpeed } from '~/lib/utils'
-
 // ============================================================================
 // SUPPORT TYPE DESCRIPTIONS
 // ============================================================================
@@ -140,25 +138,21 @@ export const getSupportTypeOrder = (): string[] => [
 // FEATURE DESCRIPTIONS (Dynamic)
 // ============================================================================
 
-export const getACCDescription = (longitudinal: string, minEngageSpeed: number): string => {
-  const speed = formatSpeed(minEngageSpeed)
-
+export const getACCDescription = (longitudinal: string): string => {
   switch (longitudinal) {
     case 'openpilot':
       return `Full openpilot Adaptive Cruise Control (ACC) with automatic speed and following distance control. ` +
         `openpilot handles all longitudinal control including acceleration, deceleration, and maintaining safe ` +
-        `following distances. Minimum engagement speed: ${speed}.`
+        `following distances.`
     case 'openpilot available':
       return `openpilot Adaptive Cruise Control (ACC) is available as an option but requires enabling. ` +
         `When enabled, openpilot provides enhanced longitudinal control with automatic speed and following ` +
-        `distance management. Minimum engagement speed: ${speed}.`
+        `distance management.`
     case 'Stock':
       return `Uses the vehicle's factory Adaptive Cruise Control (ACC) system. openpilot provides steering ` +
-        `assistance but relies on the car's built-in cruise control for speed management. ` +
-        `Minimum engagement speed: ${speed}.`
+        `assistance but relies on the car's built-in cruise control for speed management.`
     default:
-      return `Adaptive Cruise Control (ACC) maintains a safe following distance from the vehicle ahead. ` +
-        `Minimum engagement speed: ${speed}.`
+      return `Adaptive Cruise Control (ACC) maintains a safe following distance from the vehicle ahead.`
   }
 }
 
