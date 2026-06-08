@@ -28,8 +28,9 @@
       "name": "Acura ILX 2016-18",
       "make": "Acura",
       "model": "ILX",
-      "model_original": "ILX 2016-18",
-      "years": [
+      "model_variant": null,
+      "years": "2016-18",
+      "year_list": [
         2016,
         2017,
         2018
@@ -50,8 +51,9 @@
       "name": "Acura ILX 2019",
       "make": "Acura",
       "model": "ILX",
-      "model_original": "ILX 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "All",
@@ -70,8 +72,9 @@
       "name": "Acura MDX 2022-24",
       "make": "Acura",
       "model": "MDX",
-      "model_original": "MDX 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -92,8 +95,9 @@
       "name": "Acura MDX 2025-26",
       "make": "Acura",
       "model": "MDX",
-      "model_original": "MDX 2025-26",
-      "years": [
+      "model_variant": null,
+      "years": "2025-26",
+      "year_list": [
         2025,
         2026
       ],
@@ -113,8 +117,9 @@
       "name": "Acura RDX 2016-18",
       "make": "Acura",
       "model": "RDX",
-      "model_original": "RDX 2016-18",
-      "years": [
+      "model_variant": null,
+      "years": "2016-18",
+      "year_list": [
         2016,
         2017,
         2018
@@ -135,8 +140,9 @@
       "name": "Acura RDX 2019-21",
       "make": "Acura",
       "model": "RDX",
-      "model_original": "RDX 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -157,8 +163,9 @@
       "name": "Acura TLX 2021-22",
       "make": "Acura",
       "model": "TLX",
-      "model_original": "TLX 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -178,8 +185,9 @@
       "name": "Acura TLX 2025",
       "make": "Acura",
       "model": "TLX",
-      "model_original": "TLX 2025",
-      "years": [
+      "model_variant": null,
+      "years": "2025",
+      "year_list": [
         2025
       ],
       "supported_package": "All",
@@ -198,8 +206,9 @@
       "name": "Audi A3 2014-19",
       "make": "Audi",
       "model": "A3",
-      "model_original": "A3 2014-19",
-      "years": [
+      "model_variant": null,
+      "years": "2014-19",
+      "year_list": [
         2014,
         2015,
         2016,
@@ -225,8 +234,9 @@
       "name": "Audi A3 Sportback e-tron 2017-18",
       "make": "Audi",
       "model": "A3 Sportback e-tron",
-      "model_original": "A3 Sportback e-tron 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -248,8 +258,9 @@
       "name": "Audi Q2 2018",
       "make": "Audi",
       "model": "Q2",
-      "model_original": "Q2 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "Adaptive Cruise Control (ACC) & Lane Assist",
@@ -270,8 +281,9 @@
       "name": "Audi Q3 2019-24",
       "make": "Audi",
       "model": "Q3",
-      "model_original": "Q3 2019-24",
-      "years": [
+      "model_variant": null,
+      "years": "2019-24",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -297,8 +309,9 @@
       "name": "Audi RS3 2018",
       "make": "Audi",
       "model": "RS3",
-      "model_original": "RS3 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "Adaptive Cruise Control (ACC) & Lane Assist",
@@ -319,8 +332,9 @@
       "name": "Audi S3 2015-17",
       "make": "Audi",
       "model": "S3",
-      "model_original": "S3 2015-17",
-      "years": [
+      "model_variant": null,
+      "years": "2015-17",
+      "year_list": [
         2015,
         2016,
         2017
@@ -343,8 +357,9 @@
       "name": "Chevrolet Bolt EUV 2022-23",
       "make": "Chevrolet",
       "model": "Bolt EUV",
-      "model_original": "Bolt EUV 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -364,8 +379,9 @@
       "name": "Chevrolet Bolt EV 2022-23",
       "make": "Chevrolet",
       "model": "Bolt EV",
-      "model_original": "Bolt EV 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -385,8 +401,9 @@
       "name": "Chevrolet Equinox 2019-22",
       "make": "Chevrolet",
       "model": "Equinox",
-      "model_original": "Equinox 2019-22",
-      "years": [
+      "model_variant": null,
+      "years": "2019-22",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -408,8 +425,9 @@
       "name": "Chevrolet Silverado 1500 2020-21",
       "make": "Chevrolet",
       "model": "Silverado 1500",
-      "model_original": "Silverado 1500 2020-21",
-      "years": [
+      "model_variant": null,
+      "years": "2020-21",
+      "year_list": [
         2020,
         2021
       ],
@@ -429,8 +447,9 @@
       "name": "Chevrolet Trailblazer 2021-22",
       "make": "Chevrolet",
       "model": "Trailblazer",
-      "model_original": "Trailblazer 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -450,8 +469,9 @@
       "name": "Chrysler Pacifica 2017-18",
       "make": "Chrysler",
       "model": "Pacifica",
-      "model_original": "Pacifica 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -471,8 +491,9 @@
       "name": "Chrysler Pacifica 2019-20",
       "make": "Chrysler",
       "model": "Pacifica",
-      "model_original": "Pacifica 2019-20",
-      "years": [
+      "model_variant": null,
+      "years": "2019-20",
+      "year_list": [
         2019,
         2020
       ],
@@ -492,8 +513,9 @@
       "name": "Chrysler Pacifica 2021-23",
       "make": "Chrysler",
       "model": "Pacifica",
-      "model_original": "Pacifica 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -514,8 +536,9 @@
       "name": "Chrysler Pacifica Hybrid 2017-18",
       "make": "Chrysler",
       "model": "Pacifica Hybrid",
-      "model_original": "Pacifica Hybrid 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -535,8 +558,9 @@
       "name": "Chrysler Pacifica Hybrid 2019-25",
       "make": "Chrysler",
       "model": "Pacifica Hybrid",
-      "model_original": "Pacifica Hybrid 2019-25",
-      "years": [
+      "model_variant": null,
+      "years": "2019-25",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -561,8 +585,9 @@
       "name": "comma body",
       "make": "comma",
       "model": "body",
-      "model_original": "body",
-      "years": [],
+      "model_variant": null,
+      "years": null,
+      "year_list": [],
       "supported_package": "All",
       "acc": "openpilot",
       "no_acc_below": "0 mph",
@@ -579,8 +604,9 @@
       "name": "CUPRA Ateca 2018-23",
       "make": "CUPRA",
       "model": "Ateca",
-      "model_original": "Ateca 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -606,8 +632,9 @@
       "name": "Dodge Durango 2020-21",
       "make": "Dodge",
       "model": "Durango",
-      "model_original": "Durango 2020-21",
-      "years": [
+      "model_variant": null,
+      "years": "2020-21",
+      "year_list": [
         2020,
         2021
       ],
@@ -627,8 +654,9 @@
       "name": "Ford Bronco Sport 2021-24",
       "make": "Ford",
       "model": "Bronco Sport",
-      "model_original": "Bronco Sport 2021-24",
-      "years": [
+      "model_variant": null,
+      "years": "2021-24",
+      "year_list": [
         2021,
         2022,
         2023,
@@ -650,8 +678,9 @@
       "name": "Ford Escape 2020-22",
       "make": "Ford",
       "model": "Escape",
-      "model_original": "Escape 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -672,8 +701,9 @@
       "name": "Ford Escape 2023-24",
       "make": "Ford",
       "model": "Escape",
-      "model_original": "Escape 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -693,8 +723,9 @@
       "name": "Ford Escape Hybrid 2020-22",
       "make": "Ford",
       "model": "Escape Hybrid",
-      "model_original": "Escape Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -715,8 +746,9 @@
       "name": "Ford Escape Hybrid 2023-24",
       "make": "Ford",
       "model": "Escape Hybrid",
-      "model_original": "Escape Hybrid 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -736,8 +768,9 @@
       "name": "Ford Escape Plug-in Hybrid 2020-22",
       "make": "Ford",
       "model": "Escape Plug-in Hybrid",
-      "model_original": "Escape Plug-in Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -758,8 +791,9 @@
       "name": "Ford Escape Plug-in Hybrid 2023-24",
       "make": "Ford",
       "model": "Escape Plug-in Hybrid",
-      "model_original": "Escape Plug-in Hybrid 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -779,8 +813,9 @@
       "name": "Ford Expedition 2022-24",
       "make": "Ford",
       "model": "Expedition",
-      "model_original": "Expedition 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -801,8 +836,9 @@
       "name": "Ford Explorer 2020-24",
       "make": "Ford",
       "model": "Explorer",
-      "model_original": "Explorer 2020-24",
-      "years": [
+      "model_variant": null,
+      "years": "2020-24",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -825,8 +861,9 @@
       "name": "Ford Explorer Hybrid 2020-24",
       "make": "Ford",
       "model": "Explorer Hybrid",
-      "model_original": "Explorer Hybrid 2020-24",
-      "years": [
+      "model_variant": null,
+      "years": "2020-24",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -849,8 +886,9 @@
       "name": "Ford F-150 2021-23",
       "make": "Ford",
       "model": "F-150",
-      "model_original": "F-150 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -871,8 +909,9 @@
       "name": "Ford F-150 Hybrid 2021-23",
       "make": "Ford",
       "model": "F-150 Hybrid",
-      "model_original": "F-150 Hybrid 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -893,8 +932,9 @@
       "name": "Ford Focus 2018-22",
       "make": "Ford",
       "model": "Focus",
-      "model_original": "Focus 2018-22",
-      "years": [
+      "model_variant": null,
+      "years": "2018-22",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -919,8 +959,9 @@
       "name": "Ford Focus Hybrid 2018-22",
       "make": "Ford",
       "model": "Focus Hybrid",
-      "model_original": "Focus Hybrid 2018-22",
-      "years": [
+      "model_variant": null,
+      "years": "2018-22",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -945,8 +986,9 @@
       "name": "Ford Kuga 2020-23",
       "make": "Ford",
       "model": "Kuga",
-      "model_original": "Kuga 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -968,8 +1010,9 @@
       "name": "Ford Kuga Hybrid 2020-23",
       "make": "Ford",
       "model": "Kuga Hybrid",
-      "model_original": "Kuga Hybrid 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -991,8 +1034,9 @@
       "name": "Ford Kuga Hybrid 2024",
       "make": "Ford",
       "model": "Kuga Hybrid",
-      "model_original": "Kuga Hybrid 2024",
-      "years": [
+      "model_variant": null,
+      "years": "2024",
+      "year_list": [
         2024
       ],
       "supported_package": "All",
@@ -1011,8 +1055,9 @@
       "name": "Ford Kuga Plug-in Hybrid 2020-23",
       "make": "Ford",
       "model": "Kuga Plug-in Hybrid",
-      "model_original": "Kuga Plug-in Hybrid 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -1034,8 +1079,9 @@
       "name": "Ford Kuga Plug-in Hybrid 2024",
       "make": "Ford",
       "model": "Kuga Plug-in Hybrid",
-      "model_original": "Kuga Plug-in Hybrid 2024",
-      "years": [
+      "model_variant": null,
+      "years": "2024",
+      "year_list": [
         2024
       ],
       "supported_package": "All",
@@ -1054,8 +1100,9 @@
       "name": "Ford Maverick 2022",
       "make": "Ford",
       "model": "Maverick",
-      "model_original": "Maverick 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "LARIAT Luxury",
@@ -1074,8 +1121,9 @@
       "name": "Ford Maverick 2023-24",
       "make": "Ford",
       "model": "Maverick",
-      "model_original": "Maverick 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -1095,8 +1143,9 @@
       "name": "Ford Maverick Hybrid 2022",
       "make": "Ford",
       "model": "Maverick Hybrid",
-      "model_original": "Maverick Hybrid 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "LARIAT Luxury",
@@ -1115,8 +1164,9 @@
       "name": "Ford Maverick Hybrid 2023-24",
       "make": "Ford",
       "model": "Maverick Hybrid",
-      "model_original": "Maverick Hybrid 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -1136,8 +1186,9 @@
       "name": "Ford Mustang Mach-E 2021-24",
       "make": "Ford",
       "model": "Mustang Mach-E",
-      "model_original": "Mustang Mach-E 2021-24",
-      "years": [
+      "model_variant": null,
+      "years": "2021-24",
+      "year_list": [
         2021,
         2022,
         2023,
@@ -1159,8 +1210,9 @@
       "name": "Ford Ranger 2024",
       "make": "Ford",
       "model": "Ranger",
-      "model_original": "Ranger 2024",
-      "years": [
+      "model_variant": null,
+      "years": "2024",
+      "year_list": [
         2024
       ],
       "supported_package": "Adaptive Cruise Control with Lane Centering",
@@ -1179,8 +1231,9 @@
       "name": "Genesis G70 2018",
       "make": "Genesis",
       "model": "G70",
-      "model_original": "G70 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "All",
@@ -1199,8 +1252,9 @@
       "name": "Genesis G70 2019-21",
       "make": "Genesis",
       "model": "G70",
-      "model_original": "G70 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -1221,8 +1275,9 @@
       "name": "Genesis G70 2022-23",
       "make": "Genesis",
       "model": "G70",
-      "model_original": "G70 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -1242,8 +1297,9 @@
       "name": "Genesis G80 2017",
       "make": "Genesis",
       "model": "G80",
-      "model_original": "G80 2017",
-      "years": [
+      "model_variant": null,
+      "years": "2017",
+      "year_list": [
         2017
       ],
       "supported_package": "All",
@@ -1262,8 +1318,9 @@
       "name": "Genesis G80 2018-19",
       "make": "Genesis",
       "model": "G80",
-      "model_original": "G80 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -1283,8 +1340,9 @@
       "name": "Genesis G80 (2.5T Advanced Trim, with HDA II) 2024",
       "make": "Genesis",
       "model": "G80",
-      "model_original": "G80 (2.5T Advanced Trim, with HDA II) 2024",
-      "years": [
+      "model_variant": "(2.5T Advanced Trim, with HDA II)",
+      "years": "2024",
+      "year_list": [
         2024
       ],
       "supported_package": "Highway Driving Assist II",
@@ -1303,8 +1361,9 @@
       "name": "Genesis G90 2017-20",
       "make": "Genesis",
       "model": "G90",
-      "model_original": "G90 2017-20",
-      "years": [
+      "model_variant": null,
+      "years": "2017-20",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -1326,8 +1385,9 @@
       "name": "Genesis GV60 (Advanced Trim) 2023",
       "make": "Genesis",
       "model": "GV60",
-      "model_original": "GV60 (Advanced Trim) 2023",
-      "years": [
+      "model_variant": "(Advanced Trim)",
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -1346,8 +1406,9 @@
       "name": "Genesis GV60 (Performance Trim) 2022-23",
       "make": "Genesis",
       "model": "GV60",
-      "model_original": "GV60 (Performance Trim) 2022-23",
-      "years": [
+      "model_variant": "(Performance Trim)",
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -1367,8 +1428,9 @@
       "name": "Genesis GV70 (2.5T Trim, without HDA II) 2022-24",
       "make": "Genesis",
       "model": "GV70",
-      "model_original": "GV70 (2.5T Trim, without HDA II) 2022-24",
-      "years": [
+      "model_variant": "(2.5T Trim, without HDA II)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -1389,8 +1451,9 @@
       "name": "Genesis GV70 (3.5T Trim, without HDA II) 2022-23",
       "make": "Genesis",
       "model": "GV70",
-      "model_original": "GV70 (3.5T Trim, without HDA II) 2022-23",
-      "years": [
+      "model_variant": "(3.5T Trim, without HDA II)",
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -1410,8 +1473,9 @@
       "name": "Genesis GV70 Electrified (Australia Only) 2022",
       "make": "Genesis",
       "model": "GV70 Electrified",
-      "model_original": "GV70 Electrified (Australia Only) 2022",
-      "years": [
+      "model_variant": "(Australia Only)",
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -1430,8 +1494,9 @@
       "name": "Genesis GV70 Electrified (with HDA II) 2023-24",
       "make": "Genesis",
       "model": "GV70 Electrified",
-      "model_original": "GV70 Electrified (with HDA II) 2023-24",
-      "years": [
+      "model_variant": "(with HDA II)",
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -1451,8 +1516,9 @@
       "name": "Genesis GV80 2023",
       "make": "Genesis",
       "model": "GV80",
-      "model_original": "GV80 2023",
-      "years": [
+      "model_variant": null,
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -1471,8 +1537,9 @@
       "name": "GMC Sierra 1500 2020-21",
       "make": "GMC",
       "model": "Sierra 1500",
-      "model_original": "Sierra 1500 2020-21",
-      "years": [
+      "model_variant": null,
+      "years": "2020-21",
+      "year_list": [
         2020,
         2021
       ],
@@ -1492,8 +1559,9 @@
       "name": "Honda Accord 2018-22",
       "make": "Honda",
       "model": "Accord",
-      "model_original": "Accord 2018-22",
-      "years": [
+      "model_variant": null,
+      "years": "2018-22",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -1516,8 +1584,9 @@
       "name": "Honda Accord 2023-25",
       "make": "Honda",
       "model": "Accord",
-      "model_original": "Accord 2023-25",
-      "years": [
+      "model_variant": null,
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -1538,8 +1607,9 @@
       "name": "Honda Accord Hybrid 2018-22",
       "make": "Honda",
       "model": "Accord Hybrid",
-      "model_original": "Accord Hybrid 2018-22",
-      "years": [
+      "model_variant": null,
+      "years": "2018-22",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -1562,8 +1632,9 @@
       "name": "Honda Accord Hybrid 2023-25",
       "make": "Honda",
       "model": "Accord Hybrid",
-      "model_original": "Accord Hybrid 2023-25",
-      "years": [
+      "model_variant": null,
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -1584,8 +1655,9 @@
       "name": "Honda City (Brazil only) 2023",
       "make": "Honda",
       "model": "City",
-      "model_original": "City (Brazil only) 2023",
-      "years": [
+      "model_variant": "(Brazil only)",
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -1604,8 +1676,9 @@
       "name": "Honda Civic 2016-18",
       "make": "Honda",
       "model": "Civic",
-      "model_original": "Civic 2016-18",
-      "years": [
+      "model_variant": null,
+      "years": "2016-18",
+      "year_list": [
         2016,
         2017,
         2018
@@ -1626,8 +1699,9 @@
       "name": "Honda Civic 2019-21",
       "make": "Honda",
       "model": "Civic",
-      "model_original": "Civic 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -1648,8 +1722,9 @@
       "name": "Honda Civic 2022-24",
       "make": "Honda",
       "model": "Civic",
-      "model_original": "Civic 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -1670,8 +1745,9 @@
       "name": "Honda Civic Hatchback 2017-18",
       "make": "Honda",
       "model": "Civic Hatchback",
-      "model_original": "Civic Hatchback 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -1691,8 +1767,9 @@
       "name": "Honda Civic Hatchback 2019-21",
       "make": "Honda",
       "model": "Civic Hatchback",
-      "model_original": "Civic Hatchback 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -1713,8 +1790,9 @@
       "name": "Honda Civic Hatchback 2022-24",
       "make": "Honda",
       "model": "Civic Hatchback",
-      "model_original": "Civic Hatchback 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -1735,8 +1813,9 @@
       "name": "Honda Civic Hatchback Hybrid 2025-26",
       "make": "Honda",
       "model": "Civic Hatchback Hybrid",
-      "model_original": "Civic Hatchback Hybrid 2025-26",
-      "years": [
+      "model_variant": null,
+      "years": "2025-26",
+      "year_list": [
         2025,
         2026
       ],
@@ -1756,8 +1835,9 @@
       "name": "Honda Civic Hatchback Hybrid (Europe only) 2023",
       "make": "Honda",
       "model": "Civic Hatchback Hybrid",
-      "model_original": "Civic Hatchback Hybrid (Europe only) 2023",
-      "years": [
+      "model_variant": "(Europe only)",
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -1776,8 +1856,9 @@
       "name": "Honda Civic Hybrid 2025-26",
       "make": "Honda",
       "model": "Civic Hybrid",
-      "model_original": "Civic Hybrid 2025-26",
-      "years": [
+      "model_variant": null,
+      "years": "2025-26",
+      "year_list": [
         2025,
         2026
       ],
@@ -1797,8 +1878,9 @@
       "name": "Honda CR-V 2015-16",
       "make": "Honda",
       "model": "CR-V",
-      "model_original": "CR-V 2015-16",
-      "years": [
+      "model_variant": null,
+      "years": "2015-16",
+      "year_list": [
         2015,
         2016
       ],
@@ -1818,8 +1900,9 @@
       "name": "Honda CR-V 2017-22",
       "make": "Honda",
       "model": "CR-V",
-      "model_original": "CR-V 2017-22",
-      "years": [
+      "model_variant": null,
+      "years": "2017-22",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -1843,8 +1926,9 @@
       "name": "Honda CR-V 2023-26",
       "make": "Honda",
       "model": "CR-V",
-      "model_original": "CR-V 2023-26",
-      "years": [
+      "model_variant": null,
+      "years": "2023-26",
+      "year_list": [
         2023,
         2024,
         2025,
@@ -1866,8 +1950,9 @@
       "name": "Honda CR-V Hybrid 2017-22",
       "make": "Honda",
       "model": "CR-V Hybrid",
-      "model_original": "CR-V Hybrid 2017-22",
-      "years": [
+      "model_variant": null,
+      "years": "2017-22",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -1891,8 +1976,9 @@
       "name": "Honda CR-V Hybrid 2023-26",
       "make": "Honda",
       "model": "CR-V Hybrid",
-      "model_original": "CR-V Hybrid 2023-26",
-      "years": [
+      "model_variant": null,
+      "years": "2023-26",
+      "year_list": [
         2023,
         2024,
         2025,
@@ -1914,8 +2000,9 @@
       "name": "Honda e 2020",
       "make": "Honda",
       "model": "e",
-      "model_original": "e 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "All",
@@ -1934,8 +2021,9 @@
       "name": "Honda Fit 2018-20",
       "make": "Honda",
       "model": "Fit",
-      "model_original": "Fit 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -1956,8 +2044,9 @@
       "name": "Honda Freed 2020",
       "make": "Honda",
       "model": "Freed",
-      "model_original": "Freed 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "Honda Sensing",
@@ -1976,8 +2065,9 @@
       "name": "Honda HR-V 2019-22",
       "make": "Honda",
       "model": "HR-V",
-      "model_original": "HR-V 2019-22",
-      "years": [
+      "model_variant": null,
+      "years": "2019-22",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -1999,8 +2089,9 @@
       "name": "Honda HR-V 2023-25",
       "make": "Honda",
       "model": "HR-V",
-      "model_original": "HR-V 2023-25",
-      "years": [
+      "model_variant": null,
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -2021,8 +2112,9 @@
       "name": "Honda Insight 2019-22",
       "make": "Honda",
       "model": "Insight",
-      "model_original": "Insight 2019-22",
-      "years": [
+      "model_variant": null,
+      "years": "2019-22",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -2044,8 +2136,9 @@
       "name": "Honda Inspire 2018",
       "make": "Honda",
       "model": "Inspire",
-      "model_original": "Inspire 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "All",
@@ -2064,8 +2157,9 @@
       "name": "Honda N-Box 2018",
       "make": "Honda",
       "model": "N-Box",
-      "model_original": "N-Box 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "All",
@@ -2084,8 +2178,9 @@
       "name": "Honda Odyssey 2018-20",
       "make": "Honda",
       "model": "Odyssey",
-      "model_original": "Odyssey 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -2106,8 +2201,9 @@
       "name": "Honda Odyssey 2021-26",
       "make": "Honda",
       "model": "Odyssey",
-      "model_original": "Odyssey 2021-26",
-      "years": [
+      "model_variant": null,
+      "years": "2021-26",
+      "year_list": [
         2021,
         2022,
         2023,
@@ -2131,8 +2227,9 @@
       "name": "Honda Odyssey (Singapore) 2021",
       "make": "Honda",
       "model": "Odyssey",
-      "model_original": "Odyssey (Singapore) 2021",
-      "years": [
+      "model_variant": "(Singapore)",
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "Honda Sensing",
@@ -2151,8 +2248,9 @@
       "name": "Honda Odyssey (Taiwan) 2018-19",
       "make": "Honda",
       "model": "Odyssey",
-      "model_original": "Odyssey (Taiwan) 2018-19",
-      "years": [
+      "model_variant": "(Taiwan)",
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -2172,8 +2270,9 @@
       "name": "Honda Passport 2019-25",
       "make": "Honda",
       "model": "Passport",
-      "model_original": "Passport 2019-25",
-      "years": [
+      "model_variant": null,
+      "years": "2019-25",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -2198,8 +2297,9 @@
       "name": "Honda Passport 2026",
       "make": "Honda",
       "model": "Passport",
-      "model_original": "Passport 2026",
-      "years": [
+      "model_variant": null,
+      "years": "2026",
+      "year_list": [
         2026
       ],
       "supported_package": "All",
@@ -2218,8 +2318,9 @@
       "name": "Honda Pilot 2016-22",
       "make": "Honda",
       "model": "Pilot",
-      "model_original": "Pilot 2016-22",
-      "years": [
+      "model_variant": null,
+      "years": "2016-22",
+      "year_list": [
         2016,
         2017,
         2018,
@@ -2244,8 +2345,9 @@
       "name": "Honda Pilot 2023-25",
       "make": "Honda",
       "model": "Pilot",
-      "model_original": "Pilot 2023-25",
-      "years": [
+      "model_variant": null,
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -2266,8 +2368,9 @@
       "name": "Honda Ridgeline 2017-25",
       "make": "Honda",
       "model": "Ridgeline",
-      "model_original": "Ridgeline 2017-25",
-      "years": [
+      "model_variant": null,
+      "years": "2017-25",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -2294,8 +2397,9 @@
       "name": "Hyundai Azera 2022",
       "make": "Hyundai",
       "model": "Azera",
-      "model_original": "Azera 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -2314,8 +2418,9 @@
       "name": "Hyundai Azera Hybrid 2019",
       "make": "Hyundai",
       "model": "Azera Hybrid",
-      "model_original": "Azera Hybrid 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "All",
@@ -2334,8 +2439,9 @@
       "name": "Hyundai Azera Hybrid 2020",
       "make": "Hyundai",
       "model": "Azera Hybrid",
-      "model_original": "Azera Hybrid 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "All",
@@ -2354,8 +2460,9 @@
       "name": "Hyundai Custin 2023",
       "make": "Hyundai",
       "model": "Custin",
-      "model_original": "Custin 2023",
-      "years": [
+      "model_variant": null,
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -2374,8 +2481,9 @@
       "name": "Hyundai Elantra 2017-18",
       "make": "Hyundai",
       "model": "Elantra",
-      "model_original": "Elantra 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -2395,8 +2503,9 @@
       "name": "Hyundai Elantra 2019",
       "make": "Hyundai",
       "model": "Elantra",
-      "model_original": "Elantra 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -2415,8 +2524,9 @@
       "name": "Hyundai Elantra 2021-23",
       "make": "Hyundai",
       "model": "Elantra",
-      "model_original": "Elantra 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -2437,8 +2547,9 @@
       "name": "Hyundai Elantra GT 2017-20",
       "make": "Hyundai",
       "model": "Elantra GT",
-      "model_original": "Elantra GT 2017-20",
-      "years": [
+      "model_variant": null,
+      "years": "2017-20",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -2460,8 +2571,9 @@
       "name": "Hyundai Elantra Hybrid 2021-23",
       "make": "Hyundai",
       "model": "Elantra Hybrid",
-      "model_original": "Elantra Hybrid 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -2482,8 +2594,9 @@
       "name": "Hyundai Genesis 2015-16",
       "make": "Hyundai",
       "model": "Genesis",
-      "model_original": "Genesis 2015-16",
-      "years": [
+      "model_variant": null,
+      "years": "2015-16",
+      "year_list": [
         2015,
         2016
       ],
@@ -2503,8 +2616,9 @@
       "name": "Hyundai i30 2017-19",
       "make": "Hyundai",
       "model": "i30",
-      "model_original": "i30 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -2525,8 +2639,9 @@
       "name": "Hyundai Ioniq 5 (Southeast Asia and Europe only) 2022-24",
       "make": "Hyundai",
       "model": "Ioniq 5",
-      "model_original": "Ioniq 5 (Southeast Asia and Europe only) 2022-24",
-      "years": [
+      "model_variant": "(Southeast Asia and Europe only)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -2547,8 +2662,9 @@
       "name": "Hyundai Ioniq 5 (with HDA II) 2022-24",
       "make": "Hyundai",
       "model": "Ioniq 5",
-      "model_original": "Ioniq 5 (with HDA II) 2022-24",
-      "years": [
+      "model_variant": "(with HDA II)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -2569,8 +2685,9 @@
       "name": "Hyundai Ioniq 5 (without HDA II) 2022-24",
       "make": "Hyundai",
       "model": "Ioniq 5",
-      "model_original": "Ioniq 5 (without HDA II) 2022-24",
-      "years": [
+      "model_variant": "(without HDA II)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -2591,8 +2708,9 @@
       "name": "Hyundai Ioniq 6 (with HDA II) 2023-24",
       "make": "Hyundai",
       "model": "Ioniq 6",
-      "model_original": "Ioniq 6 (with HDA II) 2023-24",
-      "years": [
+      "model_variant": "(with HDA II)",
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -2612,8 +2730,9 @@
       "name": "Hyundai Ioniq 6 (without HDA II) 2023-24",
       "make": "Hyundai",
       "model": "Ioniq 6",
-      "model_original": "Ioniq 6 (without HDA II) 2023-24",
-      "years": [
+      "model_variant": "(without HDA II)",
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -2633,8 +2752,9 @@
       "name": "Hyundai Ioniq Electric 2019",
       "make": "Hyundai",
       "model": "Ioniq Electric",
-      "model_original": "Ioniq Electric 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -2653,8 +2773,9 @@
       "name": "Hyundai Ioniq Electric 2020",
       "make": "Hyundai",
       "model": "Ioniq Electric",
-      "model_original": "Ioniq Electric 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "All",
@@ -2673,8 +2794,9 @@
       "name": "Hyundai Ioniq Hybrid 2017-19",
       "make": "Hyundai",
       "model": "Ioniq Hybrid",
-      "model_original": "Ioniq Hybrid 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -2695,8 +2817,9 @@
       "name": "Hyundai Ioniq Hybrid 2020-22",
       "make": "Hyundai",
       "model": "Ioniq Hybrid",
-      "model_original": "Ioniq Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -2717,8 +2840,9 @@
       "name": "Hyundai Ioniq Plug-in Hybrid 2019",
       "make": "Hyundai",
       "model": "Ioniq Plug-in Hybrid",
-      "model_original": "Ioniq Plug-in Hybrid 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -2737,8 +2861,9 @@
       "name": "Hyundai Ioniq Plug-in Hybrid 2020-22",
       "make": "Hyundai",
       "model": "Ioniq Plug-in Hybrid",
-      "model_original": "Ioniq Plug-in Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -2759,8 +2884,9 @@
       "name": "Hyundai Kona 2020",
       "make": "Hyundai",
       "model": "Kona",
-      "model_original": "Kona 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -2779,8 +2905,9 @@
       "name": "Hyundai Kona Electric 2018-21",
       "make": "Hyundai",
       "model": "Kona Electric",
-      "model_original": "Kona Electric 2018-21",
-      "years": [
+      "model_variant": null,
+      "years": "2018-21",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -2802,8 +2929,9 @@
       "name": "Hyundai Kona Electric 2022-23",
       "make": "Hyundai",
       "model": "Kona Electric",
-      "model_original": "Kona Electric 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -2823,8 +2951,9 @@
       "name": "Hyundai Kona Electric (with HDA II, Korea only) 2023",
       "make": "Hyundai",
       "model": "Kona Electric",
-      "model_original": "Kona Electric (with HDA II, Korea only) 2023",
-      "years": [
+      "model_variant": "(with HDA II, Korea only)",
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -2843,8 +2972,9 @@
       "name": "Hyundai Kona Hybrid 2020",
       "make": "Hyundai",
       "model": "Kona Hybrid",
-      "model_original": "Kona Hybrid 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -2863,8 +2993,9 @@
       "name": "Hyundai Nexo 2021",
       "make": "Hyundai",
       "model": "Nexo",
-      "model_original": "Nexo 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "All",
@@ -2883,8 +3014,9 @@
       "name": "Hyundai Palisade 2020-22",
       "make": "Hyundai",
       "model": "Palisade",
-      "model_original": "Palisade 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -2905,8 +3037,9 @@
       "name": "Hyundai Santa Cruz 2022-24",
       "make": "Hyundai",
       "model": "Santa Cruz",
-      "model_original": "Santa Cruz 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -2927,8 +3060,9 @@
       "name": "Hyundai Santa Fe 2019-20",
       "make": "Hyundai",
       "model": "Santa Fe",
-      "model_original": "Santa Fe 2019-20",
-      "years": [
+      "model_variant": null,
+      "years": "2019-20",
+      "year_list": [
         2019,
         2020
       ],
@@ -2948,8 +3082,9 @@
       "name": "Hyundai Santa Fe 2021-23",
       "make": "Hyundai",
       "model": "Santa Fe",
-      "model_original": "Santa Fe 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -2970,8 +3105,9 @@
       "name": "Hyundai Santa Fe Hybrid 2022-23",
       "make": "Hyundai",
       "model": "Santa Fe Hybrid",
-      "model_original": "Santa Fe Hybrid 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -2991,8 +3127,9 @@
       "name": "Hyundai Santa Fe Plug-in Hybrid 2022-23",
       "make": "Hyundai",
       "model": "Santa Fe Plug-in Hybrid",
-      "model_original": "Santa Fe Plug-in Hybrid 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -3012,8 +3149,9 @@
       "name": "Hyundai Sonata 2018-19",
       "make": "Hyundai",
       "model": "Sonata",
-      "model_original": "Sonata 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -3033,8 +3171,9 @@
       "name": "Hyundai Sonata 2020-23",
       "make": "Hyundai",
       "model": "Sonata",
-      "model_original": "Sonata 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -3056,8 +3195,9 @@
       "name": "Hyundai Sonata Hybrid 2020-23",
       "make": "Hyundai",
       "model": "Sonata Hybrid",
-      "model_original": "Sonata Hybrid 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -3079,8 +3219,9 @@
       "name": "Hyundai Staria 2023",
       "make": "Hyundai",
       "model": "Staria",
-      "model_original": "Staria 2023",
-      "years": [
+      "model_variant": null,
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -3099,8 +3240,9 @@
       "name": "Hyundai Tucson 2021",
       "make": "Hyundai",
       "model": "Tucson",
-      "model_original": "Tucson 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3119,8 +3261,9 @@
       "name": "Hyundai Tucson 2022",
       "make": "Hyundai",
       "model": "Tucson",
-      "model_original": "Tucson 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3139,8 +3282,9 @@
       "name": "Hyundai Tucson 2023-24",
       "make": "Hyundai",
       "model": "Tucson",
-      "model_original": "Tucson 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -3160,8 +3304,9 @@
       "name": "Hyundai Tucson Diesel 2019",
       "make": "Hyundai",
       "model": "Tucson Diesel",
-      "model_original": "Tucson Diesel 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3180,8 +3325,9 @@
       "name": "Hyundai Tucson Hybrid 2022-24",
       "make": "Hyundai",
       "model": "Tucson Hybrid",
-      "model_original": "Tucson Hybrid 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -3202,8 +3348,9 @@
       "name": "Hyundai Tucson Plug-in Hybrid 2024",
       "make": "Hyundai",
       "model": "Tucson Plug-in Hybrid",
-      "model_original": "Tucson Plug-in Hybrid 2024",
-      "years": [
+      "model_variant": null,
+      "years": "2024",
+      "year_list": [
         2024
       ],
       "supported_package": "All",
@@ -3222,8 +3369,9 @@
       "name": "Hyundai Veloster 2019-20",
       "make": "Hyundai",
       "model": "Veloster",
-      "model_original": "Veloster 2019-20",
-      "years": [
+      "model_variant": null,
+      "years": "2019-20",
+      "year_list": [
         2019,
         2020
       ],
@@ -3243,8 +3391,9 @@
       "name": "Jeep Grand Cherokee 2016-18",
       "make": "Jeep",
       "model": "Grand Cherokee",
-      "model_original": "Grand Cherokee 2016-18",
-      "years": [
+      "model_variant": null,
+      "years": "2016-18",
+      "year_list": [
         2016,
         2017,
         2018
@@ -3265,8 +3414,9 @@
       "name": "Jeep Grand Cherokee 2019-21",
       "make": "Jeep",
       "model": "Grand Cherokee",
-      "model_original": "Grand Cherokee 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -3287,8 +3437,9 @@
       "name": "Kia Carnival 2022-24",
       "make": "Kia",
       "model": "Carnival",
-      "model_original": "Carnival 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -3309,8 +3460,9 @@
       "name": "Kia Carnival (China only) 2023",
       "make": "Kia",
       "model": "Carnival",
-      "model_original": "Carnival (China only) 2023",
-      "years": [
+      "model_variant": "(China only)",
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3329,8 +3481,9 @@
       "name": "Kia Ceed 2019-21",
       "make": "Kia",
       "model": "Ceed",
-      "model_original": "Ceed 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -3351,8 +3504,9 @@
       "name": "Kia EV6 (Southeast Asia only) 2022-24",
       "make": "Kia",
       "model": "EV6",
-      "model_original": "EV6 (Southeast Asia only) 2022-24",
-      "years": [
+      "model_variant": "(Southeast Asia only)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -3373,8 +3527,9 @@
       "name": "Kia EV6 (with HDA II) 2022-24",
       "make": "Kia",
       "model": "EV6",
-      "model_original": "EV6 (with HDA II) 2022-24",
-      "years": [
+      "model_variant": "(with HDA II)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -3395,8 +3550,9 @@
       "name": "Kia EV6 (without HDA II) 2022-24",
       "make": "Kia",
       "model": "EV6",
-      "model_original": "EV6 (without HDA II) 2022-24",
-      "years": [
+      "model_variant": "(without HDA II)",
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -3417,8 +3573,9 @@
       "name": "Kia Forte 2019-21",
       "make": "Kia",
       "model": "Forte",
-      "model_original": "Forte 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -3439,8 +3596,9 @@
       "name": "Kia Forte 2022-23",
       "make": "Kia",
       "model": "Forte",
-      "model_original": "Forte 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -3460,8 +3618,9 @@
       "name": "Kia K5 2021-24",
       "make": "Kia",
       "model": "K5",
-      "model_original": "K5 2021-24",
-      "years": [
+      "model_variant": null,
+      "years": "2021-24",
+      "year_list": [
         2021,
         2022,
         2023,
@@ -3483,8 +3642,9 @@
       "name": "Kia K5 Hybrid 2020-22",
       "make": "Kia",
       "model": "K5 Hybrid",
-      "model_original": "K5 Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -3505,8 +3665,9 @@
       "name": "Kia K7 2017",
       "make": "Kia",
       "model": "K7",
-      "model_original": "K7 2017",
-      "years": [
+      "model_variant": null,
+      "years": "2017",
+      "year_list": [
         2017
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3525,8 +3686,9 @@
       "name": "Kia K8 Hybrid (with HDA II) 2023",
       "make": "Kia",
       "model": "K8 Hybrid",
-      "model_original": "K8 Hybrid (with HDA II) 2023",
-      "years": [
+      "model_variant": "(with HDA II)",
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "Highway Driving Assist II",
@@ -3545,8 +3707,9 @@
       "name": "Kia Niro EV 2019",
       "make": "Kia",
       "model": "Niro EV",
-      "model_original": "Niro EV 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "All",
@@ -3565,8 +3728,9 @@
       "name": "Kia Niro EV 2020",
       "make": "Kia",
       "model": "Niro EV",
-      "model_original": "Niro EV 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "All",
@@ -3585,8 +3749,9 @@
       "name": "Kia Niro EV 2021",
       "make": "Kia",
       "model": "Niro EV",
-      "model_original": "Niro EV 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "All",
@@ -3605,8 +3770,9 @@
       "name": "Kia Niro EV 2022",
       "make": "Kia",
       "model": "Niro EV",
-      "model_original": "Niro EV 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -3625,8 +3791,9 @@
       "name": "Kia Niro EV (with HDA II) 2024-25",
       "make": "Kia",
       "model": "Niro EV",
-      "model_original": "Niro EV (with HDA II) 2024-25",
-      "years": [
+      "model_variant": "(with HDA II)",
+      "years": "2024-25",
+      "year_list": [
         2024,
         2025
       ],
@@ -3646,8 +3813,9 @@
       "name": "Kia Niro EV (without HDA II) 2023-25",
       "make": "Kia",
       "model": "Niro EV",
-      "model_original": "Niro EV (without HDA II) 2023-25",
-      "years": [
+      "model_variant": "(without HDA II)",
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -3668,8 +3836,9 @@
       "name": "Kia Niro Hybrid 2018",
       "make": "Kia",
       "model": "Niro Hybrid",
-      "model_original": "Niro Hybrid 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3688,8 +3857,9 @@
       "name": "Kia Niro Hybrid 2021",
       "make": "Kia",
       "model": "Niro Hybrid",
-      "model_original": "Niro Hybrid 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3708,8 +3878,9 @@
       "name": "Kia Niro Hybrid 2022",
       "make": "Kia",
       "model": "Niro Hybrid",
-      "model_original": "Niro Hybrid 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3728,8 +3899,9 @@
       "name": "Kia Niro Hybrid 2023-24",
       "make": "Kia",
       "model": "Niro Hybrid",
-      "model_original": "Niro Hybrid 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -3749,8 +3921,9 @@
       "name": "Kia Niro Plug-in Hybrid 2018-19",
       "make": "Kia",
       "model": "Niro Plug-in Hybrid",
-      "model_original": "Niro Plug-in Hybrid 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -3770,8 +3943,9 @@
       "name": "Kia Niro Plug-in Hybrid 2020",
       "make": "Kia",
       "model": "Niro Plug-in Hybrid",
-      "model_original": "Niro Plug-in Hybrid 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3790,8 +3964,9 @@
       "name": "Kia Niro Plug-in Hybrid 2021",
       "make": "Kia",
       "model": "Niro Plug-in Hybrid",
-      "model_original": "Niro Plug-in Hybrid 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3810,8 +3985,9 @@
       "name": "Kia Niro Plug-in Hybrid 2022",
       "make": "Kia",
       "model": "Niro Plug-in Hybrid",
-      "model_original": "Niro Plug-in Hybrid 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3830,8 +4006,9 @@
       "name": "Kia Optima 2017",
       "make": "Kia",
       "model": "Optima",
-      "model_original": "Optima 2017",
-      "years": [
+      "model_variant": null,
+      "years": "2017",
+      "year_list": [
         2017
       ],
       "supported_package": "Advanced Smart Cruise Control",
@@ -3850,8 +4027,9 @@
       "name": "Kia Optima 2019-20",
       "make": "Kia",
       "model": "Optima",
-      "model_original": "Optima 2019-20",
-      "years": [
+      "model_variant": null,
+      "years": "2019-20",
+      "year_list": [
         2019,
         2020
       ],
@@ -3871,8 +4049,9 @@
       "name": "Kia Optima Hybrid 2019",
       "make": "Kia",
       "model": "Optima Hybrid",
-      "model_original": "Optima Hybrid 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3891,8 +4070,9 @@
       "name": "Kia Seltos 2021",
       "make": "Kia",
       "model": "Seltos",
-      "model_original": "Seltos 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3911,8 +4091,9 @@
       "name": "Kia Sorento 2018",
       "make": "Kia",
       "model": "Sorento",
-      "model_original": "Sorento 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "Advanced Smart Cruise Control & LKAS",
@@ -3931,8 +4112,9 @@
       "name": "Kia Sorento 2019",
       "make": "Kia",
       "model": "Sorento",
-      "model_original": "Sorento 2019",
-      "years": [
+      "model_variant": null,
+      "years": "2019",
+      "year_list": [
         2019
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -3951,8 +4133,9 @@
       "name": "Kia Sorento 2021-23",
       "make": "Kia",
       "model": "Sorento",
-      "model_original": "Sorento 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -3973,8 +4156,9 @@
       "name": "Kia Sorento Hybrid 2021-23",
       "make": "Kia",
       "model": "Sorento Hybrid",
-      "model_original": "Sorento Hybrid 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -3995,8 +4179,9 @@
       "name": "Kia Sorento Plug-in Hybrid 2022-23",
       "make": "Kia",
       "model": "Sorento Plug-in Hybrid",
-      "model_original": "Sorento Plug-in Hybrid 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -4016,8 +4201,9 @@
       "name": "Kia Sportage 2023-24",
       "make": "Kia",
       "model": "Sportage",
-      "model_original": "Sportage 2023-24",
-      "years": [
+      "model_variant": null,
+      "years": "2023-24",
+      "year_list": [
         2023,
         2024
       ],
@@ -4037,8 +4223,9 @@
       "name": "Kia Sportage Hybrid 2023",
       "make": "Kia",
       "model": "Sportage Hybrid",
-      "model_original": "Sportage Hybrid 2023",
-      "years": [
+      "model_variant": null,
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "Smart Cruise Control (SCC)",
@@ -4057,8 +4244,9 @@
       "name": "Kia Stinger 2018-20",
       "make": "Kia",
       "model": "Stinger",
-      "model_original": "Stinger 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -4079,8 +4267,9 @@
       "name": "Kia Stinger 2022-23",
       "make": "Kia",
       "model": "Stinger",
-      "model_original": "Stinger 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -4100,8 +4289,9 @@
       "name": "Kia Telluride 2020-22",
       "make": "Kia",
       "model": "Telluride",
-      "model_original": "Telluride 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -4122,8 +4312,9 @@
       "name": "Lexus CT Hybrid 2017-18",
       "make": "Lexus",
       "model": "CT Hybrid",
-      "model_original": "CT Hybrid 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -4143,8 +4334,9 @@
       "name": "Lexus ES 2017-18",
       "make": "Lexus",
       "model": "ES",
-      "model_original": "ES 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -4164,8 +4356,9 @@
       "name": "Lexus ES 2019-25",
       "make": "Lexus",
       "model": "ES",
-      "model_original": "ES 2019-25",
-      "years": [
+      "model_variant": null,
+      "years": "2019-25",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -4190,8 +4383,9 @@
       "name": "Lexus ES Hybrid 2017-18",
       "make": "Lexus",
       "model": "ES Hybrid",
-      "model_original": "ES Hybrid 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -4211,8 +4405,9 @@
       "name": "Lexus ES Hybrid 2019-25",
       "make": "Lexus",
       "model": "ES Hybrid",
-      "model_original": "ES Hybrid 2019-25",
-      "years": [
+      "model_variant": null,
+      "years": "2019-25",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -4237,8 +4432,9 @@
       "name": "Lexus GS F 2016",
       "make": "Lexus",
       "model": "GS F",
-      "model_original": "GS F 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "All",
@@ -4257,8 +4453,9 @@
       "name": "Lexus IS 2017-19",
       "make": "Lexus",
       "model": "IS",
-      "model_original": "IS 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -4279,8 +4476,9 @@
       "name": "Lexus IS 2022-24",
       "make": "Lexus",
       "model": "IS",
-      "model_original": "IS 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -4301,8 +4499,9 @@
       "name": "Lexus LC 2024-25",
       "make": "Lexus",
       "model": "LC",
-      "model_original": "LC 2024-25",
-      "years": [
+      "model_variant": null,
+      "years": "2024-25",
+      "year_list": [
         2024,
         2025
       ],
@@ -4322,8 +4521,9 @@
       "name": "Lexus LS 2018",
       "make": "Lexus",
       "model": "LS",
-      "model_original": "LS 2018",
-      "years": [
+      "model_variant": null,
+      "years": "2018",
+      "year_list": [
         2018
       ],
       "supported_package": "All except Lexus Safety System+ A",
@@ -4342,8 +4542,9 @@
       "name": "Lexus NX 2018-19",
       "make": "Lexus",
       "model": "NX",
-      "model_original": "NX 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -4363,8 +4564,9 @@
       "name": "Lexus NX 2020-21",
       "make": "Lexus",
       "model": "NX",
-      "model_original": "NX 2020-21",
-      "years": [
+      "model_variant": null,
+      "years": "2020-21",
+      "year_list": [
         2020,
         2021
       ],
@@ -4384,8 +4586,9 @@
       "name": "Lexus NX Hybrid 2018-19",
       "make": "Lexus",
       "model": "NX Hybrid",
-      "model_original": "NX Hybrid 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -4405,8 +4608,9 @@
       "name": "Lexus NX Hybrid 2020-21",
       "make": "Lexus",
       "model": "NX Hybrid",
-      "model_original": "NX Hybrid 2020-21",
-      "years": [
+      "model_variant": null,
+      "years": "2020-21",
+      "year_list": [
         2020,
         2021
       ],
@@ -4426,8 +4630,9 @@
       "name": "Lexus RC 2018-20",
       "make": "Lexus",
       "model": "RC",
-      "model_original": "RC 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -4448,8 +4653,9 @@
       "name": "Lexus RC 2023",
       "make": "Lexus",
       "model": "RC",
-      "model_original": "RC 2023",
-      "years": [
+      "model_variant": null,
+      "years": "2023",
+      "year_list": [
         2023
       ],
       "supported_package": "All",
@@ -4468,8 +4674,9 @@
       "name": "Lexus RX 2016",
       "make": "Lexus",
       "model": "RX",
-      "model_original": "RX 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Lexus Safety System+",
@@ -4488,8 +4695,9 @@
       "name": "Lexus RX 2017-19",
       "make": "Lexus",
       "model": "RX",
-      "model_original": "RX 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -4510,8 +4718,9 @@
       "name": "Lexus RX 2020-22",
       "make": "Lexus",
       "model": "RX",
-      "model_original": "RX 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -4532,8 +4741,9 @@
       "name": "Lexus RX Hybrid 2016",
       "make": "Lexus",
       "model": "RX Hybrid",
-      "model_original": "RX Hybrid 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Lexus Safety System+",
@@ -4552,8 +4762,9 @@
       "name": "Lexus RX Hybrid 2017-19",
       "make": "Lexus",
       "model": "RX Hybrid",
-      "model_original": "RX Hybrid 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -4574,8 +4785,9 @@
       "name": "Lexus RX Hybrid 2020-22",
       "make": "Lexus",
       "model": "RX Hybrid",
-      "model_original": "RX Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -4596,8 +4808,9 @@
       "name": "Lexus UX Hybrid 2019-24",
       "make": "Lexus",
       "model": "UX Hybrid",
-      "model_original": "UX Hybrid 2019-24",
-      "years": [
+      "model_variant": null,
+      "years": "2019-24",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -4621,8 +4834,9 @@
       "name": "Lincoln Aviator 2020-24",
       "make": "Lincoln",
       "model": "Aviator",
-      "model_original": "Aviator 2020-24",
-      "years": [
+      "model_variant": null,
+      "years": "2020-24",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -4645,8 +4859,9 @@
       "name": "Lincoln Aviator Plug-in Hybrid 2020-24",
       "make": "Lincoln",
       "model": "Aviator Plug-in Hybrid",
-      "model_original": "Aviator Plug-in Hybrid 2020-24",
-      "years": [
+      "model_variant": null,
+      "years": "2020-24",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -4669,8 +4884,9 @@
       "name": "MAN eTGE 2020-24",
       "make": "MAN",
       "model": "eTGE",
-      "model_original": "eTGE 2020-24",
-      "years": [
+      "model_variant": null,
+      "years": "2020-24",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -4695,8 +4911,9 @@
       "name": "MAN TGE 2017-24",
       "make": "MAN",
       "model": "TGE",
-      "model_original": "TGE 2017-24",
-      "years": [
+      "model_variant": null,
+      "years": "2017-24",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -4724,8 +4941,9 @@
       "name": "Mazda CX-5 2022-25",
       "make": "Mazda",
       "model": "CX-5",
-      "model_original": "CX-5 2022-25",
-      "years": [
+      "model_variant": null,
+      "years": "2022-25",
+      "year_list": [
         2022,
         2023,
         2024,
@@ -4747,8 +4965,9 @@
       "name": "Mazda CX-9 2021-23",
       "make": "Mazda",
       "model": "CX-9",
-      "model_original": "CX-9 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -4769,8 +4988,9 @@
       "name": "Nissan Altima 2019-24",
       "make": "Nissan",
       "model": "Altima",
-      "model_original": "Altima 2019-24",
-      "years": [
+      "model_variant": null,
+      "years": "2019-24",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -4796,8 +5016,9 @@
       "name": "Nissan Leaf 2018-23",
       "make": "Nissan",
       "model": "Leaf",
-      "model_original": "Leaf 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -4823,8 +5044,9 @@
       "name": "Nissan Rogue 2018-20",
       "make": "Nissan",
       "model": "Rogue",
-      "model_original": "Rogue 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -4847,8 +5069,9 @@
       "name": "Nissan X-Trail 2017",
       "make": "Nissan",
       "model": "X-Trail",
-      "model_original": "X-Trail 2017",
-      "years": [
+      "model_variant": null,
+      "years": "2017",
+      "year_list": [
         2017
       ],
       "supported_package": "ProPILOT Assist",
@@ -4869,8 +5092,9 @@
       "name": "Ram 1500 2019-24",
       "make": "Ram",
       "model": "1500",
-      "model_original": "1500 2019-24",
-      "years": [
+      "model_variant": null,
+      "years": "2019-24",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -4894,8 +5118,9 @@
       "name": "Rivian R1S 2022-24",
       "make": "Rivian",
       "model": "R1S",
-      "model_original": "R1S 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -4916,8 +5141,9 @@
       "name": "Rivian R1S 2025",
       "make": "Rivian",
       "model": "R1S",
-      "model_original": "R1S 2025",
-      "years": [
+      "model_variant": null,
+      "years": "2025",
+      "year_list": [
         2025
       ],
       "supported_package": "All",
@@ -4936,8 +5162,9 @@
       "name": "Rivian R1T 2022-24",
       "make": "Rivian",
       "model": "R1T",
-      "model_original": "R1T 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -4958,8 +5185,9 @@
       "name": "Rivian R1T 2025",
       "make": "Rivian",
       "model": "R1T",
-      "model_original": "R1T 2025",
-      "years": [
+      "model_variant": null,
+      "years": "2025",
+      "year_list": [
         2025
       ],
       "supported_package": "All",
@@ -4978,8 +5206,9 @@
       "name": "SEAT Ateca 2016-23",
       "make": "SEAT",
       "model": "Ateca",
-      "model_original": "Ateca 2016-23",
-      "years": [
+      "model_variant": null,
+      "years": "2016-23",
+      "year_list": [
         2016,
         2017,
         2018,
@@ -5007,8 +5236,9 @@
       "name": "SEAT Leon 2014-20",
       "make": "SEAT",
       "model": "Leon",
-      "model_original": "Leon 2014-20",
-      "years": [
+      "model_variant": null,
+      "years": "2014-20",
+      "year_list": [
         2014,
         2015,
         2016,
@@ -5035,8 +5265,9 @@
       "name": "Subaru Ascent 2019-21",
       "make": "Subaru",
       "model": "Ascent",
-      "model_original": "Ascent 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -5057,8 +5288,9 @@
       "name": "Subaru Crosstrek 2018-19",
       "make": "Subaru",
       "model": "Crosstrek",
-      "model_original": "Crosstrek 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -5078,8 +5310,9 @@
       "name": "Subaru Crosstrek 2020-23",
       "make": "Subaru",
       "model": "Crosstrek",
-      "model_original": "Crosstrek 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -5101,8 +5334,9 @@
       "name": "Subaru Forester 2019-21",
       "make": "Subaru",
       "model": "Forester",
-      "model_original": "Forester 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -5123,8 +5357,9 @@
       "name": "Subaru Impreza 2017-19",
       "make": "Subaru",
       "model": "Impreza",
-      "model_original": "Impreza 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -5145,8 +5380,9 @@
       "name": "Subaru Impreza 2020-22",
       "make": "Subaru",
       "model": "Impreza",
-      "model_original": "Impreza 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -5167,8 +5403,9 @@
       "name": "Subaru Legacy 2020-22",
       "make": "Subaru",
       "model": "Legacy",
-      "model_original": "Legacy 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -5189,8 +5426,9 @@
       "name": "Subaru Outback 2020-22",
       "make": "Subaru",
       "model": "Outback",
-      "model_original": "Outback 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -5211,8 +5449,9 @@
       "name": "Subaru XV 2018-19",
       "make": "Subaru",
       "model": "XV",
-      "model_original": "XV 2018-19",
-      "years": [
+      "model_variant": null,
+      "years": "2018-19",
+      "year_list": [
         2018,
         2019
       ],
@@ -5232,8 +5471,9 @@
       "name": "Subaru XV 2020-21",
       "make": "Subaru",
       "model": "XV",
-      "model_original": "XV 2020-21",
-      "years": [
+      "model_variant": null,
+      "years": "2020-21",
+      "year_list": [
         2020,
         2021
       ],
@@ -5253,8 +5493,9 @@
       "name": "Škoda Fabia 2022-23",
       "make": "Škoda",
       "model": "Fabia",
-      "model_original": "Fabia 2022-23",
-      "years": [
+      "model_variant": null,
+      "years": "2022-23",
+      "year_list": [
         2022,
         2023
       ],
@@ -5276,8 +5517,9 @@
       "name": "Škoda Kamiq 2021-23",
       "make": "Škoda",
       "model": "Kamiq",
-      "model_original": "Kamiq 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -5301,8 +5543,9 @@
       "name": "Škoda Karoq 2019-23",
       "make": "Škoda",
       "model": "Karoq",
-      "model_original": "Karoq 2019-23",
-      "years": [
+      "model_variant": null,
+      "years": "2019-23",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -5329,8 +5572,9 @@
       "name": "Škoda Kodiaq 2017-23",
       "make": "Škoda",
       "model": "Kodiaq",
-      "model_original": "Kodiaq 2017-23",
-      "years": [
+      "model_variant": null,
+      "years": "2017-23",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -5359,8 +5603,9 @@
       "name": "Škoda Octavia 2015-19",
       "make": "Škoda",
       "model": "Octavia",
-      "model_original": "Octavia 2015-19",
-      "years": [
+      "model_variant": null,
+      "years": "2015-19",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -5387,8 +5632,9 @@
       "name": "Škoda Octavia RS 2016",
       "make": "Škoda",
       "model": "Octavia RS",
-      "model_original": "Octavia RS 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Adaptive Cruise Control (ACC) & Lane Assist",
@@ -5411,8 +5657,9 @@
       "name": "Škoda Octavia Scout 2017-19",
       "make": "Škoda",
       "model": "Octavia Scout",
-      "model_original": "Octavia Scout 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -5437,8 +5684,9 @@
       "name": "Škoda Scala 2020-23",
       "make": "Škoda",
       "model": "Scala",
-      "model_original": "Scala 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -5462,8 +5710,9 @@
       "name": "Škoda Superb 2015-22",
       "make": "Škoda",
       "model": "Superb",
-      "model_original": "Superb 2015-22",
-      "years": [
+      "model_variant": null,
+      "years": "2015-22",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -5493,8 +5742,9 @@
       "name": "Tesla Model 3 (with HW3) 2019-23",
       "make": "Tesla",
       "model": "Model 3",
-      "model_original": "Model 3 (with HW3) 2019-23",
-      "years": [
+      "model_variant": "(with HW3)",
+      "years": "2019-23",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -5521,8 +5771,9 @@
       "name": "Tesla Model 3 (with HW4) 2024-25",
       "make": "Tesla",
       "model": "Model 3",
-      "model_original": "Model 3 (with HW4) 2024-25",
-      "years": [
+      "model_variant": "(with HW4)",
+      "years": "2024-25",
+      "year_list": [
         2024,
         2025
       ],
@@ -5546,8 +5797,9 @@
       "name": "Tesla Model Y (with HW3) 2020-23",
       "make": "Tesla",
       "model": "Model Y",
-      "model_original": "Model Y (with HW3) 2020-23",
-      "years": [
+      "model_variant": "(with HW3)",
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -5573,8 +5825,9 @@
       "name": "Tesla Model Y (with HW4) 2024-25",
       "make": "Tesla",
       "model": "Model Y",
-      "model_original": "Model Y (with HW4) 2024-25",
-      "years": [
+      "model_variant": "(with HW4)",
+      "years": "2024-25",
+      "year_list": [
         2024,
         2025
       ],
@@ -5598,8 +5851,9 @@
       "name": "Toyota Alphard 2019-20",
       "make": "Toyota",
       "model": "Alphard",
-      "model_original": "Alphard 2019-20",
-      "years": [
+      "model_variant": null,
+      "years": "2019-20",
+      "year_list": [
         2019,
         2020
       ],
@@ -5619,8 +5873,9 @@
       "name": "Toyota Alphard Hybrid 2021",
       "make": "Toyota",
       "model": "Alphard Hybrid",
-      "model_original": "Alphard Hybrid 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "All",
@@ -5639,8 +5894,9 @@
       "name": "Toyota Avalon 2016",
       "make": "Toyota",
       "model": "Avalon",
-      "model_original": "Avalon 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Toyota Safety Sense P",
@@ -5659,8 +5915,9 @@
       "name": "Toyota Avalon 2017-18",
       "make": "Toyota",
       "model": "Avalon",
-      "model_original": "Avalon 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -5680,8 +5937,9 @@
       "name": "Toyota Avalon 2019-21",
       "make": "Toyota",
       "model": "Avalon",
-      "model_original": "Avalon 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -5702,8 +5960,9 @@
       "name": "Toyota Avalon 2022",
       "make": "Toyota",
       "model": "Avalon",
-      "model_original": "Avalon 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -5722,8 +5981,9 @@
       "name": "Toyota Avalon Hybrid 2019-21",
       "make": "Toyota",
       "model": "Avalon Hybrid",
-      "model_original": "Avalon Hybrid 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -5744,8 +6004,9 @@
       "name": "Toyota Avalon Hybrid 2022",
       "make": "Toyota",
       "model": "Avalon Hybrid",
-      "model_original": "Avalon Hybrid 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -5764,8 +6025,9 @@
       "name": "Toyota C-HR 2017-20",
       "make": "Toyota",
       "model": "C-HR",
-      "model_original": "C-HR 2017-20",
-      "years": [
+      "model_variant": null,
+      "years": "2017-20",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -5787,8 +6049,9 @@
       "name": "Toyota C-HR 2021",
       "make": "Toyota",
       "model": "C-HR",
-      "model_original": "C-HR 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "All",
@@ -5807,8 +6070,9 @@
       "name": "Toyota C-HR Hybrid 2017-20",
       "make": "Toyota",
       "model": "C-HR Hybrid",
-      "model_original": "C-HR Hybrid 2017-20",
-      "years": [
+      "model_variant": null,
+      "years": "2017-20",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -5830,8 +6094,9 @@
       "name": "Toyota C-HR Hybrid 2021-22",
       "make": "Toyota",
       "model": "C-HR Hybrid",
-      "model_original": "C-HR Hybrid 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -5851,8 +6116,9 @@
       "name": "Toyota Camry 2018-20",
       "make": "Toyota",
       "model": "Camry",
-      "model_original": "Camry 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -5873,8 +6139,9 @@
       "name": "Toyota Camry 2021-24",
       "make": "Toyota",
       "model": "Camry",
-      "model_original": "Camry 2021-24",
-      "years": [
+      "model_variant": null,
+      "years": "2021-24",
+      "year_list": [
         2021,
         2022,
         2023,
@@ -5896,8 +6163,9 @@
       "name": "Toyota Camry Hybrid 2018-20",
       "make": "Toyota",
       "model": "Camry Hybrid",
-      "model_original": "Camry Hybrid 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -5918,8 +6186,9 @@
       "name": "Toyota Camry Hybrid 2021-24",
       "make": "Toyota",
       "model": "Camry Hybrid",
-      "model_original": "Camry Hybrid 2021-24",
-      "years": [
+      "model_variant": null,
+      "years": "2021-24",
+      "year_list": [
         2021,
         2022,
         2023,
@@ -5941,8 +6210,9 @@
       "name": "Toyota Corolla 2017-19",
       "make": "Toyota",
       "model": "Corolla",
-      "model_original": "Corolla 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -5963,8 +6233,9 @@
       "name": "Toyota Corolla 2020-22",
       "make": "Toyota",
       "model": "Corolla",
-      "model_original": "Corolla 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -5985,8 +6256,9 @@
       "name": "Toyota Corolla Cross (Non-US only) 2020-23",
       "make": "Toyota",
       "model": "Corolla Cross",
-      "model_original": "Corolla Cross (Non-US only) 2020-23",
-      "years": [
+      "model_variant": "(Non-US only)",
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6008,8 +6280,9 @@
       "name": "Toyota Corolla Cross Hybrid (Non-US only) 2020-22",
       "make": "Toyota",
       "model": "Corolla Cross Hybrid",
-      "model_original": "Corolla Cross Hybrid (Non-US only) 2020-22",
-      "years": [
+      "model_variant": "(Non-US only)",
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -6030,8 +6303,9 @@
       "name": "Toyota Corolla Hatchback 2019-22",
       "make": "Toyota",
       "model": "Corolla Hatchback",
-      "model_original": "Corolla Hatchback 2019-22",
-      "years": [
+      "model_variant": null,
+      "years": "2019-22",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -6053,8 +6327,9 @@
       "name": "Toyota Corolla Hybrid 2020-22",
       "make": "Toyota",
       "model": "Corolla Hybrid",
-      "model_original": "Corolla Hybrid 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -6075,8 +6350,9 @@
       "name": "Toyota Corolla Hybrid (South America only) 2020-23",
       "make": "Toyota",
       "model": "Corolla Hybrid",
-      "model_original": "Corolla Hybrid (South America only) 2020-23",
-      "years": [
+      "model_variant": "(South America only)",
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6098,8 +6374,9 @@
       "name": "Toyota Highlander 2017-19",
       "make": "Toyota",
       "model": "Highlander",
-      "model_original": "Highlander 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -6120,8 +6397,9 @@
       "name": "Toyota Highlander 2020-23",
       "make": "Toyota",
       "model": "Highlander",
-      "model_original": "Highlander 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6143,8 +6421,9 @@
       "name": "Toyota Highlander Hybrid 2017-19",
       "make": "Toyota",
       "model": "Highlander Hybrid",
-      "model_original": "Highlander Hybrid 2017-19",
-      "years": [
+      "model_variant": null,
+      "years": "2017-19",
+      "year_list": [
         2017,
         2018,
         2019
@@ -6165,8 +6444,9 @@
       "name": "Toyota Highlander Hybrid 2020-23",
       "make": "Toyota",
       "model": "Highlander Hybrid",
-      "model_original": "Highlander Hybrid 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6188,8 +6468,9 @@
       "name": "Toyota Mirai 2021",
       "make": "Toyota",
       "model": "Mirai",
-      "model_original": "Mirai 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "All",
@@ -6208,8 +6489,9 @@
       "name": "Toyota Prius 2016",
       "make": "Toyota",
       "model": "Prius",
-      "model_original": "Prius 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Toyota Safety Sense P",
@@ -6228,8 +6510,9 @@
       "name": "Toyota Prius 2017-20",
       "make": "Toyota",
       "model": "Prius",
-      "model_original": "Prius 2017-20",
-      "years": [
+      "model_variant": null,
+      "years": "2017-20",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -6251,8 +6534,9 @@
       "name": "Toyota Prius 2021-22",
       "make": "Toyota",
       "model": "Prius",
-      "model_original": "Prius 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -6272,8 +6556,9 @@
       "name": "Toyota Prius Prime 2017-20",
       "make": "Toyota",
       "model": "Prius Prime",
-      "model_original": "Prius Prime 2017-20",
-      "years": [
+      "model_variant": null,
+      "years": "2017-20",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -6295,8 +6580,9 @@
       "name": "Toyota Prius Prime 2021-22",
       "make": "Toyota",
       "model": "Prius Prime",
-      "model_original": "Prius Prime 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -6316,8 +6602,9 @@
       "name": "Toyota Prius v 2017",
       "make": "Toyota",
       "model": "Prius v",
-      "model_original": "Prius v 2017",
-      "years": [
+      "model_variant": null,
+      "years": "2017",
+      "year_list": [
         2017
       ],
       "supported_package": "Toyota Safety Sense P",
@@ -6336,8 +6623,9 @@
       "name": "Toyota RAV4 2016",
       "make": "Toyota",
       "model": "RAV4",
-      "model_original": "RAV4 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Toyota Safety Sense P",
@@ -6356,8 +6644,9 @@
       "name": "Toyota RAV4 2017-18",
       "make": "Toyota",
       "model": "RAV4",
-      "model_original": "RAV4 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -6377,8 +6666,9 @@
       "name": "Toyota RAV4 2019-21",
       "make": "Toyota",
       "model": "RAV4",
-      "model_original": "RAV4 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -6399,8 +6689,9 @@
       "name": "Toyota RAV4 2022",
       "make": "Toyota",
       "model": "RAV4",
-      "model_original": "RAV4 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -6419,8 +6710,9 @@
       "name": "Toyota RAV4 2023-25",
       "make": "Toyota",
       "model": "RAV4",
-      "model_original": "RAV4 2023-25",
-      "years": [
+      "model_variant": null,
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -6441,8 +6733,9 @@
       "name": "Toyota RAV4 Hybrid 2016",
       "make": "Toyota",
       "model": "RAV4 Hybrid",
-      "model_original": "RAV4 Hybrid 2016",
-      "years": [
+      "model_variant": null,
+      "years": "2016",
+      "year_list": [
         2016
       ],
       "supported_package": "Toyota Safety Sense P",
@@ -6461,8 +6754,9 @@
       "name": "Toyota RAV4 Hybrid 2017-18",
       "make": "Toyota",
       "model": "RAV4 Hybrid",
-      "model_original": "RAV4 Hybrid 2017-18",
-      "years": [
+      "model_variant": null,
+      "years": "2017-18",
+      "year_list": [
         2017,
         2018
       ],
@@ -6482,8 +6776,9 @@
       "name": "Toyota RAV4 Hybrid 2019-21",
       "make": "Toyota",
       "model": "RAV4 Hybrid",
-      "model_original": "RAV4 Hybrid 2019-21",
-      "years": [
+      "model_variant": null,
+      "years": "2019-21",
+      "year_list": [
         2019,
         2020,
         2021
@@ -6504,8 +6799,9 @@
       "name": "Toyota RAV4 Hybrid 2022",
       "make": "Toyota",
       "model": "RAV4 Hybrid",
-      "model_original": "RAV4 Hybrid 2022",
-      "years": [
+      "model_variant": null,
+      "years": "2022",
+      "year_list": [
         2022
       ],
       "supported_package": "All",
@@ -6524,8 +6820,9 @@
       "name": "Toyota RAV4 Hybrid 2023-25",
       "make": "Toyota",
       "model": "RAV4 Hybrid",
-      "model_original": "RAV4 Hybrid 2023-25",
-      "years": [
+      "model_variant": null,
+      "years": "2023-25",
+      "year_list": [
         2023,
         2024,
         2025
@@ -6546,8 +6843,9 @@
       "name": "Toyota Sienna 2018-20",
       "make": "Toyota",
       "model": "Sienna",
-      "model_original": "Sienna 2018-20",
-      "years": [
+      "model_variant": null,
+      "years": "2018-20",
+      "year_list": [
         2018,
         2019,
         2020
@@ -6568,8 +6866,9 @@
       "name": "Volkswagen Arteon 2018-23",
       "make": "Volkswagen",
       "model": "Arteon",
-      "model_original": "Arteon 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -6595,8 +6894,9 @@
       "name": "Volkswagen Arteon eHybrid 2020-23",
       "make": "Volkswagen",
       "model": "Arteon eHybrid",
-      "model_original": "Arteon eHybrid 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6620,8 +6920,9 @@
       "name": "Volkswagen Arteon R 2020-23",
       "make": "Volkswagen",
       "model": "Arteon R",
-      "model_original": "Arteon R 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6645,8 +6946,9 @@
       "name": "Volkswagen Arteon Shooting Brake 2020-23",
       "make": "Volkswagen",
       "model": "Arteon Shooting Brake",
-      "model_original": "Arteon Shooting Brake 2020-23",
-      "years": [
+      "model_variant": null,
+      "years": "2020-23",
+      "year_list": [
         2020,
         2021,
         2022,
@@ -6670,8 +6972,9 @@
       "name": "Volkswagen Atlas 2018-23",
       "make": "Volkswagen",
       "model": "Atlas",
-      "model_original": "Atlas 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -6697,8 +7000,9 @@
       "name": "Volkswagen Atlas Cross Sport 2020-22",
       "make": "Volkswagen",
       "model": "Atlas Cross Sport",
-      "model_original": "Atlas Cross Sport 2020-22",
-      "years": [
+      "model_variant": null,
+      "years": "2020-22",
+      "year_list": [
         2020,
         2021,
         2022
@@ -6721,8 +7025,9 @@
       "name": "Volkswagen California 2021-23",
       "make": "Volkswagen",
       "model": "California",
-      "model_original": "California 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -6745,8 +7050,9 @@
       "name": "Volkswagen Caravelle 2020",
       "make": "Volkswagen",
       "model": "Caravelle",
-      "model_original": "Caravelle 2020",
-      "years": [
+      "model_variant": null,
+      "years": "2020",
+      "year_list": [
         2020
       ],
       "supported_package": "Adaptive Cruise Control (ACC) & Lane Assist",
@@ -6767,8 +7073,9 @@
       "name": "Volkswagen CC 2018-22",
       "make": "Volkswagen",
       "model": "CC",
-      "model_original": "CC 2018-22",
-      "years": [
+      "model_variant": null,
+      "years": "2018-22",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -6793,8 +7100,9 @@
       "name": "Volkswagen Crafter 2017-24",
       "make": "Volkswagen",
       "model": "Crafter",
-      "model_original": "Crafter 2017-24",
-      "years": [
+      "model_variant": null,
+      "years": "2017-24",
+      "year_list": [
         2017,
         2018,
         2019,
@@ -6822,8 +7130,9 @@
       "name": "Volkswagen e-Crafter 2018-24",
       "make": "Volkswagen",
       "model": "e-Crafter",
-      "model_original": "e-Crafter 2018-24",
-      "years": [
+      "model_variant": null,
+      "years": "2018-24",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -6850,8 +7159,9 @@
       "name": "Volkswagen e-Golf 2014-20",
       "make": "Volkswagen",
       "model": "e-Golf",
-      "model_original": "e-Golf 2014-20",
-      "years": [
+      "model_variant": null,
+      "years": "2014-20",
+      "year_list": [
         2014,
         2015,
         2016,
@@ -6878,8 +7188,9 @@
       "name": "Volkswagen Golf 2015-20",
       "make": "Volkswagen",
       "model": "Golf",
-      "model_original": "Golf 2015-20",
-      "years": [
+      "model_variant": null,
+      "years": "2015-20",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -6905,8 +7216,9 @@
       "name": "Volkswagen Golf Alltrack 2015-19",
       "make": "Volkswagen",
       "model": "Golf Alltrack",
-      "model_original": "Golf Alltrack 2015-19",
-      "years": [
+      "model_variant": null,
+      "years": "2015-19",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -6931,8 +7243,9 @@
       "name": "Volkswagen Golf GTD 2015-20",
       "make": "Volkswagen",
       "model": "Golf GTD",
-      "model_original": "Golf GTD 2015-20",
-      "years": [
+      "model_variant": null,
+      "years": "2015-20",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -6958,8 +7271,9 @@
       "name": "Volkswagen Golf GTE 2015-20",
       "make": "Volkswagen",
       "model": "Golf GTE",
-      "model_original": "Golf GTE 2015-20",
-      "years": [
+      "model_variant": null,
+      "years": "2015-20",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -6985,8 +7299,9 @@
       "name": "Volkswagen Golf GTI 2015-21",
       "make": "Volkswagen",
       "model": "Golf GTI",
-      "model_original": "Golf GTI 2015-21",
-      "years": [
+      "model_variant": null,
+      "years": "2015-21",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -7013,8 +7328,9 @@
       "name": "Volkswagen Golf R 2015-19",
       "make": "Volkswagen",
       "model": "Golf R",
-      "model_original": "Golf R 2015-19",
-      "years": [
+      "model_variant": null,
+      "years": "2015-19",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -7039,8 +7355,9 @@
       "name": "Volkswagen Golf SportsVan 2015-20",
       "make": "Volkswagen",
       "model": "Golf SportsVan",
-      "model_original": "Golf SportsVan 2015-20",
-      "years": [
+      "model_variant": null,
+      "years": "2015-20",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -7066,8 +7383,9 @@
       "name": "Volkswagen Grand California 2019-24",
       "make": "Volkswagen",
       "model": "Grand California",
-      "model_original": "Grand California 2019-24",
-      "years": [
+      "model_variant": null,
+      "years": "2019-24",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -7093,8 +7411,9 @@
       "name": "Volkswagen Jetta 2019-23",
       "make": "Volkswagen",
       "model": "Jetta",
-      "model_original": "Jetta 2019-23",
-      "years": [
+      "model_variant": null,
+      "years": "2019-23",
+      "year_list": [
         2019,
         2020,
         2021,
@@ -7119,8 +7438,9 @@
       "name": "Volkswagen Jetta GLI 2021-23",
       "make": "Volkswagen",
       "model": "Jetta GLI",
-      "model_original": "Jetta GLI 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -7143,8 +7463,9 @@
       "name": "Volkswagen Passat 2015-22",
       "make": "Volkswagen",
       "model": "Passat",
-      "model_original": "Passat 2015-22",
-      "years": [
+      "model_variant": null,
+      "years": "2015-22",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -7172,8 +7493,9 @@
       "name": "Volkswagen Passat Alltrack 2015-22",
       "make": "Volkswagen",
       "model": "Passat Alltrack",
-      "model_original": "Passat Alltrack 2015-22",
-      "years": [
+      "model_variant": null,
+      "years": "2015-22",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -7201,8 +7523,9 @@
       "name": "Volkswagen Passat GTE 2015-22",
       "make": "Volkswagen",
       "model": "Passat GTE",
-      "model_original": "Passat GTE 2015-22",
-      "years": [
+      "model_variant": null,
+      "years": "2015-22",
+      "year_list": [
         2015,
         2016,
         2017,
@@ -7230,8 +7553,9 @@
       "name": "Volkswagen Polo 2018-23",
       "make": "Volkswagen",
       "model": "Polo",
-      "model_original": "Polo 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -7255,8 +7579,9 @@
       "name": "Volkswagen Polo GTI 2018-23",
       "make": "Volkswagen",
       "model": "Polo GTI",
-      "model_original": "Polo GTI 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -7280,8 +7605,9 @@
       "name": "Volkswagen T-Cross 2021",
       "make": "Volkswagen",
       "model": "T-Cross",
-      "model_original": "T-Cross 2021",
-      "years": [
+      "model_variant": null,
+      "years": "2021",
+      "year_list": [
         2021
       ],
       "supported_package": "Adaptive Cruise Control (ACC) & Lane Assist",
@@ -7300,8 +7626,9 @@
       "name": "Volkswagen T-Roc 2018-23",
       "make": "Volkswagen",
       "model": "T-Roc",
-      "model_original": "T-Roc 2018-23",
-      "years": [
+      "model_variant": null,
+      "years": "2018-23",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -7327,8 +7654,9 @@
       "name": "Volkswagen Taos 2022-24",
       "make": "Volkswagen",
       "model": "Taos",
-      "model_original": "Taos 2022-24",
-      "years": [
+      "model_variant": null,
+      "years": "2022-24",
+      "year_list": [
         2022,
         2023,
         2024
@@ -7351,8 +7679,9 @@
       "name": "Volkswagen Teramont 2018-22",
       "make": "Volkswagen",
       "model": "Teramont",
-      "model_original": "Teramont 2018-22",
-      "years": [
+      "model_variant": null,
+      "years": "2018-22",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -7377,8 +7706,9 @@
       "name": "Volkswagen Teramont Cross Sport 2021-22",
       "make": "Volkswagen",
       "model": "Teramont Cross Sport",
-      "model_original": "Teramont Cross Sport 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -7400,8 +7730,9 @@
       "name": "Volkswagen Teramont X 2021-22",
       "make": "Volkswagen",
       "model": "Teramont X",
-      "model_original": "Teramont X 2021-22",
-      "years": [
+      "model_variant": null,
+      "years": "2021-22",
+      "year_list": [
         2021,
         2022
       ],
@@ -7423,8 +7754,9 @@
       "name": "Volkswagen Tiguan 2018-24",
       "make": "Volkswagen",
       "model": "Tiguan",
-      "model_original": "Tiguan 2018-24",
-      "years": [
+      "model_variant": null,
+      "years": "2018-24",
+      "year_list": [
         2018,
         2019,
         2020,
@@ -7451,8 +7783,9 @@
       "name": "Volkswagen Tiguan eHybrid 2021-23",
       "make": "Volkswagen",
       "model": "Tiguan eHybrid",
-      "model_original": "Tiguan eHybrid 2021-23",
-      "years": [
+      "model_variant": null,
+      "years": "2021-23",
+      "year_list": [
         2021,
         2022,
         2023
@@ -7475,8 +7808,9 @@
       "name": "Volkswagen Touran 2016-23",
       "make": "Volkswagen",
       "model": "Touran",
-      "model_original": "Touran 2016-23",
-      "years": [
+      "model_variant": null,
+      "years": "2016-23",
+      "year_list": [
         2016,
         2017,
         2018,
