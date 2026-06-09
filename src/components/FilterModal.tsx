@@ -314,7 +314,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
             <div class="bg-[#3a1519] rounded-t-4xl">
               {/* Drawer handle */}
               <div class="flex justify-center pt-4 pb-3">
-                <div class="w-12 h-1.5 rounded-full shadow-sm bg-[#292929]" />
+                <div class="w-12 h-1.5 rounded-full bg-[#8a7076]" />
               </div>
 
               {/* Header */}
