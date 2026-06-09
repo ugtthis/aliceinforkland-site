@@ -26,6 +26,31 @@ body {
   font-family: var(--font-mono);
 }
 
+/* Scrollbar */
+* {
+  scrollbar-color: #6a4d54 #120b0d;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #6a4d54;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #8a7076;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #120b0d;
+}
+
 .mobile-drawer-viewport-safe {
   /* Base conservative fallback for all browsers */
   max-height: 85vh;
