@@ -35,9 +35,9 @@ export default function Home() {
               type="button"
               onClick={() => setIsCompareMode(false)}
               class={cn(
-                'flex items-center justify-center p-2 transition-colors cursor-pointer',
+                'flex items-center justify-center p-2 border-2 border-transparent transition-colors cursor-pointer',
                 !isCompareMode()
-                  ? 'bg-[#242424] text-white border-2 border-[#741b26] shadow-md/70'
+                  ? 'bg-[#242424] text-white border-[#741b26] shadow-md/70'
                   : 'bg-[#34282b] text-white/55 hover:bg-[#4a393d] hover:text-white/80'
               )}
               aria-label="Grid view"
@@ -48,9 +48,9 @@ export default function Home() {
               type="button"
               onClick={() => setIsCompareMode(true)}
               class={cn(
-                'flex items-center justify-center p-2 transition-colors cursor-pointer',
+                'flex items-center justify-center p-2 border-2 border-transparent transition-colors cursor-pointer',
                 isCompareMode()
-                  ? 'bg-[#242424] text-white border-2 border-[#741b26] shadow-md/70'
+                  ? 'bg-[#242424] text-white border-[#741b26] shadow-md/70'
                   : 'bg-[#34282b] text-white/55 hover:bg-[#4a393d] hover:text-white/80'
               )}
               aria-label="List view"
