@@ -3,8 +3,6 @@ import { createSignal, type Accessor, type Setter, createMemo } from 'solid-js'
 import type { Car } from '~/types/CarDataTypes'
 import { normalize } from '~/lib/utils'
 import carData from '~/data/metadata.json'
-import longitudinalReports from '~/data/longitudinal_reports.json'
-import lateralReports from '~/data/lateral_reports.json'
 
 type SearchableCar = Car & {
   searchText: string
@@ -43,8 +41,6 @@ export type FilterState = {
   year: string
   hasUserVideo: string
   hasSetupVideo: string
-  hasLongitudinalReport: string
-  hasLateralReport: string
 }
 
 export const filterLabels = {
@@ -53,8 +49,6 @@ export const filterLabels = {
   supportLevel: 'Support',
   hasUserVideo: 'Has Video',
   hasSetupVideo: 'Has Install Video',
-  hasLongitudinalReport: 'Has Longitudinal Report',
-  hasLateralReport: 'Has Lateral Report',
 } as const
 
 export type SortField = keyof Pick<Car, 'make' | 'support_type' | 'year_list'>
@@ -87,8 +81,6 @@ export const FilterProvider = (props: ParentProps) => {
     year: '',
     hasUserVideo: '',
     hasSetupVideo: '',
-    hasLongitudinalReport: '',
-    hasLateralReport: '',
   })
 
   const [searchQuery, setSearchQuery] = createSignal('')
@@ -133,27 +125,6 @@ export const FilterProvider = (props: ParentProps) => {
         result = result.filter((car) => car.setup_video === null || car.setup_video === '')
       }
     }
-    if (currentFilters.hasLongitudinalReport) {
-      const shouldHaveReport = currentFilters.hasLongitudinalReport === 'Yes'
-
-      result = result.filter((car) => {
-        const isHybrid = car.name.toLowerCase().includes('hybrid')
-        const key = isHybrid ? `${car.car_fingerprint} (hybrid)` : car.car_fingerprint
-        const hasReport = (longitudinalReports as Record<string, unknown>)[key] !== undefined
-        return shouldHaveReport === hasReport
-      })
-    }
-    if (currentFilters.hasLateralReport) {
-      const shouldHaveReport = currentFilters.hasLateralReport === 'Yes'
-
-      result = result.filter((car) => {
-        const isHybrid = car.name.toLowerCase().includes('hybrid')
-        const key = isHybrid ? `${car.car_fingerprint} (hybrid)` : car.car_fingerprint
-        const hasReport = (lateralReports as Record<string, unknown>)[key] !== undefined
-        return shouldHaveReport === hasReport
-      })
-    }
-
     const query = searchQuery().trim()
     if (query) {
       result = result.filter((car) => matchesQuery(car, query))
@@ -210,8 +181,6 @@ export const FilterProvider = (props: ParentProps) => {
       year: '',
       hasUserVideo: '',
       hasSetupVideo: '',
-      hasLongitudinalReport: '',
-      hasLateralReport: '',
     })
     setSearchQuery('')
   }
