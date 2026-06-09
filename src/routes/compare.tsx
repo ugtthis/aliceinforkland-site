@@ -197,8 +197,10 @@ export default function ComparePage() {
 
     let resizeObserver: ResizeObserver | undefined
     if (tableContainerRef) {
+      // Defer to next frame so state updates don't re-trigger this observer
+      // within the same resize cycle (avoids "ResizeObserver loop" warning).
       resizeObserver = new ResizeObserver(() => {
-        detectHorizontalScroll()
+        requestAnimationFrame(() => detectHorizontalScroll())
       })
       resizeObserver.observe(tableContainerRef)
 
