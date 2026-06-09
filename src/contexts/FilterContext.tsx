@@ -40,7 +40,7 @@ function getRelevanceScore(car: Car, normalizedQuery: string): number {
 }
 
 export type FilterState = {
-  supportLevel: string
+  source: string
   make: string
   year: string
   hasUserVideo: string
@@ -50,7 +50,7 @@ export type FilterState = {
 export const filterLabels = {
   year: 'Year',
   make: 'Make',
-  supportLevel: 'Support',
+  source: 'Source',
   hasUserVideo: 'Has Video',
   hasSetupVideo: 'Has Install Video',
 } as const
@@ -80,7 +80,7 @@ const FilterContext = createContext<FilterContextValue>()
 
 export const FilterProvider = (props: ParentProps) => {
   const [filters, setFilters] = createSignal<FilterState>({
-    supportLevel: '',
+    source: '',
     make: '',
     year: '',
     hasUserVideo: '',
@@ -102,9 +102,9 @@ export const FilterProvider = (props: ParentProps) => {
   const filteredResults = createMemo(() => {
     let result = [...searchableCars]
     const currentFilters = filters()
-    if (currentFilters.supportLevel) {
+    if (currentFilters.source) {
       result = result.filter(
-        (car) => car.source === currentFilters.supportLevel,
+        (car) => car.source === currentFilters.source,
       )
     }
     if (currentFilters.make) {
@@ -180,7 +180,7 @@ export const FilterProvider = (props: ParentProps) => {
 
   const clearAllFilters = () => {
     setFilters({
-      supportLevel: '',
+      source: '',
       make: '',
       year: '',
       hasUserVideo: '',

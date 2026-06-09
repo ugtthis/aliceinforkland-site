@@ -64,7 +64,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
 
   // Get unique values for dropdowns
   const typedCarData = carData as Car[]
-  const supportLevels = [...new Set(typedCarData.map((car) => car.source))].sort()
+  const sources = [...new Set(typedCarData.map((car) => car.source))].sort()
   const makes = [...new Set(typedCarData.map((car) => car.make))].sort()
   const years: string[] = [
     ...new Set(typedCarData.flatMap((car) => car.year_list.map(String))),
@@ -101,7 +101,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
   const sortOptions: { label: string; value: SortField }[] = [
     { label: 'Make', value: 'make' },
     { label: 'Year', value: 'years' },
-    { label: 'Support Level', value: 'source' },
+    { label: 'Source', value: 'source' },
   ]
 
   const FilterContent = () => (
@@ -190,11 +190,11 @@ const FilterModal: Component<FilterModalProps> = (props) => {
           <h2 class="mb-4 text-lg font-semibold">FILTER BY:</h2>
           <div class="space-y-4">
             <CustomDropdown
-              label="Support Level"
-              options={supportLevels}
-              value={filters().supportLevel}
+              label="Source"
+              options={sources}
+              value={filters().source}
               onChange={(value) =>
-                setFilters((prev) => ({ ...prev, supportLevel: value }))
+                setFilters((prev) => ({ ...prev, source: value }))
               }
             />
 
