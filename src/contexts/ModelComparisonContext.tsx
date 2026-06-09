@@ -5,7 +5,7 @@ type ModelComparisonContextValue = {
   isCompareMode: Accessor<boolean>
   setIsCompareMode: (value: boolean) => void
   selectedCars: Accessor<string[]>
-  toggleCarSelection: (carName: string) => void
+  toggleCarSelection: (carId: string) => void
   clearSelectedCars: () => void
 }
 
@@ -19,12 +19,12 @@ export const ModelComparisonProvider = (props: ParentProps) => {
     setIsInCompareMode(enabled)
   }
 
-  const toggleCarSelection = (carName: string) => {
+  const toggleCarSelection = (carId: string) => {
     setSelectedCars((prev) => {
-      if (prev.includes(carName)) {
-        return prev.filter((name) => name !== carName)
+      if (prev.includes(carId)) {
+        return prev.filter((id) => id !== carId)
       } else if (prev.length < 6) {
-        return [...prev, carName]
+        return [...prev, carId]
       }
       return prev
     })

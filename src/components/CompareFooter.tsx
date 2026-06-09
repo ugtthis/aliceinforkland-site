@@ -1,29 +1,18 @@
-import { type Component, Show, Index, createMemo } from 'solid-js'
+import { type Component, Show, Index } from 'solid-js'
 import { useNavigate } from '@solidjs/router'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 import { cn, slugify } from '~/lib/utils'
-import { getSupportTypeGradient } from '~/types/supportType'
-import type { Car } from '~/types/CarDataTypes'
-import metadata from '~/data/metadata.json'
 import CloseIconSvg from '~/lib/icons/close.svg?raw'
 import RightArrowSvg from '~/lib/icons/right-arrow.svg?raw'
 
 const CompareFooter: Component = () => {
   const { selectedCars, clearSelectedCars } = useModelComparison()
   const navigate = useNavigate()
-  const typedCarData = metadata as Car[]
-
-  const carSupportTypeGradients = createMemo(() => {
-    return selectedCars().map(carName => {
-      const car = typedCarData.find(c => c.name === carName)
-      return getSupportTypeGradient(car?.support_type)
-    })
-  })
 
   const handleCompare = () => {
     if (selectedCars().length >= 2) {
-      // Navigate to compare page with slugified car names (clean URLs)
-      const carSlugs = selectedCars().map(name => slugify(name)).join(',')
+      // Navigate to compare page with slugified unique IDs
+      const carSlugs = selectedCars().map(id => slugify(id)).join(',')
       navigate(`/compare?cars=${encodeURIComponent(carSlugs)}`)
     }
   }
@@ -45,7 +34,7 @@ const CompareFooter: Component = () => {
                       i < selectedCars().length
                         ? cn(
                             'h-7 w-5 border-4 border-[#101010] bg-gradient-to-b',
-                            carSupportTypeGradients()[i],
+                            'from-[#c76a78] to-[#5a2a32]',
                             'shadow-[2px_4px_3px_rgba(0,0,0,0.4),inset_0_3px_8px_rgba(0,0,0,0.8),inset_0_-2px_4px_rgba(255,255,255,0.1)]',
                           )
                         : 'h-5 w-4 border-2 border-white/20 shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]',
