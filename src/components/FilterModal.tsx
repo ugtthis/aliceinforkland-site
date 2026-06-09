@@ -311,7 +311,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
             )}
           >
             {/* Mobile header with drawer handle */}
-            <div class="bg-[#616161] rounded-t-4xl">
+            <div class="bg-[#3a1519] rounded-t-4xl">
               {/* Drawer handle */}
               <div class="flex justify-center pt-4 pb-3">
                 <div class="w-12 h-1.5 rounded-full shadow-sm bg-[#292929]" />
@@ -365,7 +365,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
           )}
         >
           {/* Desktop header */}
-          <div class="flex flex-shrink-0 items-center justify-between border-b border-black bg-accent p-4">
+          <div class="flex flex-shrink-0 items-center justify-between border-b border-black bg-[#3a1519] p-4">
             <Dialog.Label class="text-xl font-bold text-white">
               Filter & Sort
             </Dialog.Label>
