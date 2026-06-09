@@ -240,7 +240,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
       {/* Fixed Footer section */}
       <div class="flex-shrink-0 p-6 border-t border-white/10 bg-surface text-white shadow-[0_-6px_16px_rgba(0,0,0,0.2)]">
         <div
-          class="p-3 mb-4 font-semibold text-center bg-black border border-white"
+          class="p-3 mb-4 font-semibold text-center bg-[#2d2227]"
           style={{ color: getResultsColor(resultCount() || 0) }}
         >
           {resultCount() || 0} RESULT{(resultCount() || 0) !== 1 ? 'S' : ''}
@@ -267,7 +267,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
           </button>
           <button
             onClick={() => props.onOpenChange(false)}
-            class="relative flex flex-1 items-center justify-center gap-2 border-2 border-black p-3 font-medium transition-colors cursor-pointer"
+            class="relative flex flex-1 items-center justify-center gap-2 border-4 border-black p-3 font-medium transition-colors cursor-pointer"
             style={{
               color: '#ffffff',
               'background-color': `color-mix(in srgb, ${getResultsColor(resultCount() || 0)} 35%, #12090b 65%)`
