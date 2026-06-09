@@ -3,6 +3,7 @@ import { createSignal } from 'solid-js'
 
 import FilterSvg from '~/lib/icons/filter.svg?raw'
 import SearchGlassSvg from '~/lib/icons/search-glass.svg?raw'
+import AifLogo from '~/lib/icons/alice-in-forkland.png'
 import ShineBorder from '~/components/ui/ShineBorder'
 import FilterModal from '~/components/FilterModal'
 import { useFilter } from '~/contexts/FilterContext'
@@ -21,6 +22,12 @@ const Header: Component = () => {
           'shadow-[0_6px_20px_rgba(0,0,0,0.6)] gradient-dark-red md:py-8',
         )}
       >
+        <img
+          src={AifLogo}
+          alt="Alice in Forkland"
+          class="h-auto w-[300px]"
+          loading="eager"
+        />
         <div class="flex w-full justify-center px-14 max-[410px]:px-8">
           <div class="flex max-w-full items-center gap-2 md:gap-3.5">
             <div class="min-w-0">
@@ -37,8 +44,8 @@ const Header: Component = () => {
                   }}
                   maxLength={45}
                   class={cn(
-                    'h-12 w-[400px] max-w-full pl-12 pr-6 bg-white',
-                    'font-sans text-xs outline-none sm:text-sm md:text-base',
+                    'h-12 w-[400px] max-w-full border border-[#6a4d54] bg-[#171215] pl-12 pr-6 text-[#f1e7e9]',
+                    'font-sans text-xs placeholder:text-[#b9a8ad] outline-none sm:text-sm md:text-base',
                   )}
                 />
                 <span class="absolute inset-y-0 left-0 grid w-12 place-items-center text-gray-500" aria-hidden="true">
@@ -51,11 +58,11 @@ const Header: Component = () => {
               type="button"
               onClick={() => setIsFilterOpen(true)}
               class={cn(
-                'grid place-items-center size-[48px] flex-shrink-0 px-0 py-0 border-7 border-[#C7C7C7]',
-                'bg-[#989898] transition-colors cursor-pointer hover:bg-[#7a7a7a]',
+                'grid place-items-center size-[48px] flex-shrink-0 px-0 py-0 border-7 border-[#6a4d54]',
+                'bg-[#2d2227] transition-colors cursor-pointer hover:bg-[#3a2a30]',
               )}
             >
-              <div class="size-5 text-[#D4D4D4]" innerHTML={FilterSvg} />
+              <div class="size-5 text-[#efe3e6df]" innerHTML={FilterSvg} />
             </button>
           </div>
         </div>
