@@ -1,25 +1,18 @@
-import type { SupportType } from '~/types/supportType'
-
 export type Car = {
+  id: string
   name: string
+  source: string
   make: string
   model: string
+  model_variant?: string | null
   years: string
-  year_list: string[]
-  package: string
+  year_list: number[]
+  supported_package: string
+  acc: string
+  no_acc_below: string
+  no_alc_below: string
+  auto_resume_available: boolean
   video: string | null
   setup_video: string | null
-  footnotes: string[]
-  setup_notes?: string[]
-  support_type: SupportType
-  car_fingerprint: string
-  auto_resume: boolean
-  harness: string | null
-  mass_curb_weight: number
-  steer_ratio: number
-  wheelbase: number
-  min_steer_speed: number | null
-  min_enable_speed: number
-  max_lateral_accel?: number | null
-  [key: string]: string | number | boolean | string[] | null | undefined | Record<string, unknown>
+  footnotes?: Record<string, Array<string | number>>
 }

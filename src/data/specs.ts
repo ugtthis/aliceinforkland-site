@@ -1,14 +1,16 @@
+import type { Car } from '~/types/CarDataTypes'
+
 type SpecDefinition = {
   label: string
-  key: string
+  key: keyof Car
   category: string
 }
 
 export const SPECS: SpecDefinition[] = [
-  { label: 'Supported Package', key: 'package', category: 'Compatibility Info' },
-  { label: 'ACC', key: 'longitudinal', category: 'Compatibility Info' },
-  { label: 'No ACC below', key: 'min_enable_speed', category: 'Compatibility Info' },
-  { label: 'No ALC below', key: 'min_steer_speed', category: 'Compatibility Info' },
+  { label: 'Supported Package', key: 'supported_package', category: 'Compatibility Info' },
+  { label: 'ACC', key: 'acc', category: 'Compatibility Info' },
+  { label: 'No ACC below', key: 'no_acc_below', category: 'Compatibility Info' },
+  { label: 'No ALC below', key: 'no_alc_below', category: 'Compatibility Info' },
   { label: 'Video', key: 'video', category: 'Compatibility Info' },
   { label: 'Setup Video', key: 'setup_video', category: 'Compatibility Info' },
 ]
