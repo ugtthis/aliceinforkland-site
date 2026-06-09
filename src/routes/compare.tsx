@@ -1,12 +1,10 @@
 import { useSearchParams, useNavigate } from '@solidjs/router'
 import { createMemo, For, Show, createSignal, onMount, onCleanup, createEffect } from 'solid-js'
 import type { Car } from '~/types/CarDataTypes'
-import { getSupportTypeColor } from '~/types/supportType'
 import { cn, hasObjectEntries, slugify } from '~/lib/utils'
-import metadata from '~/data/metadata.json'
+import { carData } from '~/data/cars'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 import { SPECS_BY_CATEGORY } from '~/data/specs'
-import { openSupportTypeModal } from '~/contexts/SupportTypeModalContext'
 import UpArrowSvg from '~/lib/icons/up-arrow.svg?raw'
 import RightArrowSvg from '~/lib/icons/right-arrow.svg?raw'
 import RotateLeftSvg from '~/lib/icons/rotate-left.svg?raw'
@@ -69,20 +67,20 @@ export default function ComparePage() {
 
     const carsString = Array.isArray(carsParam) ? carsParam[0] : carsParam
     const carSlugs = carsString.split(',').slice(0, 6)
-    const typedCarData = metadata as Car[]
+    const typedCarData = carData as Car[]
 
     return carSlugs
-      .map(slug => typedCarData.find(car => slugify(car.name) === slug))
+      .map(slug => typedCarData.find(car => slugify(car.id) === slug))
       .filter(Boolean) as Car[]
   })
 
-  const removeCar = (carName: string) => {
-    const remaining = selectedCars().filter(car => car.name !== carName)
+  const removeCar = (carId: string) => {
+    const remaining = selectedCars().filter(car => car.id !== carId)
 
     if (remaining.length < MIN_CARS_FOR_COMPARISON) {
       navigateToCompareMode()
     } else {
-      const newParams = remaining.map(car => slugify(car.name)).join(',')
+      const newParams = remaining.map(car => slugify(car.id)).join(',')
       setSearchParams({ cars: newParams })
     }
 
@@ -313,11 +311,10 @@ export default function ComparePage() {
               <div class="flex justify-between items-center px-4 mx-auto md:px-6 max-w-[2200px]">
                 <div class="flex gap-3 items-center">
                   <div class={cn(
-                    'py-1.5 px-3 border-4 border-white/80',
-                    getSupportTypeColor(selectedCars()[highlight().selected!.columnIndex].support_type),
+                    'py-1.5 px-3 border-4 border-white/80 bg-[#2d2227] text-[#efe3e6]',
                   )}>
                     <span class="text-xs font-bold uppercase md:text-sm">
-                      {selectedCars()[highlight().selected!.columnIndex].support_type}
+                      {selectedCars()[highlight().selected!.columnIndex].source}
                     </span>
                   </div>
                   <div class="text-white">
@@ -372,16 +369,14 @@ export default function ComparePage() {
                   {(car, columnIndex) => (
                     <div class="flex relative flex-col px-4 w-full h-full">
                         {/* Support Type Badge - Tab Style */}
-                        <button
-                          onClick={() => openSupportTypeModal(car.support_type)}
+                        <div
                           class={cn(
                             'relative z-10 block w-fit border-2 border-black border-b-0 py-0.5 px-2',
-                            'text-center transition-opacity cursor-pointer hover:opacity-80',
-                            getSupportTypeColor(car.support_type),
+                            'bg-[#2d2227] text-center text-[#efe3e6]',
                           )}
                         >
-                          <p class="text-xs font-bold uppercase">{car.support_type}</p>
-                        </button>
+                          <p class="text-xs font-bold uppercase">{car.source}</p>
+                        </div>
 
                         {/* Card */}
                         <div
@@ -400,7 +395,7 @@ export default function ComparePage() {
                           {/* Action Buttons */}
                           <div class="flex">
                             <button
-                              onClick={() => removeCar(car.name)}
+                              onClick={() => removeCar(car.id)}
                               class={cn(
                                 'flex flex-1 items-center justify-center py-1.5 bg-[#A07878] text-sm font-medium text-white',
                                 'transition-colors cursor-pointer hover:bg-[#8B6B6B]',
@@ -471,7 +466,6 @@ export default function ComparePage() {
                               const isObject = hasObjectEntries(value)
 
                               const getDisplayValue = () => {
-                                if (spec.format && value != null) return spec.format(value as unknown)
                                 if (value != null && typeof value === 'object') return 'N/A'
                                 return value?.toString() ?? 'N/A'
                               }
@@ -509,10 +503,10 @@ export default function ComparePage() {
                                     })()}
                                   >
                                     <div class="text-sm leading-relaxed">
-                                      <For each={Object.entries(value as Record<string, string>)}>
+                                      <For each={Object.entries(value as Record<string, unknown>)}>
                                         {([key, val]) => (
                                           <div>
-                                            <span class="font-bold">{key}:</span> {val}
+                                            <span class="font-bold">{key}:</span> {String(val)}
                                           </div>
                                         )}
                                       </For>
