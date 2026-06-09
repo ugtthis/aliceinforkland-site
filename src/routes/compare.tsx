@@ -341,7 +341,7 @@ export default function ComparePage() {
                   'cursor-pointer shadow-md/30 inset-shadow-[0_1px_2px_rgba(0,0,0,0.5)] hover:opacity-80',
                   isZoomedOut()
                     ? 'border-3 border-[#4a3439] bg-gradient-to-b from-[#24191c] to-[#0f0b0c] text-white'
-                    : 'border-3 border-green-900 bg-gradient-to-b from-[#4A9B6F] to-[#005925] text-white',
+                    : 'border-3 border-[#5c4247] bg-gradient-to-b from-[#5a1418] to-[#2d0c10] text-[#f3e8ea]',
                 )}
                 title={isZoomedOut() ? 'Reset zoom' : 'Zoom out to view full table'}
               >
