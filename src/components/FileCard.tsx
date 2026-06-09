@@ -12,7 +12,6 @@ import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
 import CheckSvg from '~/lib/icons/checkmark.svg?raw'
 import Checkmark2Svg from '~/lib/icons/checkmark-2.svg?raw'
 import CloseXIcon from '~/lib/icons/close-x.png'
-import { formatSpeed as formatEngageSpeed } from '~/lib/utils'
 import { getACCDescription, getAutoResumeDescription } from '~/data/descriptions'
 
 const RED_PNG_FILTER = "brightness(0) saturate(90%) invert(23%) sepia(89%) saturate(3520%) hue-rotate(352deg) brightness(85%) contrast(95%)"
@@ -105,14 +104,22 @@ const ExpandableRow = (props: ExpandableRowProps) => {
 const Card: Component<CardProps> = (props) => {
   const [expandedRow, setExpandedRow] = createSignal<string | null>(null)
   const { selectedCars, toggleCarSelection } = useModelComparison()
+  const sourceLabel = (props.car.source ?? '').trim()
+  const yearList = createMemo(() => props.car.year_list.map(String))
+  const carTitle = () => {
+    const variant = (props.car.model_variant ?? '').trim()
+    return variant.length > 0
+      ? `${props.car.make} ${props.car.model} ${variant}`
+      : `${props.car.make} ${props.car.model}`
+  }
 
   // Memoize the selected state to avoid unnecessary reactive dependencies
-  const isSelected = createMemo(() => selectedCars().includes(props.car.name))
+  const isSelected = createMemo(() => selectedCars().includes(props.car.id))
   const isDisabled = createMemo(() => !isSelected() && selectedCars().length >= 6)
 
   const getResumeIcon = () => {
-    if (props.car.auto_resume === true) return { icon: CheckSvg }
-    if (props.car.auto_resume === false) return { iconUrl: CloseXIcon }
+    if (props.car.auto_resume_available === true) return { icon: CheckSvg }
+    if (props.car.auto_resume_available === false) return { iconUrl: CloseXIcon }
     return {}
   }
 
@@ -120,14 +127,14 @@ const Card: Component<CardProps> = (props) => {
     label: "Resume from stop",
     value: "NA",
     ...getResumeIcon(),
-    description: getAutoResumeDescription(props.car.auto_resume),
+    description: getAutoResumeDescription(props.car.auto_resume_available),
     class: "border-2 border-border-soft"
   }
 
   const accRowProps = {
     label: "ACC",
-    value: props.car.longitudinal as string || "Stock",
-    description: getACCDescription(props.car.longitudinal as string || "Stock", props.car.min_enable_speed),
+    value: props.car.acc || "Stock",
+    description: getACCDescription(props.car.acc || "Stock"),
     class: "border-2 border-border-soft"
   }
 
@@ -150,7 +157,7 @@ const Card: Component<CardProps> = (props) => {
               <input
                 type="checkbox"
                 checked={isSelected()}
-                onChange={() => toggleCarSelection(props.car.name)}
+                onChange={() => toggleCarSelection(props.car.id)}
                 disabled={isDisabled()}
                 autocomplete="off" // Firefox browser fix to prevent restoring form state on refresh
                 class={cn(
@@ -159,7 +166,7 @@ const Card: Component<CardProps> = (props) => {
                   'transition-colors cursor-pointer',
                   'hover:bg-[#2e5232] disabled:cursor-not-allowed disabled:opacity-40',
                 )}
-                aria-label={`Select ${props.car.make} ${props.car.model}`}
+                aria-label={`Select ${carTitle()}`}
               />
               <div class="absolute inset-0 opacity-0 transition-opacity duration-75 pointer-events-none peer-checked:opacity-100">
                 <div class="flex size-7 items-center justify-center text-[#65e063]" innerHTML={Checkmark2Svg} />
@@ -172,9 +179,9 @@ const Card: Component<CardProps> = (props) => {
             {/* Year and Model - Mobile only */}
             <div class="flex flex-1 items-center border-b border-[#6a4d54] px-2 py-2.5 min-[370px]:border-b-0 min-[370px]:border-r">
               <h1 class="text-xs font-semibold leading-tight">
-                <HighlightText text={props.car.years} query={props.searchQuery} yearList={props.car.year_list as string[]} />
+                <HighlightText text={props.car.years} query={props.searchQuery} yearList={yearList()} />
                 {' '}
-                <HighlightText text={`${props.car.make} ${props.car.model}`} query={props.searchQuery} />
+                <HighlightText text={carTitle()} query={props.searchQuery} />
               </h1>
             </div>
 
@@ -186,7 +193,7 @@ const Card: Component<CardProps> = (props) => {
               )}
             >
               <span class="text-xs font-semibold leading-tight uppercase">
-                sunnypilot
+                {sourceLabel}
               </span>
             </div>
           </div>
@@ -194,14 +201,14 @@ const Card: Component<CardProps> = (props) => {
           {/* Year - Desktop only */}
           <div class="hidden items-center w-[110px] border-l border-r border-[#6a4d54] px-3 py-2.5 md:flex">
             <h2 class="text-base font-medium leading-tight">
-              <HighlightText text={props.car.years} query={props.searchQuery} yearList={props.car.year_list as string[]} />
+              <HighlightText text={props.car.years} query={props.searchQuery} yearList={yearList()} />
             </h2>
           </div>
 
           {/* Model name - Desktop only */}
           <div class="hidden flex-1 items-center border-r border-[#6a4d54] px-3 py-2.5 md:flex">
             <h1 class="text-lg font-semibold">
-              <HighlightText text={`${props.car.make} ${props.car.model}`} query={props.searchQuery} />
+              <HighlightText text={carTitle()} query={props.searchQuery} />
             </h1>
           </div>
 
@@ -213,7 +220,7 @@ const Card: Component<CardProps> = (props) => {
             )}
           >
             <span class="text-sm font-semibold leading-tight uppercase whitespace-nowrap">
-              sunnypilot
+              {sourceLabel}
             </span>
           </div>
 
@@ -225,7 +232,7 @@ const Card: Component<CardProps> = (props) => {
         {/* Support label */}
       <div class={supportLabelClass}>
         <p class="uppercase text-[16px]">
-          sunnypilot
+          {sourceLabel}
         </p>
       </div>
 
@@ -241,12 +248,12 @@ const Card: Component<CardProps> = (props) => {
           <div class="flex border-b border-[#6a4d54]">
             <div class="flex items-center px-2 py-2.5 border-r border-[#6a4d54]">
               <h2 class="text-lg">
-                <HighlightText text={props.car.years} query={props.searchQuery} yearList={props.car.year_list as string[]} />
+                <HighlightText text={props.car.years} query={props.searchQuery} yearList={yearList()} />
               </h2>
             </div>
             <div class="flex flex-1 items-center justify-between min-h-[60px] px-3 py-2.5">
               <h1 class="flex-1 pr-3 text-xl font-semibold">
-                <HighlightText text={`${props.car.make} ${props.car.model}`} query={props.searchQuery} />
+                <HighlightText text={carTitle()} query={props.searchQuery} />
               </h1>
               <div class={cn('ml-2 flex-shrink-0', !props.car.video && 'invisible')}>
                 <a
@@ -267,7 +274,7 @@ const Card: Component<CardProps> = (props) => {
 
           <div class="min-h-[60px] border-b border-[#6a4d54] px-2 py-2.5">
             <p class="font-sans text-sm text-[#e1d4d7]">
-              <strong>ADAS Package:</strong> <HighlightText text={props.car.package} query={props.searchQuery} />
+              <strong>ADAS Package:</strong> <HighlightText text={props.car.supported_package} query={props.searchQuery} />
             </p>
           </div>
           <div class="@container flex border-b border-[#6a4d54] p-3">
@@ -282,13 +289,13 @@ const Card: Component<CardProps> = (props) => {
             <div class="flex flex-col gap-2 flex-[1.618]">
               <div class="flex flex-1 flex-col justify-center border border-[#5f454c] bg-[#181316] px-2 py-1">
                 <p class="text-sm">
-                  <strong>ALC:</strong> {formatEngageSpeed(props.car.min_steer_speed)}
+                  <strong>ALC:</strong> {props.car.no_alc_below}
                 </p>
                 <p class="text-xs text-[#c9bbbf]">Automated Lane Centering</p>
               </div>
               <div class="flex flex-1 flex-col justify-center border border-[#5f454c] bg-[#181316] px-2 py-1">
                 <p class="text-sm">
-                  <strong>ACC:</strong> {formatEngageSpeed(props.car.min_enable_speed)}
+                  <strong>ACC:</strong> {props.car.no_acc_below}
                 </p>
                 <p class="text-xs text-[#c9bbbf]">Adaptive Cruise Control</p>
               </div>
@@ -299,7 +306,7 @@ const Card: Component<CardProps> = (props) => {
           {/* spacer for future drivetrain label */}
         </div>
 
-        <input type="checkbox" id={`toggle-${props.car.name}`} class="hidden peer" />
+        <input type="checkbox" id={`toggle-${props.car.id}`} class="hidden peer" />
 
         {/* Expanded Card Body */}
         <div
@@ -329,7 +336,7 @@ const Card: Component<CardProps> = (props) => {
 
         {/* Chevron button */}
         <label
-          for={`toggle-${props.car.name}`}
+          for={`toggle-${props.car.id}`}
           class={cn(
             'flex justify-center py-1 border-t border-[#6a4d54] bg-[#2b2025] text-[#ddcfd3] cursor-pointer',
             'peer-checked:bg-surface-secondary peer-checked:[&>div]:rotate-180',
