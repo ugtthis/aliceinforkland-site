@@ -306,13 +306,16 @@ const Card: Component<CardProps> = (props) => {
           {/* spacer for future drivetrain label */}
         </div>
 
+        {/* Persistent border seam */}
+        <div class="h-px bg-[#6a4d54]" />
+
         <input type="checkbox" id={`toggle-${props.car.id}`} class="hidden peer" />
 
         {/* Expanded Card Body */}
         <div
           class={cn(
             'max-h-0 overflow-hidden bg-surface-secondary transition-all duration-300',
-            'peer-checked:max-h-card-height peer-checked:border-t peer-checked:border-[#6a4d54]',
+            'peer-checked:max-h-card-height',
           )}
         >
           <div class="p-4">
@@ -338,8 +341,8 @@ const Card: Component<CardProps> = (props) => {
         <label
           for={`toggle-${props.car.id}`}
           class={cn(
-            'flex justify-center py-1 border-t border-[#6a4d54] bg-[#2b2025] text-[#ddcfd3] cursor-pointer',
-            'peer-checked:bg-surface-secondary peer-checked:[&>div]:rotate-180',
+            'flex justify-center py-1 border-t border-transparent bg-[#2b2025] text-[#ddcfd3] cursor-pointer',
+            'peer-checked:border-[#6a4d54] peer-checked:bg-surface-secondary peer-checked:[&>div]:rotate-180',
             'hover:bg-[#3a2a30] hover:text-[#f1e7e9] hover:duration-300 hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
             'max-md:bg-[#3a2a30] max-md:text-[#f1e7e9] max-md:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
             'peer-checked:max-md:shadow-none',
