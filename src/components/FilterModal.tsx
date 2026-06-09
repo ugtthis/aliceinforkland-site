@@ -14,8 +14,7 @@ import { BREAKPOINTS } from '~/utils/breakpoints'
 import CustomDropdown from '~/components/ui/CustomDropdown'
 import { useFilter, type SortField } from '~/contexts/FilterContext'
 import type { Car } from '~/types/CarDataTypes'
-import carData from '~/data/metadata.json'
-import { getSupportLevels } from '~/types/supportType'
+import { carData } from '~/data/cars'
 
 import { cn } from '~/lib/utils'
 import sortOrderIcon from '~/lib/icons/sort-order-icon.svg?url'
@@ -65,10 +64,10 @@ const FilterModal: Component<FilterModalProps> = (props) => {
 
   // Get unique values for dropdowns
   const typedCarData = carData as Car[]
-  const supportLevels = getSupportLevels()
+  const supportLevels = [...new Set(typedCarData.map((car) => car.source))].sort()
   const makes = [...new Set(typedCarData.map((car) => car.make))].sort()
   const years: string[] = [
-    ...new Set(typedCarData.flatMap((car) => car.year_list)),
+    ...new Set(typedCarData.flatMap((car) => car.year_list.map(String))),
   ].sort()
 
   const [openSort, setOpenSort] = createSignal(false)
@@ -101,8 +100,8 @@ const FilterModal: Component<FilterModalProps> = (props) => {
 
   const sortOptions: { label: string; value: SortField }[] = [
     { label: 'Make', value: 'make' },
-    { label: 'Year', value: 'year_list' },
-    { label: 'Support Level', value: 'support_type' },
+    { label: 'Year', value: 'years' },
+    { label: 'Support Level', value: 'source' },
   ]
 
   const FilterContent = () => (

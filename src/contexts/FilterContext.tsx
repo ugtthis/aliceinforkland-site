@@ -2,7 +2,7 @@ import { createContext, useContext, type ParentProps } from 'solid-js'
 import { createSignal, type Accessor, type Setter, createMemo } from 'solid-js'
 import type { Car } from '~/types/CarDataTypes'
 import { normalize } from '~/lib/utils'
-import carData from '~/data/metadata.json'
+import { carData } from '~/data/cars'
 
 type SearchableCar = Car & {
   searchText: string
@@ -13,9 +13,13 @@ function buildSearchText(car: Car): string {
     car.name,
     car.make,
     car.model,
-    car.support_type,
-    car.package,
-    ...car.year_list
+    car.source,
+    car.supported_package,
+    car.acc,
+    car.no_acc_below,
+    car.no_alc_below,
+    car.years,
+    ...car.year_list.map(String),
   ].join(' ')
 }
 
@@ -51,7 +55,7 @@ export const filterLabels = {
   hasSetupVideo: 'Has Install Video',
 } as const
 
-export type SortField = keyof Pick<Car, 'make' | 'support_type' | 'year_list'>
+export type SortField = 'make' | 'source' | 'years'
 
 export type SortConfig = {
   field: SortField
@@ -100,7 +104,7 @@ export const FilterProvider = (props: ParentProps) => {
     const currentFilters = filters()
     if (currentFilters.supportLevel) {
       result = result.filter(
-        (car) => car.support_type === currentFilters.supportLevel,
+        (car) => car.source === currentFilters.supportLevel,
       )
     }
     if (currentFilters.make) {
@@ -108,7 +112,7 @@ export const FilterProvider = (props: ParentProps) => {
     }
     if (currentFilters.year) {
       result = result.filter((car) =>
-        (car.year_list as string[]).includes(currentFilters.year),
+        car.year_list.map(String).includes(currentFilters.year),
       )
     }
     if (currentFilters.hasUserVideo) {
@@ -139,12 +143,12 @@ export const FilterProvider = (props: ParentProps) => {
         if (scoreA !== scoreB) return scoreB - scoreA
       }
       const field: SortField = sort.field
-      let aVal: string | number | string[] = a[field]
-      let bVal: string | number | string[] = b[field]
+      let aVal: string | number = a[field]
+      let bVal: string | number = b[field]
 
-      if (field === 'year_list') {
-        aVal = parseInt((aVal as string[])[0] || '0', 10)
-        bVal = parseInt((bVal as string[])[0] || '0', 10)
+      if (field === 'years') {
+        aVal = parseInt((a.year_list[0]?.toString() ?? '0'), 10)
+        bVal = parseInt((b.year_list[0]?.toString() ?? '0'), 10)
       }
 
       if (sort.order === 'ASC') {
