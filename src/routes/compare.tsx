@@ -371,7 +371,7 @@ export default function ComparePage() {
                         {/* Support Type Badge - Tab Style */}
                         <div
                           class={cn(
-                            'relative z-10 block w-fit border-2 border-black border-b-0 py-0.5 px-2',
+                            'relative z-10 block w-fit border-2 border-[#3d2b2f] border-b-0 py-0.5 px-2',
                             'bg-[#2d2227] text-center text-[#efe3e6]',
                           )}
                         >
