@@ -37,7 +37,7 @@ export default function Home() {
               class={cn(
                 'flex items-center justify-center p-2 transition-colors cursor-pointer',
                 !isCompareMode()
-                  ? 'bg-[#242424] text-white border-2 border-[#b84a57] shadow-md/70'
+                  ? 'bg-[#242424] text-white border-2 border-[#741b26] shadow-md/70'
                   : 'bg-[#34282b] text-white/55 hover:bg-[#4a393d] hover:text-white/80'
               )}
               aria-label="Grid view"
@@ -50,7 +50,7 @@ export default function Home() {
               class={cn(
                 'flex items-center justify-center p-2 transition-colors cursor-pointer',
                 isCompareMode()
-                  ? 'bg-[#242424] text-white border-2 border-[#b84a57] shadow-md/70'
+                  ? 'bg-[#242424] text-white border-2 border-[#741b26] shadow-md/70'
                   : 'bg-[#34282b] text-white/55 hover:bg-[#4a393d] hover:text-white/80'
               )}
               aria-label="List view"
