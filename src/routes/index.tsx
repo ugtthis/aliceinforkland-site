@@ -1,4 +1,4 @@
-import { For } from 'solid-js'
+import { For, createMemo } from 'solid-js'
 import FileCard from '~/components/FileCard'
 import FilterChips from '~/components/FilterChips'
 import Header from '~/components/Header'
@@ -6,14 +6,20 @@ import CompareFooter from '~/components/CompareFooter'
 import { useFilter } from '~/contexts/FilterContext'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 
-import metadata from '~/data/metadata.json'
+import { carData } from '~/data/cars'
 import GridSvg from '~/lib/icons/grid.svg?raw'
 import ListSvg from '~/lib/icons/list.svg?raw'
 import { cn } from '~/lib/utils'
 
 export default function Home() {
-  const { filteredResults, resultCount, searchQuery } = useFilter()
+  const { filteredResults, searchQuery } = useFilter()
   const { isCompareMode, setIsCompareMode } = useModelComparison()
+  const uniqueTotalCount = createMemo(
+    () => new Set(carData.map((car) => car.name)).size,
+  )
+  const uniqueFilteredCount = createMemo(
+    () => new Set(filteredResults().map((car) => car.name)).size,
+  )
 
   return (
     <>
@@ -21,7 +27,7 @@ export default function Home() {
       <main class="mx-auto max-w-7xl px-4 pt-4 pb-16 text-[#e7dadd]">
         <div class="flex items-center justify-between mb-1.5">
           <div class="text-md text-white/70 md:text-lg">
-            {resultCount()} of {metadata.length} cars
+            {uniqueFilteredCount()} of {uniqueTotalCount()} cars
           </div>
 
           <div class="flex border-5 border-[#2a1d20] bg-[#0b0708] shadow-sm">
@@ -65,7 +71,7 @@ export default function Home() {
         >
           <For each={filteredResults()}>
             {(vehicle) => (
-              <div class="vehicle-card" data-car-id={vehicle.name}>
+              <div class="vehicle-card" data-car-id={vehicle.id}>
                 <FileCard car={vehicle} searchQuery={searchQuery()} />
               </div>
             )}
