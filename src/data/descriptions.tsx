@@ -1,88 +1,50 @@
-// ============================================================================
-// DATA SOURCE DESCRIPTIONS
-// ============================================================================
+import rawDataSourceContent from './data-source-descriptions.json'
+
+type DataSourceResource = {
+  label: string
+  url: string
+}
 
 export type DataSourceContent = {
-  paragraphs: string[]
-  reference?: {
-    text: string
-    url: string
-  }
-
-  /**
-   * Use when description exceeds 211 characters.
-   * Prevents the description container from overflowing.
-   */
-  expandableContent?: {
-    sections: {
-      title: string
-      paragraphs: string[]
-      link?: {
-        text: string
-        url: string
-      }
-    }[]
-  }
+  summary: string
+  resources: DataSourceResource[]
 }
 
-export const DATA_SOURCE_CONTENT: Record<string, DataSourceContent> = {
-  sunnypilot: {
-    paragraphs: [
-      "sunnypilot is an open source driver assistance system which offers the user a unique driving experience for over 350 supported car makes and models with modified behaviors of driving assist engagements.",
-    ],
-    expandableContent: {
-      sections: [
-        {
-          title: '',
-          paragraphs: [
-            "sunnypilot complies with the safety policy from comma.ai's openpilot as accurately as possible.",
-          ],
-        },
-      ],
-    },
-    reference: {
-      text: "Github",
-      url: "https://github.com/sunnypilot/sunnypilot",
-    },
-  },
-  frogpilot: {
-    paragraphs: [
-      "FrogPilot is a fully open-source, frog-themed, and highly customizable fork of openpilot. Built with clean commits and a strong focus on serving the community."
-    ],
-    expandableContent: {
-      sections: [
-        {
-          title: '',
-          paragraphs: [
-            "Shaped by both user and developer contributions, FrogPilot embraces collaborative, community-driven development to deliver a cutting-edge openpilot experience for everyone.",
-          ],
-        },
-      ],
-    },
-    reference: {
-      text: "Github",
-      url: "https://github.com/FrogAi/FrogPilot",
-    },
-  },
-  bluepilot: {
-    paragraphs: [
-      "BluePilot is a fork of openpilot specifically developed for Ford vehicles. It works by directly tapping into the IPMA, bypassing the limitations of the stock Lane Centering features.",
-    ],
-    reference: {
-      text: "Github",
-      url: "https://github.com/BluePilotDev/bluepilot",
-    },
-  },
-  openpilot: {
-    paragraphs: [
-      "The upstream codebase for downstream forks, openpilot is an operating system for robotics maintained by comma. Currently, it upgrades the driver assistance system on 300+ supported cars.",
-    ],
-    reference: {
-      text: "Github",
-      url: "https://github.com/commaai/openpilot",
-    },
-  },
+const isValidDataSourceContent = (value: unknown): value is DataSourceContent => {
+  if (!value || typeof value !== 'object') return false
+
+  const content = value as DataSourceContent
+  if (typeof content.summary !== 'string') {
+    return false
+  }
+
+  if (!Array.isArray(content.resources) || content.resources.length === 0) return false
+  for (const resource of content.resources) {
+    if (!resource || typeof resource !== 'object') return false
+    if (typeof resource.label !== 'string' || typeof resource.url !== 'string') {
+      return false
+    }
+  }
+
+  return true
 }
+
+const loadDataSourceContent = (input: unknown): Record<string, DataSourceContent> => {
+  if (!input || typeof input !== 'object') {
+    throw new Error('Invalid data source descriptions: expected an object map')
+  }
+
+  const entries = Object.entries(input)
+  for (const [source, value] of entries) {
+    if (!isValidDataSourceContent(value)) {
+      throw new Error(`Invalid data source descriptions for "${source}"`)
+    }
+  }
+
+  return input as Record<string, DataSourceContent>
+}
+
+export const DATA_SOURCE_CONTENT = loadDataSourceContent(rawDataSourceContent)
 
 // ============================================================================
 // FEATURE DESCRIPTIONS (Dynamic)

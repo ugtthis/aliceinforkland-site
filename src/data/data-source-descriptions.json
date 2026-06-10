@@ -1,0 +1,54 @@
+{
+  "sunnypilot": {
+    "summary": "sunnypilot is an open source driver assistance system which offers the user a unique driving experience for over 350 supported car makes and models with modified behaviors of driving assist engagements. sunnypilot complies with the safety policy from comma.ai's openpilot as accurately as possible.",
+    "resources": [
+      {
+        "label": "Github",
+        "url": "https://github.com/sunnypilot/sunnypilot"
+      },
+      {
+        "label": "More Info",
+        "url": "https://community.sunnypilot.ai/c/documentation/114"
+      }
+    ]
+  },
+  "frogpilot": {
+    "summary": "FrogPilot is a fully open-source, frog-themed, and highly customizable fork of openpilot. Built with clean commits and a strong focus on serving the community. Shaped by both user and developer contributions, FrogPilot embraces collaborative, community-driven development to deliver a cutting-edge openpilot experience for everyone.",
+    "resources": [
+      {
+        "label": "Github",
+        "url": "https://github.com/FrogAi/FrogPilot"
+      },
+      {
+        "label": "More Info",
+        "url": "https://frogpilot.wiki.gg/"
+      }
+    ]
+  },
+  "bluepilot": {
+    "summary": "BluePilot is a fork of openpilot specifically developed for Ford vehicles. It works by directly tapping into the IPMA, bypassing the limitations of the stock Lane Centering features.",
+    "resources": [
+      {
+        "label": "Github",
+        "url": "https://github.com/BluePilotDev/bluepilot"
+      },
+      {
+        "label": "More Info",
+        "url": "https://bluepilot.dev/FAQ/"
+      }
+    ]
+  },
+  "openpilot": {
+    "summary": "The upstream codebase for downstream forks, openpilot is an operating system for robotics maintained by comma. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+    "resources": [
+      {
+        "label": "Github",
+        "url": "https://github.com/commaai/openpilot"
+      },
+      {
+        "label": "More Info",
+        "url": "https://docs.comma.ai/"
+      }
+    ]
+  }
+}

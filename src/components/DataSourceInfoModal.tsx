@@ -3,6 +3,7 @@ import {
   Show,
   createSignal,
   createEffect,
+  on,
   For,
   createMemo,
 } from 'solid-js'
@@ -33,7 +34,7 @@ const DATA_SOURCE_ORDER = [
   ]),
 ].sort()
 
-const ExternalLinkButton: Component<{ text: string; url: string }> = (props) => (
+const ExternalLinkButton: Component<{ label: string; url: string }> = (props) => (
   <a
     href={props.url}
     target="_blank"
@@ -44,65 +45,54 @@ const ExternalLinkButton: Component<{ text: string; url: string }> = (props) => 
       'text-sm transition-all',
     )}
   >
-    {props.text}
+    {props.label}
     <span class="w-4 h-4" innerHTML={LinkIcon} />
   </a>
 )
 
-const SpacedParagraphList: Component<{ paragraphs: string[]; spacing?: string }> = (props) => (
-  <For each={props.paragraphs}>
-    {(paragraph, index) => {
-      const isNotLastParagraph = index() < props.paragraphs.length - 1
-      return <p class={isNotLastParagraph ? (props.spacing ?? 'mb-3') : ''}>{paragraph}</p>
-    }}
-  </For>
-)
-
-const ReadMoreSection: Component<{
-  content: DataSourceContent['expandableContent']
+const ExpandableDescription: Component<{
+  content: DataSourceContent
   isExpanded: boolean
   onToggle: () => void
 }> = (props) => {
-  const hasLinks = () => props.content?.sections.some((section) => section.link) ?? false
+  let descriptionRef: HTMLParagraphElement | undefined
+  const [summaryOverflows, setSummaryOverflows] = createSignal(true)
+  const summaryText = () => props.content.summary.trim()
+
+  const updateSummaryOverflow = () => {
+    if (!descriptionRef || props.isExpanded) return
+    setSummaryOverflows(descriptionRef.scrollHeight > descriptionRef.clientHeight)
+  }
+
+  createEffect(
+    on(
+      () => [summaryText(), props.isExpanded],
+      () => requestAnimationFrame(updateSummaryOverflow),
+    ),
+  )
+
+  const shouldShowReadMore = () => props.isExpanded || summaryOverflows()
 
   return (
     <div>
-      <Show when={props.isExpanded}>
-        <div class="pt-4 mt-6 space-y-4 border-t border-white/20">
-          <For each={props.content!.sections}>
-            {(section) => (
-              <div>
-                <Show when={section.title}>
-                  <h3 class="mb-2 font-bold text-md">{section.title}</h3>
-                </Show>
-                <SpacedParagraphList paragraphs={section.paragraphs} spacing="mb-2" />
-              </div>
-            )}
-          </For>
-
-          <Show when={hasLinks()}>
-            <div class="flex flex-wrap gap-3 pt-4 mt-6 border-t border-white/20">
-              <For each={props.content!.sections}>
-                {(section) => (
-                  <Show when={section.link}>
-                    <ExternalLinkButton text={section.link!.text} url={section.link!.url} />
-                  </Show>
-                )}
-              </For>
-            </div>
-          </Show>
-        </div>
-      </Show>
-
-      <button
-        onClick={props.onToggle}
-        class={cn(
-          'text-sm font-semibold text-white/80 underline cursor-pointer hover:text-white',
-          props.isExpanded ? 'mt-6' : 'mt-4',
-        )}
+      <p
+        ref={descriptionRef}
+        class={cn(props.isExpanded ? 'line-clamp-none' : 'line-clamp-3')}
       >
-        {props.isExpanded ? 'Show less' : 'Read more'}
-      </button>
+        {summaryText()}
+      </p>
+
+      <Show when={shouldShowReadMore()}>
+        <button
+          onClick={props.onToggle}
+          class={cn(
+            'text-sm font-semibold text-white/80 underline cursor-pointer hover:text-white',
+            props.isExpanded ? 'mt-6' : 'mt-4',
+          )}
+        >
+          {props.isExpanded ? 'Show less' : 'Read more'}
+        </button>
+      </Show>
     </div>
   )
 }
@@ -218,24 +208,21 @@ const DataSourceInfoModal: Component<DataSourceInfoModalProps> = (props) => {
               <Show when={selectedContent()} fallback={<p>N/A</p>}>
                 {(content) => (
                   <>
-                    <SpacedParagraphList paragraphs={content().paragraphs} />
+                    <ExpandableDescription
+                      content={content()}
+                      isExpanded={isExpanded()}
+                      onToggle={() => setIsExpanded(!isExpanded())}
+                    />
 
-                    <Show when={content().expandableContent}>
-                      <ReadMoreSection
-                        content={content().expandableContent}
-                        isExpanded={isExpanded()}
-                        onToggle={() => setIsExpanded(!isExpanded())}
-                      />
-                    </Show>
-
-                    <Show when={content().reference}>
-                      <div class="pt-4 mt-6 border-t border-white/20">
-                        <ExternalLinkButton
-                          text={content().reference!.text}
-                          url={content().reference!.url}
-                        />
+                    <div class="pt-4 mt-6 border-t border-white/20">
+                      <div class="flex flex-wrap gap-3">
+                        <For each={content().resources}>
+                          {(resource) => (
+                            <ExternalLinkButton label={resource.label} url={resource.url} />
+                          )}
+                        </For>
                       </div>
-                    </Show>
+                    </div>
                   </>
                 )}
               </Show>
