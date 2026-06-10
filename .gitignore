@@ -1,0 +1,27 @@
+# Build outputs
+dist
+.output
+.wrangler
+.vinxi
+tsconfig.tsbuildinfo
+
+# Environment
+.env
+.env*.local
+
+# Dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# opendbc repository (used only during workflow)
+opendbc/

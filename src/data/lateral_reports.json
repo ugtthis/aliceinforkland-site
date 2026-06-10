@@ -1,0 +1,34 @@
+{
+  "FORD_BRONCO_SPORT_MK1": [
+    {
+      "description": "master",
+      "link": "https://commaai.github.io/opendbc-data/lateral_reports/FORD_BRONCO_SPORT_MK1_5beb9b58bd12b691_0000027d--08f3ec2873.html"
+    },
+    {
+      "description": "new curvature safety",
+      "link": "https://commaai.github.io/opendbc-data/lateral_reports/FORD_BRONCO_SPORT_MK1_5beb9b58bd12b691_00000280--0681ceae98.html"
+    }
+  ],
+  "KIA_EV6": [
+    {
+      "description": "master",
+      "link": "https://commaai.github.io/opendbc-data/lateral_reports/KIA_EV6_98395b7c5b27882e_0000029a--b2f9848b93.html"
+    },
+    {
+      "description": "high limits",
+      "link": "https://commaai.github.io/opendbc-data/lateral_reports/KIA_EV6_98395b7c5b27882e_00000268--6b3e66b898.html"
+    }
+  ],
+  "TESLA_MODEL_Y": [
+    {
+      "description": "master",
+      "link": "https://commaai.github.io/opendbc-data/lateral_reports/TESLA_MODEL_Y_0f79c454f812791a_000001bd--15bdf1ba66.html"
+    }
+  ],
+  "VOLKSWAGEN_ID4_MK1": [
+    {
+      "description": "master",
+      "link": "https://commaai.github.io/opendbc-data/lateral_reports/VOLKSWAGEN_ID4_MK1_aebd8f1d4ea16066_00000084--3ff94803c8.html"
+    }
+  ]
+}
