@@ -1,13 +1,8 @@
-/**
- * Central repository for all user-facing descriptions and help text
- * Organized by: Spec Descriptions, Support Type Content, and Feature Descriptions
- */
-
 // ============================================================================
-// SUPPORT TYPE DESCRIPTIONS
+// DATA SOURCE DESCRIPTIONS
 // ============================================================================
 
-export type SupportTypeContent = {
+export type DataSourceContent = {
   paragraphs: string[]
   reference?: {
     text: string
@@ -15,9 +10,9 @@ export type SupportTypeContent = {
   }
 
   /**
- * Use when description exceeds 211 characters.
- * Prevents the description container from overflowing.
- */
+   * Use when description exceeds 211 characters.
+   * Prevents the description container from overflowing.
+   */
   expandableContent?: {
     sections: {
       title: string
@@ -30,109 +25,64 @@ export type SupportTypeContent = {
   }
 }
 
-export const SUPPORT_TYPE_CONTENT: Record<string, SupportTypeContent> = {
-  'Upstream': {
+export const DATA_SOURCE_CONTENT: Record<string, DataSourceContent> = {
+  sunnypilot: {
     paragraphs: [
-      "A supported vehicle is one that just works when you install a " +
-      "comma device. All supported cars provide a better experience than any stock system.",
-      "Supported vehicles reference the US market unless otherwise specified."
-    ]
-  },
-  'Under review': {
-    paragraphs: [
-      "A vehicle under review is one for which software support has been " +
-      "merged into upstream openpilot, but hasn't yet been tested for " +
-      "drive quality and conformance with comma safety guidelines(linked below)"
+      "sunnypilot is an open source driver assistance system which offers the user a unique driving experience for over 350 supported car makes and models with modified behaviors of driving assist engagements.",
     ],
     expandableContent: {
       sections: [
         {
-          title: "",
+          title: '',
           paragraphs: [
-            "This is a normal part of the development and quality assurance process." +
-            "This vehicle will not work when upstream openpilot is installed, but " +
-            "custom forks may allow their use."
-          ]
-        }
-      ]
+            "sunnypilot complies with the safety policy from comma.ai's openpilot as accurately as possible.",
+          ],
+        },
+      ],
     },
     reference: {
-      text: "comma Safety Guidelines",
-      url: "https://github.com/commaai/openpilot/blob/master/docs/SAFETY.md"
-    }
+      text: "Github",
+      url: "https://github.com/sunnypilot/sunnypilot",
+    },
   },
-  'Community': {
+  frogpilot: {
     paragraphs: [
-      "Although they're not upstream, the community has openpilot running " +
-      "on other makes and models. See the Community Supported Models section " +
-      "of each make on our wiki (linked below)."
-    ],
-    reference: {
-      text: "openpilot wiki",
-      url: "https://github.com/commaai/openpilot/wiki"
-    }
-  },
-  'Not compatible': {
-    paragraphs: [
-      "This vehicle is not compatible with openpilot.",
-      "This may be due to incompatible safety systems, lack of CAN bus " +
-      "access, or other technical limitations that prevent openpilot from " +
-      "interfacing with the vehicle's controls."
+      "FrogPilot is a fully open-source, frog-themed, and highly customizable fork of openpilot. Built with clean commits and a strong focus on serving the community."
     ],
     expandableContent: {
       sections: [
         {
-          title: "CAN Bus Security",
+          title: '',
           paragraphs: [
-            "Vehicles with CAN security measures, such as AUTOSAR Secure " +
-            "Onboard Communication (SecOC) are not usable with openpilot " +
-            "unless the owner can recover the message signing key and " +
-            "implement CAN message signing. Examples include certain newer " +
-            "Toyota, and the GM Global B platform."
+            "Shaped by both user and developer contributions, FrogPilot embraces collaborative, community-driven development to deliver a cutting-edge openpilot experience for everyone.",
           ],
-          link: {
-            text: "CAN bus on Wikipedia",
-            url: "https://en.wikipedia.org/wiki/CAN_bus"
-          }
         },
-        {
-          title: "FlexRay",
-          paragraphs: [
-            "All the cars that openpilot supports use a CAN bus for " +
-            "communication between all the car's computers, however a CAN " +
-            "bus isn't the only way that the computers in your car can " +
-            "communicate.",
-            "Most, if not all, vehicles from the following " +
-            "manufacturers use FlexRay instead of a CAN bus: BMW, Mercedes, " +
-            "Audi, Land Rover, and some Volvo. These cars may one day be " +
-            "supported, but we have no immediate plans to support FlexRay."
-          ],
-          link: {
-            text: "FlexRay on Wikipedia",
-            url: "https://en.wikipedia.org/wiki/FlexRay"
-          }
-        }
-      ]
-    }
+      ],
+    },
+    reference: {
+      text: "Github",
+      url: "https://github.com/FrogAi/FrogPilot",
+    },
   },
-  'Dashcam mode': {
+  bluepilot: {
     paragraphs: [
-      "Dashcam vehicles have software support in upstream openpilot, but " +
-      "will go into \"dashcam mode\" at startup and will not engage.",
-      "This may be due to known issues with driving safety or quality, or it " +
-      "may be a work in progress that isn't yet ready for safety and " +
-      "quality review."
-    ]
-  }
+      "BluePilot is a fork of openpilot specifically developed for Ford vehicles. It works by directly tapping into the IPMA, bypassing the limitations of the stock Lane Centering features.",
+    ],
+    reference: {
+      text: "Github",
+      url: "https://github.com/BluePilotDev/bluepilot",
+    },
+  },
+  openpilot: {
+    paragraphs: [
+      "The upstream codebase for downstream forks, openpilot is an operating system for robotics maintained by comma. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+    ],
+    reference: {
+      text: "Github",
+      url: "https://github.com/commaai/openpilot",
+    },
+  },
 }
-
-export const getSupportTypeOrder = (): string[] => [
-  'Upstream',
-  'Under review',
-  'Community',
-  'Dashcam mode',
-  'Not compatible',
-]
 
 // ============================================================================
 // FEATURE DESCRIPTIONS (Dynamic)

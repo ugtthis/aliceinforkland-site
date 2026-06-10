@@ -5,6 +5,7 @@ import type { Car } from '~/types/CarDataTypes'
 import HighlightText from '~/components/ui/HighlightText'
 import { cn } from '~/lib/utils'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
+import { openDataSourceModal } from '~/contexts/DataSourceModalContext'
 
 import DownChevronSvg from '~/lib/icons/down-chevron.svg?raw'
 import VideoCameraSvg from '~/lib/icons/video-camera.svg?raw'
@@ -144,6 +145,7 @@ const Card: Component<CardProps> = (props) => {
 
   const supportLabelClass = cn(
     'py-1 px-6 inline-block border border-[#6a4d54] border-b-0 text-center bg-[#2d2227] text-[#efe3e6]',
+    'cursor-pointer transition-colors hover:bg-[#3a2a30]',
   )
 
   return (
@@ -186,16 +188,18 @@ const Card: Component<CardProps> = (props) => {
             </div>
 
             {/* Support type - Mobile only */}
-            <div
+            <button
+              type="button"
+              onClick={() => openDataSourceModal(sourceLabel)}
               class={cn(
                 'flex w-full items-center justify-center px-2 py-1.5 text-center bg-[#2d2227] text-[#efe3e6]',
-                'min-[370px]:w-[100px] min-[370px]:py-2.5',
+                'transition-colors cursor-pointer hover:bg-[#3a2a30] min-[370px]:w-[100px] min-[370px]:py-2.5',
               )}
             >
               <span class="text-xs font-semibold leading-tight uppercase">
                 {sourceLabel}
               </span>
-            </div>
+            </button>
           </div>
 
           {/* Year - Desktop only */}
@@ -213,16 +217,18 @@ const Card: Component<CardProps> = (props) => {
           </div>
 
           {/* Support type - Desktop only */}
-          <div
+          <button
+            type="button"
+            onClick={() => openDataSourceModal(sourceLabel)}
             class={cn(
               'hidden items-center justify-center w-[160px] border-r border-[#6a4d54] px-3 py-2.5',
-              'text-center bg-[#2d2227] text-[#efe3e6] md:flex',
+              'text-center bg-[#2d2227] text-[#efe3e6] transition-colors cursor-pointer hover:bg-[#3a2a30] md:flex',
             )}
           >
             <span class="text-sm font-semibold leading-tight uppercase whitespace-nowrap">
               {sourceLabel}
             </span>
-          </div>
+          </button>
 
         </div>
       </div>
@@ -230,11 +236,15 @@ const Card: Component<CardProps> = (props) => {
       {/* Regular card (grid mode) */}
       <div class="card-grid-mode">
         {/* Support label */}
-      <div class={supportLabelClass}>
+      <button
+        type="button"
+        onClick={() => openDataSourceModal(sourceLabel)}
+        class={supportLabelClass}
+      >
         <p class="uppercase text-[16px]">
           {sourceLabel}
         </p>
-      </div>
+      </button>
 
       {/* Card body */}
       <div

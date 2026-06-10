@@ -4,8 +4,8 @@ import { Suspense, Show } from 'solid-js'
 import { isServer } from 'solid-js/web'
 import { FilterProvider } from '~/contexts/FilterContext'
 import { ModelComparisonProvider } from '~/contexts/ModelComparisonContext'
-import SupportTypeInfoModal from '~/components/SupportTypeInfoModal'
-import { supportModalState, closeSupportTypeModal } from '~/contexts/SupportTypeModalContext'
+import DataSourceInfoModal from '~/components/DataSourceInfoModal'
+import { dataSourceModalState, closeDataSourceModal } from '~/contexts/DataSourceModalContext'
 import '~/app.css'
 
 export default function App() {
@@ -17,10 +17,10 @@ export default function App() {
             <Suspense>{props.children}</Suspense>
 
             <Show when={!isServer}>
-              <SupportTypeInfoModal
-                open={supportModalState.isOpen()}
-                onOpenChange={(open) => !open && closeSupportTypeModal()}
-                initialSupportType={supportModalState.supportType()}
+              <DataSourceInfoModal
+                open={dataSourceModalState.isOpen()}
+                onOpenChange={(open) => !open && closeDataSourceModal()}
+                initialDataSource={dataSourceModalState.dataSource()}
               />
             </Show>
           </ModelComparisonProvider>

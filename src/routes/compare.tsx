@@ -4,6 +4,7 @@ import type { Car } from '~/types/CarDataTypes'
 import { cn, hasObjectEntries, slugify } from '~/lib/utils'
 import { carData } from '~/data/cars'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
+import { openDataSourceModal } from '~/contexts/DataSourceModalContext'
 import { SPECS_BY_CATEGORY } from '~/data/specs'
 import UpArrowSvg from '~/lib/icons/up-arrow.svg?raw'
 import RightArrowSvg from '~/lib/icons/right-arrow.svg?raw'
@@ -312,13 +313,21 @@ export default function ComparePage() {
             >
               <div class="flex justify-between items-center px-4 mx-auto md:px-6 max-w-[2200px]">
                 <div class="flex gap-3 items-center">
-                  <div class={cn(
-                    'py-1.5 px-3 border-4 border-white/80 bg-[#2d2227] text-[#efe3e6]',
-                  )}>
+                  <button
+                    type="button"
+                    onClick={(event) => {
+                      event.stopPropagation()
+                      openDataSourceModal(selectedCars()[highlight().selected!.columnIndex].source)
+                    }}
+                    class={cn(
+                      'py-1.5 px-3 border-4 border-white/80 bg-[#2d2227] text-[#efe3e6]',
+                      'transition-colors cursor-pointer hover:bg-[#3a2a30]',
+                    )}
+                  >
                     <span class="text-xs font-bold uppercase md:text-sm">
                       {selectedCars()[highlight().selected!.columnIndex].source}
                     </span>
-                  </div>
+                  </button>
                   <div class="text-white">
                     <span class="text-sm font-semibold md:text-lg">
                       {selectedCars()[highlight().selected!.columnIndex].name}
@@ -370,15 +379,18 @@ export default function ComparePage() {
                 <For each={selectedCars()}>
                   {(car, columnIndex) => (
                     <div class="flex relative flex-col px-4 w-full h-full">
-                        {/* Support Type Badge - Tab Style */}
-                        <div
+                        {/* Data Source Badge */}
+                        <button
+                          type="button"
+                          onClick={() => openDataSourceModal(car.source)}
                           class={cn(
                             'relative z-10 block w-fit border-2 border-[#3d2b2f] border-b-0 py-0.5 px-2',
                             'bg-[#2d2227] text-center text-[#efe3e6]',
+                            'transition-colors cursor-pointer hover:bg-[#3a2a30]',
                           )}
                         >
                           <p class="text-xs font-bold uppercase">{car.source}</p>
-                        </div>
+                        </button>
 
                         {/* Card */}
                         <div
