@@ -7,6 +7,7 @@ export type Car = {
   model_variant?: string | null
   years: string
   year_list: number[]
+  hardware_needed: string
   supported_package: string
   acc: string
   no_acc_below: string
