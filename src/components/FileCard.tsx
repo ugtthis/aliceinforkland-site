@@ -13,7 +13,7 @@ import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
 import CheckSvg from '~/lib/icons/checkmark.svg?raw'
 import Checkmark2Svg from '~/lib/icons/checkmark-2.svg?raw'
 import CloseXIcon from '~/lib/icons/close-x.png'
-import { getACCDescription, getAutoResumeDescription } from '~/data/descriptions'
+import { getACCDescription, getAutoResumeDescription } from '~/data/featureDescriptions'
 
 const RED_PNG_FILTER = "brightness(0) saturate(90%) invert(23%) sepia(89%) saturate(3520%) hue-rotate(352deg) brightness(85%) contrast(95%)"
 

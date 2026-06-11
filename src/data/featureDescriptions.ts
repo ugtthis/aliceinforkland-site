@@ -1,55 +1,3 @@
-import rawDataSourceContent from './data-source-descriptions.json'
-
-type DataSourceResource = {
-  label: string
-  url: string
-}
-
-export type DataSourceContent = {
-  summary: string
-  resources: DataSourceResource[]
-}
-
-const isValidDataSourceContent = (value: unknown): value is DataSourceContent => {
-  if (!value || typeof value !== 'object') return false
-
-  const content = value as DataSourceContent
-  if (typeof content.summary !== 'string') {
-    return false
-  }
-
-  if (!Array.isArray(content.resources) || content.resources.length === 0) return false
-  for (const resource of content.resources) {
-    if (!resource || typeof resource !== 'object') return false
-    if (typeof resource.label !== 'string' || typeof resource.url !== 'string') {
-      return false
-    }
-  }
-
-  return true
-}
-
-const loadDataSourceContent = (input: unknown): Record<string, DataSourceContent> => {
-  if (!input || typeof input !== 'object') {
-    throw new Error('Invalid data source descriptions: expected an object map')
-  }
-
-  const entries = Object.entries(input)
-  for (const [source, value] of entries) {
-    if (!isValidDataSourceContent(value)) {
-      throw new Error(`Invalid data source descriptions for "${source}"`)
-    }
-  }
-
-  return input as Record<string, DataSourceContent>
-}
-
-export const DATA_SOURCE_CONTENT = loadDataSourceContent(rawDataSourceContent)
-
-// ============================================================================
-// FEATURE DESCRIPTIONS (Dynamic)
-// ============================================================================
-
 export const getACCDescription = (longitudinal: string): string => {
   switch (longitudinal) {
     case 'openpilot':
@@ -78,4 +26,3 @@ export const getAutoResumeDescription = (autoResume: boolean): string => {
       `press the accelerator or cruise control button to resume after the vehicle ahead starts moving again.`
   }
 }
-

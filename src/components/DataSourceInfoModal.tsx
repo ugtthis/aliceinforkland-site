@@ -14,7 +14,7 @@ import { BREAKPOINTS } from '~/utils/breakpoints'
 import {
   DATA_SOURCE_CONTENT,
   type DataSourceContent,
-} from '~/data/descriptions'
+} from '~/data/dataSourceDescriptions'
 import { carData } from '~/data/cars'
 import type { Car } from '~/types/CarDataTypes'
 import { cn } from '~/lib/utils'
