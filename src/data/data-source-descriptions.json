@@ -38,6 +38,19 @@
       }
     ]
   },
+  "starpilot": {
+    "summary": "StarPilot is an openpilot fork focused on expanded vehicle support and fork-specific compatibility changes while building on openpilot's driver assistance foundation.",
+    "resources": [
+      {
+        "label": "Github",
+        "url": "https://github.com/firestar5683/StarPilot"
+      },
+      {
+        "label": "More Info",
+        "url": "/"
+      }
+    ]
+  },
   "openpilot": {
     "summary": "The upstream codebase for downstream forks, openpilot is an operating system for robotics maintained by comma. Currently, it upgrades the driver assistance system on 300+ supported cars.",
     "resources": [

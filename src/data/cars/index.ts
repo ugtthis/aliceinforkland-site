@@ -1,6 +1,7 @@
 import bluepilotData from './bluepilot.json'
 import frogpilotData from './frogpilot.json'
 import openpilotData from './openpilot.json'
+import starpilotData from './starpilot.json'
 import sunnypilotData from './sunnypilot.json'
 import type { Car } from '~/types/CarDataTypes'
 
@@ -38,6 +39,7 @@ const catalogInputs: CatalogInput[] = [
   bluepilotData as CatalogInput,
   frogpilotData as CatalogInput,
   openpilotData as CatalogInput,
+  starpilotData as CatalogInput,
   sunnypilotData as CatalogInput,
 ]
 
