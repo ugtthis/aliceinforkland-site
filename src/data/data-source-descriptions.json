@@ -63,5 +63,18 @@
         "url": "https://docs.comma.ai/"
       }
     ]
+  },
+  "wip": {
+    "summary": "Work in Progress(WIP) cars range from experimental experiences to almost fully supported cars that are not yet in upstream openpilot. These cars are not fully tested and can be highly unstable. Try at your own risk.",
+    "resources": [
+      {
+        "label": "Car Port Docs",
+        "url": "https://docs.comma.ai/how-to/car-port/"
+      },
+      {
+        "label": "Car Port Process Video",
+        "url": "https://www.youtube.com/watch?v=XxPS5TpTUnI"
+      }
+    ]
   }
 }

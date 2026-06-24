@@ -3,6 +3,7 @@ import frogpilotData from './frogpilot.json'
 import openpilotData from './openpilot.json'
 import starpilotData from './starpilot.json'
 import sunnypilotData from './sunnypilot.json'
+import wipData from './wip.json'
 import type { Car } from '~/types/CarDataTypes'
 
 type CatalogInput = {
@@ -15,6 +16,7 @@ type CatalogInput = {
 }
 
 type CarRecord = {
+  key?: string
   name: string
   make: string
   model: string
@@ -33,6 +35,14 @@ type CarRecord = {
   setup_video?: string | null
   years_not_in_upstream?: number[]
   footnotes?: Record<string, Array<string | number>>
+  branch_name?: string
+  branch_url?: string
+  branch_desc?: string
+  wiki_url?: string
+  discord_url?: string
+  discord_name?: string
+  extra_resource_url?: string | null
+  important_notes?: string[] | null
 }
 
 const catalogInputs: CatalogInput[] = [
@@ -41,6 +51,7 @@ const catalogInputs: CatalogInput[] = [
   openpilotData as CatalogInput,
   starpilotData as CatalogInput,
   sunnypilotData as CatalogInput,
+  wipData as CatalogInput,
 ]
 
 const getCatalogSource = (catalog: CatalogInput): string => {
@@ -59,22 +70,46 @@ const getCatalogUrl = (catalog: CatalogInput): string => {
   return url
 }
 
-const buildCarRecord = (car: CarRecord, source: string, sourceUrl: string): Car => ({
-  ...car,
-  id: `${car.name}-${source}`,
-  name: car.name,
-  years: car.years,
-  year_list: car.year_list,
-  model_variant: car.model_variant ?? null,
-  model_variant_list: car.model_variant_list,
-  supported_package_list: car.supported_package_list,
-  auto_resume_available: car.auto_resume_available ?? false,
-  years_not_in_upstream: car.years_not_in_upstream ?? [],
-  source,
-  source_url: sourceUrl,
-  video: car.video ?? null,
-  setup_video: car.setup_video ?? null,
-})
+const buildCarRecord = (car: CarRecord, source: string, sourceUrl: string): Car => {
+  const wip_details = source === 'wip'
+    ? {
+        key: car.key!,
+        branch_name: car.branch_name!,
+        branch_url: car.branch_url!,
+        branch_desc: car.branch_desc!,
+        wiki_url: car.wiki_url!,
+        discord_url: car.discord_url!,
+        discord_name: car.discord_name!,
+        extra_resource_url: car.extra_resource_url ?? null,
+        important_notes: car.important_notes ?? null,
+      }
+    : undefined
+
+  return {
+    id: `${car.name}-${source}`,
+    name: car.name,
+    make: car.make,
+    model: car.model,
+    model_variant: car.model_variant ?? null,
+    model_variant_list: car.model_variant_list,
+    years: car.years,
+    year_list: car.year_list,
+    hardware_needed: car.hardware_needed,
+    supported_package: car.supported_package,
+    supported_package_list: car.supported_package_list,
+    acc: car.acc,
+    no_acc_below: car.no_acc_below,
+    no_alc_below: car.no_alc_below,
+    auto_resume_available: car.auto_resume_available ?? false,
+    video: car.video ?? null,
+    setup_video: car.setup_video ?? null,
+    years_not_in_upstream: car.years_not_in_upstream ?? [],
+    footnotes: car.footnotes,
+    source,
+    source_url: sourceUrl,
+    ...(wip_details ? { wip_details } : {}),
+  }
+}
 
 const buildCarCatalog = (catalogs: CatalogInput[]): Car[] =>
   catalogs.flatMap((catalog) => {

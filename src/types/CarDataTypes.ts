@@ -1,3 +1,15 @@
+export type WipDetails = {
+  key: string
+  branch_name: string
+  branch_url: string
+  branch_desc: string
+  wiki_url: string
+  discord_url: string
+  discord_name: string
+  extra_resource_url: string | null
+  important_notes: string[] | null
+}
+
 export type Car = {
   id: string
   name: string
@@ -20,4 +32,5 @@ export type Car = {
   setup_video: string | null
   years_not_in_upstream: number[]
   footnotes?: Record<string, Array<string | number>>
+  wip_details?: WipDetails
 }
