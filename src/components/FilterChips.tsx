@@ -20,12 +20,11 @@ const FilterChips: Component = () => {
     activeFilters().length > 0 || searchQuery().trim().length > 0
   )
 
-  const Chip = (props: { label: string; value: string; bgColor: string; onRemove: () => void }) => (
+  const Chip = (props: { label: string; value: string; onRemove: () => void }) => (
     <div
       class={cn(
         'flex items-center gap-1.5 max-w-full px-3 py-1.5',
-        'border border-[#3d2b2f] bg-accent text-sm text-white shadow-elev-1',
-        props.bgColor,
+        'border border-[#6a4d54] bg-[#2d2227] text-sm text-white shadow-elev-1',
       )}
     >
       <span class="font-medium">{props.label}:</span>
@@ -52,7 +51,6 @@ const FilterChips: Component = () => {
           <Chip
             label="Search"
             value={`"${searchQuery()}"`}
-            bgColor="bg-accent"
             onRemove={() => setSearchQuery('')}
           />
         </Show>
@@ -62,7 +60,6 @@ const FilterChips: Component = () => {
             <Chip
               label={filter.label}
               value={filter.value}
-              bgColor="bg-accent"
               onRemove={() => removeFilter(filter.key)}
             />
           )}
