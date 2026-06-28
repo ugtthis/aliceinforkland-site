@@ -10,6 +10,8 @@ import UpArrowSvg from '~/lib/icons/up-arrow.svg?raw'
 import RightArrowSvg from '~/lib/icons/right-arrow.svg?raw'
 import RotateLeftSvg from '~/lib/icons/rotate-left.svg?raw'
 import ZoomOutSvg from '~/lib/icons/zoom-out.svg?raw'
+import VideoCameraSvg from '~/lib/icons/video-camera.svg?raw'
+import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
 
 const MIN_CARS_FOR_COMPARISON = 2
 
@@ -282,6 +284,32 @@ export default function ComparePage() {
     return ''
   }
 
+  const renderSpecValueContent = (displayValue: string, specKey: string) => {
+    const isVideoSpec = specKey === 'video' || specKey === 'setup_video'
+    const isUrl = /^https?:\/\//i.test(displayValue)
+
+    if (isVideoSpec && isUrl) {
+      return (
+        <a
+          href={displayValue}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open video"
+          aria-label="Open video"
+          class={cn(
+            'group flex items-center bg-[#5c4a50] p-2 text-[#f1e7e9] transition-all duration-300',
+            'cursor-pointer hover:bg-red-600 hover:shadow-xl',
+          )}
+        >
+          <div class="block h-5 w-5 transition-opacity duration-200 group-hover:hidden" innerHTML={VideoCameraSvg} />
+          <div class="hidden h-5 w-5 transition-opacity duration-200 group-hover:block" innerHTML={PlayVideoSvg} />
+        </a>
+      )
+    }
+
+    return <span class="leading-snug">{displayValue}</span>
+  }
+
   return (
     <div class="min-h-screen text-[#e7dadd]">
       {/* Header */}
@@ -500,20 +528,7 @@ export default function ComparePage() {
                                     when={isObject}
                                     fallback={(() => {
                                       const displayValue = getDisplayValue()
-                                      const isUrl = /^https?:\/\//i.test(displayValue)
-
-                                      return isUrl ? (
-                                        <a
-                                          href={displayValue}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          class="leading-snug text-blue-300 underline hover:text-blue-200"
-                                        >
-                                          {displayValue}
-                                        </a>
-                                      ) : (
-                                        <span class="leading-snug">{displayValue}</span>
-                                      )
+                                      return renderSpecValueContent(displayValue, spec.key)
                                     })()}
                                   >
                                     <div class="text-sm leading-relaxed">
