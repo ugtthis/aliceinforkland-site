@@ -189,6 +189,15 @@ const FilterModal: Component<FilterModalProps> = (props) => {
             />
 
             <CustomDropdown
+              label="Not in Upstream"
+              options={['Yes', 'No']}
+              value={filters().notInUpstream}
+              onChange={(value) =>
+                setFilters((prev) => ({ ...prev, notInUpstream: value }))
+              }
+            />
+
+            <CustomDropdown
               label="Make"
               options={makes}
               value={filters().make}

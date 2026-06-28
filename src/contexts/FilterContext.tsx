@@ -45,6 +45,7 @@ export type FilterState = {
   year: string
   hasUserVideo: string
   hasSetupVideo: string
+  notInUpstream: string
 }
 
 export const filterLabels = {
@@ -53,6 +54,7 @@ export const filterLabels = {
   source: 'Source',
   hasUserVideo: 'Has Video',
   hasSetupVideo: 'Has Install Video',
+  notInUpstream: 'Not in Upstream',
 } as const
 
 export type SortField = 'make' | 'source' | 'years'
@@ -85,6 +87,7 @@ export const FilterProvider = (props: ParentProps) => {
     year: '',
     hasUserVideo: '',
     hasSetupVideo: '',
+    notInUpstream: '',
   })
 
   const [searchQuery, setSearchQuery] = createSignal('')
@@ -127,6 +130,13 @@ export const FilterProvider = (props: ParentProps) => {
         result = result.filter((car) => car.setup_video !== null && car.setup_video !== '')
       } else if (currentFilters.hasSetupVideo === 'No') {
         result = result.filter((car) => car.setup_video === null || car.setup_video === '')
+      }
+    }
+    if (currentFilters.notInUpstream) {
+      if (currentFilters.notInUpstream === 'Yes') {
+        result = result.filter((car) => car.years_not_in_upstream.length > 0)
+      } else if (currentFilters.notInUpstream === 'No') {
+        result = result.filter((car) => car.years_not_in_upstream.length === 0)
       }
     }
     const query = searchQuery().trim()
@@ -185,6 +195,7 @@ export const FilterProvider = (props: ParentProps) => {
       year: '',
       hasUserVideo: '',
       hasSetupVideo: '',
+      notInUpstream: '',
     })
     setSearchQuery('')
   }
