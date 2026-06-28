@@ -494,7 +494,7 @@ export default function ComparePage() {
                                   )}
                                   onMouseEnter={() => updateCellHover(columnIndex(), spec.key)}
                                   onClick={() => handleCellClick(columnIndex(), spec.key)}
-                                  style={{ "word-break": "break-word", "overflow-wrap": "anywhere" }}
+                                  style={{ "word-break": "normal", "overflow-wrap": "break-word" }}
                                 >
                                   <Show
                                     when={isObject}

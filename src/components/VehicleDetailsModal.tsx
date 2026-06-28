@@ -684,7 +684,7 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
                     </div>
                     <div class="space-y-3 px-3 py-3">
                       <Show when={importantNotes().length > 0}>
-                        <ul class="list-disc space-y-2 pl-5 break-words text-sm leading-relaxed text-[#ddcfd3] [&_a]:break-all [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-[#f1e7e9]">
+                        <ul class="list-disc space-y-2 pl-5 break-words text-sm leading-relaxed text-[#ddcfd3] [&_a]:break-words [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-[#f1e7e9]">
                           <For each={importantNotes()}>
                             {(note) => <li innerHTML={sanitizeTrustedFootnoteHtml(note)} />}
                           </For>
