@@ -7,16 +7,13 @@ import {
   For,
   createMemo,
 } from 'solid-js'
-import * as Drawer from 'corvu/drawer'
-import * as Dialog from 'corvu/dialog'
-import createMediaQuery from '~/utils/createMediaQuery'
-import { BREAKPOINTS } from '~/utils/breakpoints'
 import {
   DATA_SOURCE_CONTENT,
   type DataSourceContent,
 } from '~/data/dataSourceDescriptions'
 import { carData } from '~/data/cars'
 import type { Car } from '~/types/CarDataTypes'
+import ResponsiveModal from '~/components/ui/ResponsiveModal'
 import { cn } from '~/lib/utils'
 import LinkIcon from '~/lib/icons/link-new-window.svg?raw'
 import ChevronIcon from '~/lib/icons/down-chevron.svg?raw'
@@ -120,8 +117,6 @@ const DataSourceTab: Component<{
 )
 
 const DataSourceInfoModal: Component<DataSourceInfoModalProps> = (props) => {
-  const isDesktop = createMediaQuery(BREAKPOINTS.desktop)
-  const [openedAsDesktop, setOpenedAsDesktop] = createSignal<boolean | null>(null)
   const [selectedIndex, setSelectedIndex] = createSignal(0)
   const [isExpanded, setIsExpanded] = createSignal(false)
 
@@ -130,17 +125,12 @@ const DataSourceInfoModal: Component<DataSourceInfoModalProps> = (props) => {
 
   createEffect(() => {
     if (props.open) {
-      if (openedAsDesktop() === null) {
-        setOpenedAsDesktop(isDesktop())
-      }
       if (props.initialDataSource) {
         const index = DATA_SOURCE_ORDER.indexOf(props.initialDataSource)
         if (index !== -1) {
           setSelectedIndex(index)
         }
       }
-    } else {
-      setOpenedAsDesktop(null)
     }
   })
 
@@ -173,13 +163,6 @@ const DataSourceInfoModal: Component<DataSourceInfoModalProps> = (props) => {
     requestAnimationFrame(() => scrollButtonToCenter(container, selectedButton))
   })
 
-  createEffect(() => {
-    if (props.open && openedAsDesktop() !== null && openedAsDesktop() !== isDesktop()) {
-      props.onOpenChange(false)
-    }
-  })
-
-  const shouldUseDesktop = () => openedAsDesktop() ?? isDesktop()
   const selectedDataSource = createMemo(() => DATA_SOURCE_ORDER[selectedIndex()] ?? DATA_SOURCE_ORDER[0])
   const selectedContent = createMemo(() => DATA_SOURCE_CONTENT[selectedDataSource()])
 
@@ -273,118 +256,16 @@ const DataSourceInfoModal: Component<DataSourceInfoModalProps> = (props) => {
     </>
   )
 
-  const MobileDrawer = () => (
-    <Drawer.Root
+  return (
+    <ResponsiveModal
       open={props.open}
       onOpenChange={props.onOpenChange}
-      breakPoints={[0.95]}
-      side="bottom"
+      title="Data Sources:"
+      description="Data source references and related links"
+      desktopMaxHeight="700px"
     >
-      {(drawerProps) => (
-        <Drawer.Portal>
-          <Drawer.Overlay
-            class={cn(
-              'fixed inset-0 z-40 bg-black/50',
-              'data-[transitioning]:transition-all data-[transitioning]:duration-300',
-            )}
-            style={{
-              'background-color': `rgb(0 0 0 / ${0.5 * drawerProps.openPercentage})`,
-            }}
-          />
-          <Drawer.Content
-            class={cn(
-              'mobile-drawer-viewport-safe fixed inset-x-0 bottom-0 z-50 flex flex-col',
-              'rounded-t-4xl bg-surface text-white shadow-[0_-6px_20px_rgba(0,0,0,0.6)]',
-              'data-[transitioning]:transition-transform data-[transitioning]:duration-300',
-              'data-[transitioning]:ease-[cubic-bezier(0.32,0.72,0,1)]',
-            )}
-          >
-            {/* Mobile header with drawer handle */}
-            <div class="bg-[#3a1519] rounded-t-4xl">
-              {/* Drawer handle */}
-              <div class="flex justify-center pt-4 pb-3">
-                <div class="w-12 h-1.5 rounded-full bg-[#8a7076]" />
-              </div>
-
-              {/* Header */}
-              <div class="flex justify-between items-center px-4 pb-4 border-b border-black">
-                <Drawer.Label class="text-xl font-bold text-white">
-                  Data Sources:
-                </Drawer.Label>
-                <Drawer.Close
-                  class={cn(
-                    'flex items-center justify-center size-8',
-                    'bg-surface-secondary border border-white/20',
-                    'text-lg font-bold text-white transition-colors cursor-pointer',
-                    'hover:bg-[#3a2b2f]',
-                  )}
-                >
-                  ×
-                </Drawer.Close>
-              </div>
-            </div>
-
-            <div class="flex flex-col flex-1 min-h-0">
-              <ModalContent />
-            </div>
-          </Drawer.Content>
-        </Drawer.Portal>
-      )}
-    </Drawer.Root>
-  )
-
-  const DesktopDialog = () => (
-    <Dialog.Root open={props.open} onOpenChange={props.onOpenChange}>
-      <Dialog.Portal>
-        <Dialog.Overlay
-          class={cn(
-            'fixed inset-0 z-40 bg-black/50',
-            'data-[opening]:animate-in data-[opening]:fade-in-0',
-            'data-[closing]:animate-out data-[closing]:fade-out-0',
-          )}
-        />
-        <Dialog.Content
-          class={cn(
-            'fixed left-1/2 top-1/2 z-50 w-full max-w-2xl',
-            '-translate-x-1/2 -translate-y-1/2',
-            'border-4 border-black bg-surface text-white',
-            'max-h-[min(85vh,700px)] flex flex-col',
-            'shadow-[0_6px_20px_rgba(0,0,0,0.6)]',
-            'data-[opening]:animate-in data-[opening]:fade-in-0',
-            'data-[opening]:zoom-in-95 data-[opening]:slide-in-from-top-2',
-            'data-[closing]:animate-out data-[closing]:fade-out-0',
-            'data-[closing]:zoom-out-95 data-[closing]:slide-out-to-top-2',
-          )}
-        >
-          {/* Desktop header */}
-          <div class="flex flex-shrink-0 items-center justify-between border-b border-black bg-[#3a1519] p-4">
-            <Dialog.Label class="text-xl font-bold text-white">
-              Data Sources:
-            </Dialog.Label>
-            <Dialog.Close
-              class={cn(
-                'flex items-center justify-center size-8',
-                'bg-surface-secondary border border-white/20',
-                'text-lg font-bold text-white transition-colors cursor-pointer',
-                'hover:bg-[#3a2b2f]',
-              )}
-            >
-              ×
-            </Dialog.Close>
-          </div>
-
-          <div class="flex flex-col flex-1 min-h-0">
-            <ModalContent />
-          </div>
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
-  )
-
-  return (
-    <Show when={shouldUseDesktop()} fallback={<MobileDrawer />}>
-      <DesktopDialog />
-    </Show>
+      <ModalContent />
+    </ResponsiveModal>
   )
 }
 

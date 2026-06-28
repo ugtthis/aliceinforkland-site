@@ -1,4 +1,4 @@
-import { type Component, createSignal, createEffect, createMemo } from 'solid-js'
+import { type Component, createMemo } from 'solid-js'
 
 import type { Car } from '~/types/CarDataTypes'
 
@@ -6,104 +6,19 @@ import HighlightText from '~/components/ui/HighlightText'
 import { cn } from '~/lib/utils'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 import { openDataSourceModal } from '~/contexts/DataSourceModalContext'
+import { openVehicleDetailsModal } from '~/contexts/VehicleDetailsModalContext'
 
-import DownChevronSvg from '~/lib/icons/down-chevron.svg?raw'
 import VideoCameraSvg from '~/lib/icons/video-camera.svg?raw'
 import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
-import CheckSvg from '~/lib/icons/checkmark.svg?raw'
+import OpenFolderSvg from '~/lib/icons/open-folder.svg?raw'
 import Checkmark2Svg from '~/lib/icons/checkmark-2.svg?raw'
-import CloseXIcon from '~/lib/icons/close-x.png'
-import { getACCDescription, getAutoResumeDescription } from '~/data/featureDescriptions'
-
-const RED_PNG_FILTER = "brightness(0) saturate(90%) invert(23%) sepia(89%) saturate(3520%) hue-rotate(352deg) brightness(85%) contrast(95%)"
 
 type CardProps = {
   car: Car
   searchQuery: string
 }
 
-type ExpandableRowProps = {
-  label: string
-  value: string
-  description: string
-  class?: string
-  icon?: string
-  iconUrl?: string
-  isExpanded: boolean
-  onToggle: () => void
-}
-
-const ExpandableRow = (props: ExpandableRowProps) => {
-  const [isScrolledToBottom, setIsScrolledToBottom] = createSignal(false)
-  let scrollRef: HTMLDivElement | undefined
-
-  const resetScrollOnOpen = () => {
-    if (props.isExpanded && scrollRef) {
-      scrollRef.scrollTop = 0
-      setIsScrolledToBottom(false)
-    }
-  }
-
-  createEffect(resetScrollOnOpen)
-
-  const handleScroll = (e: Event) => {
-    const target = e.target as HTMLDivElement
-    const isAtBottom = target.scrollTop + target.clientHeight >= target.scrollHeight - 1
-    setIsScrolledToBottom(isAtBottom)
-  }
-
-  return (
-    <div class={cn('border border-[#6a4d54] bg-[#21191d] text-[#eee2e5]', props.class)}>
-      {/* Toggle header */}
-      <div
-        class={cn(
-          'flex items-center justify-between px-4 py-4',
-          'transition-colors duration-200 cursor-pointer hover:bg-[#2d2227]',
-        )}
-        onClick={props.onToggle}
-      >
-        <div class="text-sm font-medium text-[#eadde0]">{props.label}</div>
-        <div class="flex items-center gap-3">
-          {props.icon ? (
-            <div class="w-5 h-5" innerHTML={props.icon} />
-          ) : props.iconUrl ? (
-            <div class="w-5 h-5 flex items-center justify-center">
-              <img src={props.iconUrl} alt="" class="w-full h-full" style={{ filter: RED_PNG_FILTER }} />
-            </div>
-          ) : (
-            <div class="text-sm font-semibold text-[#f1e7e9]">{props.value}</div>
-          )}
-          <div
-            class={cn('h-2 w-2 transition-transform duration-200', props.isExpanded && 'rotate-180')}
-            innerHTML={DownChevronSvg}
-          />
-        </div>
-      </div>
-
-      {/* Expandable description */}
-      <div class={cn('overflow-hidden transition-all duration-300', props.isExpanded ? 'max-h-20' : 'max-h-0')}>
-        <div class="relative">
-          <div
-            ref={scrollRef}
-            class="h-row-height overflow-y-auto bg-[#2a2024] px-4 py-3 text-sm text-[#ddcfd3]"
-            onScroll={handleScroll}
-          >
-            {props.description}
-          </div>
-          {/* Scroll gradient indicator */}
-          <div class={cn(
-            'absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-black/50 to-transparent opacity-0',
-            'transition-opacity duration-200 pointer-events-none',
-            isScrolledToBottom() ? 'opacity-0' : 'opacity-100',
-          )} />
-        </div>
-      </div>
-    </div>
-  )
-}
-
 const Card: Component<CardProps> = (props) => {
-  const [expandedRow, setExpandedRow] = createSignal<string | null>(null)
   const { selectedCars, toggleCarSelection } = useModelComparison()
   const sourceLabel = (props.car.source ?? '').trim()
   const yearList = createMemo(() => props.car.year_list.map(String))
@@ -117,31 +32,6 @@ const Card: Component<CardProps> = (props) => {
   // Memoize the selected state to avoid unnecessary reactive dependencies
   const isSelected = createMemo(() => selectedCars().includes(props.car.id))
   const isDisabled = createMemo(() => !isSelected() && selectedCars().length >= 6)
-
-  const getResumeIcon = () => {
-    if (props.car.auto_resume_available === true) return { icon: CheckSvg }
-    if (props.car.auto_resume_available === false) return { iconUrl: CloseXIcon }
-    return {}
-  }
-
-  const resumeRowProps = {
-    label: "Resume from stop",
-    value: "NA",
-    ...getResumeIcon(),
-    description: getAutoResumeDescription(props.car.auto_resume_available),
-    class: "border-2 border-border-soft"
-  }
-
-  const accRowProps = {
-    label: "ACC",
-    value: props.car.acc || "Stock",
-    description: getACCDescription(props.car.acc || "Stock"),
-    class: "border-2 border-border-soft"
-  }
-
-  const toggleRow = (rowId: string) => {
-    setExpandedRow(expandedRow() === rowId ? null : rowId)
-  }
 
   const supportLabelClass = cn(
     'py-1 px-6 inline-block border border-[#6a4d54] border-b-0 text-center bg-[#2d2227] text-[#efe3e6]',
@@ -316,50 +206,19 @@ const Card: Component<CardProps> = (props) => {
           {/* spacer for future drivetrain label */}
         </div>
 
-        {/* Persistent border seam */}
-        <div class="h-px bg-[#6a4d54]" />
-
-        <input type="checkbox" id={`toggle-${props.car.id}`} class="hidden peer" />
-
-        {/* Expanded Card Body */}
-        <div
+        <button
+          type="button"
+          onClick={() => openVehicleDetailsModal(props.car)}
+          aria-label={`Open details for ${carTitle()}`}
           class={cn(
-            'max-h-0 overflow-hidden bg-surface-secondary transition-all duration-300',
-            'peer-checked:max-h-card-height',
+            'mt-auto flex w-full items-center justify-center gap-2 border-t border-[#6a4d54] bg-[#2b2025] px-4 py-2.5',
+            'text-sm font-semibold uppercase tracking-wide text-[#efe3e6] transition-colors duration-200',
+            'cursor-pointer hover:bg-[#3a2a30] hover:text-[#f1e7e9]',
+            'max-md:bg-[#3a2a30] max-md:text-[#f1e7e9]',
           )}
         >
-          <div class="p-4">
-            <div class="flex flex-col gap-2">
-              {/* Row 1 */}
-              <ExpandableRow
-                {...resumeRowProps}
-                isExpanded={expandedRow() === "resume"}
-                onToggle={() => toggleRow("resume")}
-              />
-
-              {/* Row 2 */}
-              <ExpandableRow
-                {...accRowProps}
-                isExpanded={expandedRow() === "acc"}
-                onToggle={() => toggleRow("acc")}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Chevron button */}
-        <label
-          for={`toggle-${props.car.id}`}
-          class={cn(
-            'flex justify-center py-1 border-t border-transparent bg-[#2b2025] text-[#ddcfd3] cursor-pointer',
-            'peer-checked:border-[#6a4d54] peer-checked:bg-surface-secondary peer-checked:[&>div]:rotate-180',
-            'hover:bg-[#3a2a30] hover:text-[#f1e7e9] hover:duration-300 hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
-            'max-md:bg-[#3a2a30] max-md:text-[#f1e7e9] max-md:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)]',
-            'peer-checked:max-md:shadow-none',
-          )}
-        >
-          <div class="h-5 w-5" innerHTML={DownChevronSvg} />
-        </label>
+          <span class="h-6 w-6" innerHTML={OpenFolderSvg} />
+        </button>
       </div>
       </div>
     </>

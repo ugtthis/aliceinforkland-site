@@ -5,7 +5,9 @@ import { isServer } from 'solid-js/web'
 import { FilterProvider } from '~/contexts/FilterContext'
 import { ModelComparisonProvider } from '~/contexts/ModelComparisonContext'
 import DataSourceInfoModal from '~/components/DataSourceInfoModal'
+import VehicleDetailsModal from '~/components/VehicleDetailsModal'
 import { dataSourceModalState, closeDataSourceModal } from '~/contexts/DataSourceModalContext'
+import { vehicleDetailsModalState, closeVehicleDetailsModal } from '~/contexts/VehicleDetailsModalContext'
 import '~/app.css'
 
 export default function App() {
@@ -21,6 +23,11 @@ export default function App() {
                 open={dataSourceModalState.isOpen()}
                 onOpenChange={(open) => !open && closeDataSourceModal()}
                 initialDataSource={dataSourceModalState.dataSource()}
+              />
+              <VehicleDetailsModal
+                open={vehicleDetailsModalState.isOpen()}
+                onOpenChange={(open) => !open && closeVehicleDetailsModal()}
+                car={vehicleDetailsModalState.car()}
               />
             </Show>
           </ModelComparisonProvider>
