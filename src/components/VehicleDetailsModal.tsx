@@ -374,7 +374,7 @@ const CompatibleHardwareTile: Component<{
                 'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
               )}
             >
-              <span class="min-w-0 whitespace-normal break-words text-sm font-semibold leading-tight text-[#f1e7e9] underline-offset-4 group-hover:underline">
+              <span class="min-w-0 whitespace-normal break-words text-sm font-semibold leading-tight text-[#f1e7e9]">
                 Buy used on Discord
               </span>
               <span class="h-3.5 w-3.5 shrink-0 text-[#efe3e6]" innerHTML={LinkIcon} />
@@ -406,7 +406,7 @@ const CompatibleHardwareTile: Component<{
                 'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
               )}
             >
-              <span class="min-w-0 whitespace-normal break-words text-sm font-semibold leading-tight text-[#f1e7e9] underline-offset-4 group-hover:underline">
+              <span class="min-w-0 whitespace-normal break-words text-sm font-semibold leading-tight text-[#f1e7e9]">
                 Buy New
               </span>
               <span class="h-3.5 w-3.5 shrink-0 text-[#efe3e6]" innerHTML={LinkIcon} />
@@ -700,7 +700,7 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
                             'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
                           )}
                         >
-                          <span class="min-w-0 truncate text-sm font-semibold leading-tight text-[#f1e7e9] underline-offset-4 group-hover:underline">
+                          <span class="min-w-0 truncate text-sm font-semibold leading-tight text-[#f1e7e9]">
                             Additional resource
                           </span>
                           <span class="h-3.5 w-3.5 shrink-0 text-[#efe3e6]" innerHTML={LinkIcon} />
