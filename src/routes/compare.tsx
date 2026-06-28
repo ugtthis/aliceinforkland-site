@@ -45,17 +45,17 @@ export default function ComparePage() {
   const HIGHLIGHT_STYLES = {
     card: {
       selected: 'ring-4 ring-[#c76a78] shadow-lg shadow-[#c76a78]/45',
-      hovered: 'ring-4 ring-[#7b748d] shadow-[0_0_20px_rgba(123,116,141,0.35)]',
+      hovered: 'ring-4 ring-[#a3a3a3] shadow-[0_0_22px_rgba(163,163,163,0.42)]',
       default: 'shadow-elev-1',
     },
     cell: {
       selected: 'bg-[#c76a78]/20 text-[#f7e7eb] font-semibold outline outline-[3px] outline-[#c76a78] shadow-xl',
-      columnSelected: 'bg-[#7b748d]/30 text-[#ece9f5]',
-      columnHovered: 'bg-white/10',
+      columnSelected: 'bg-[#6f5a63]/28 text-[#eee4e7]',
+      columnHovered: 'bg-[#9a9a9a]/26',
     },
     row: {
       selected: 'bg-[#c76a78]/14',
-      hovered: 'bg-white/12',
+      hovered: 'bg-[#4a4a4a]/30',
       stripeEven: 'bg-[#1b1517]',
       stripeOdd: 'bg-[#120e10]',
     },
