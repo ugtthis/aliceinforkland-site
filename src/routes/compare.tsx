@@ -464,7 +464,7 @@ export default function ComparePage() {
                   <>
                     {/* Category Header */}
                     <div
-                      class="grid w-full border-b-2 bg-stone-950 min-w-fit"
+                      class="grid w-full bg-stone-950 min-w-fit"
                       style={{
                         "grid-template-columns": `280px repeat(${selectedCars().length}, minmax(220px, 1fr))`,
                         "gap": "0 0"
