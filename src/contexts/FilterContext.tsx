@@ -157,6 +157,14 @@ export const FilterProvider = (props: ParentProps) => {
       let bVal: string | number = b[field]
 
       if (field === 'years') {
+        const aYearMissing = a.years.trim().toUpperCase() === 'N/A' || a.year_list.length === 0
+        const bYearMissing = b.years.trim().toUpperCase() === 'N/A' || b.year_list.length === 0
+
+        // Keep unknown year values(comma body) at the end for both ASC and DESC sorts
+        if (aYearMissing !== bYearMissing) {
+          return aYearMissing ? 1 : -1
+        }
+
         aVal = parseInt((a.year_list[0]?.toString() ?? '0'), 10)
         bVal = parseInt((b.year_list[0]?.toString() ?? '0'), 10)
       }
