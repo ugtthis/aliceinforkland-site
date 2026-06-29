@@ -5,7 +5,8 @@ export type WipDetails = {
   branch_desc: string
   wiki_url: string
   discord_url: string
-  discord_name: string
+  discord_names: string[]
+  x_names: string[]
   extra_resource_url: string | null
   important_notes: string[] | null
 }

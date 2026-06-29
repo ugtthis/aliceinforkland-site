@@ -40,7 +40,8 @@ type CarRecord = {
   branch_desc?: string
   wiki_url?: string
   discord_url?: string
-  discord_name?: string
+  discord_names?: string[]
+  x_names?: string[]
   extra_resource_url?: string | null
   important_notes?: string[] | null
 }
@@ -71,6 +72,13 @@ const getCatalogUrl = (catalog: CatalogInput): string => {
 }
 
 const buildCarRecord = (car: CarRecord, source: string, sourceUrl: string): Car => {
+  const discordNames = (car.discord_names ?? [])
+    .map((name) => name.trim())
+    .filter((name) => name.length > 0)
+  const xNames = (car.x_names ?? [])
+    .map((name) => name.trim())
+    .filter((name) => name.length > 0)
+
   const wip_details = source === 'wip'
     ? {
         key: car.key!,
@@ -79,7 +87,8 @@ const buildCarRecord = (car: CarRecord, source: string, sourceUrl: string): Car 
         branch_desc: car.branch_desc!,
         wiki_url: car.wiki_url!,
         discord_url: car.discord_url!,
-        discord_name: car.discord_name!,
+        discord_names: discordNames,
+        x_names: xNames,
         extra_resource_url: car.extra_resource_url ?? null,
         important_notes: car.important_notes ?? null,
       }
