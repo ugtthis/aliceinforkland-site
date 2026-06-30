@@ -112,9 +112,29 @@ body {
 }
 
 .gradient-dark-red {
+  position: relative;
+  isolation: isolate;
   background:
     radial-gradient(ellipse at center, #5a1418 18%, #3a0f12 36%, #11080a 82%),
     linear-gradient(135deg, #090506 0%, #260b0e 24%, #4a1116 50%, #2d0c10 74%, #080405 100%);
+}
+
+.gradient-dark-red::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("./lib/images/noise.svg");
+  background-size: 87px 87px;
+  filter: contrast(1.35) brightness(0.55);
+  mix-blend-mode: hard-light;
+  opacity: 0.96;
+}
+
+.gradient-dark-red > * {
+  position: relative;
+  z-index: 1;
 }
 
 .gradient-dark-red-soft {
