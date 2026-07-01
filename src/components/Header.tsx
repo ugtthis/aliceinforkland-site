@@ -25,6 +25,8 @@ const Header: Component = () => {
         <img
           src={AifLogo}
           alt="Alice in Forkland"
+          width={782}
+          height={127}
           class="h-auto w-[300px]"
           loading="eager"
         />
