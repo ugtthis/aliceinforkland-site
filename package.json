@@ -27,6 +27,7 @@
   "//dependencies": {
     "@solidjs/router": "client-side routing for solidjs",
     "@solidjs/start": "full-stack web framework for solidjs",
+    "@tanstack/solid-virtual": "virtualized row rendering for car list",
     "clsx": "utility for constructing className strings conditionally",
     "corvu": "ui components for solidjs",
     "solid-js": "reactive js lib for ui",
@@ -36,6 +37,7 @@
   "dependencies": {
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.1.0",
+    "@tanstack/solid-virtual": "^3.13.31",
     "clsx": "^2.1.1",
     "corvu": "^0.7.2",
     "solid-js": "^1.9.5",

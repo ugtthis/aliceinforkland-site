@@ -1,8 +1,8 @@
-import { For, createMemo } from 'solid-js'
-import FileCard from '~/components/FileCard'
+import { createMemo } from 'solid-js'
 import FilterChips from '~/components/FilterChips'
 import Header from '~/components/Header'
 import CompareFooter from '~/components/CompareFooter'
+import VirtualizedCarList from '~/components/VirtualizedCarList'
 import { useFilter } from '~/contexts/FilterContext'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 
@@ -61,22 +61,11 @@ export default function Home() {
         </div>
         <FilterChips />
 
-        <div
-          class={cn(
-            'grid grid-cols-1 mt-8',
-            isCompareMode()
-              ? 'gap-2 compare-mode-active'
-              : 'gap-6 md:grid-cols-2 lg:grid-cols-3',
-          )}
-        >
-          <For each={filteredResults()}>
-            {(vehicle) => (
-              <div class="vehicle-card" data-car-id={vehicle.id}>
-                <FileCard car={vehicle} searchQuery={searchQuery()} />
-              </div>
-            )}
-          </For>
-        </div>
+        <VirtualizedCarList
+          cars={filteredResults()}
+          searchQuery={searchQuery()}
+          isCompareMode={isCompareMode()}
+        />
       </main>
       {isCompareMode() && <CompareFooter />}
     </>

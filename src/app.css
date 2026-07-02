@@ -161,20 +161,13 @@ body {
 }
 
 .card-compare-mode {
-  content-visibility: hidden;
   display: none;
 }
 
-.card-grid-mode {
-  content-visibility: auto;
-}
-
 .compare-mode-active .card-grid-mode {
-  content-visibility: hidden;
   display: none;
 }
 
 .compare-mode-active .card-compare-mode {
-  content-visibility: auto;
   display: block;
 }
