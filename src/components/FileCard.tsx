@@ -147,12 +147,12 @@ const Card: Component<CardProps> = (props) => {
           {/* Year and Model */}
           <div class="flex border-b border-[#6a4d54]">
             <div class="flex items-center px-2 py-2.5 border-r border-[#6a4d54]">
-              <h2 class="text-lg">
+              <h2 class="text-base">
                 <HighlightText text={props.car.years} query={props.searchQuery} yearList={yearList()} />
               </h2>
             </div>
-            <div class="flex flex-1 items-center justify-between min-h-[60px] px-3 py-2.5">
-              <h1 class="flex-1 pr-3 text-xl font-semibold">
+            <div class="flex flex-1 items-center justify-between min-h-[76px] px-3 py-2.5">
+              <h1 class="flex-1 pr-3 text-base font-semibold">
                 <HighlightText text={carTitle()} query={props.searchQuery} />
               </h1>
               <div class={cn('ml-2 flex-shrink-0', !props.car.video && 'invisible')}>
