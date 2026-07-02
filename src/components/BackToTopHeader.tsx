@@ -52,13 +52,11 @@ const BackToTopHeader: Component = () => {
         'gradient-dark-red shadow-[0_6px_20px_rgba(0,0,0,0.6)] transition-opacity duration-200 ease-out',
         isVisible() ? 'opacity-100' : 'pointer-events-none opacity-0',
       )}
-      aria-hidden={!isVisible()}
     >
       <div class="mx-auto max-w-7xl px-4 md:px-6">
         <button
           type="button"
           onClick={scrollToTop}
-          aria-label="Back to top"
           class="flex w-full cursor-pointer items-center justify-end text-white transition-colors hover:text-[#f1c7cf]"
         >
           <div class="h-6 w-6 flex-shrink-0 bouncy-arrow" innerHTML={UpArrowSvg} />
