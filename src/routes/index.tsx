@@ -3,6 +3,7 @@ import FilterChips from '~/components/FilterChips'
 import Header from '~/components/Header'
 import CompareFooter from '~/components/CompareFooter'
 import VirtualizedCarList from '~/components/VirtualizedCarList'
+import BackToTopHeader from '~/components/BackToTopHeader'
 import { useFilter } from '~/contexts/FilterContext'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <BackToTopHeader />
       <main class="mx-auto max-w-7xl px-4 pt-4 pb-16 text-[#e7dadd]">
         <div class="flex items-center justify-between mb-1.5">
           <div class="text-md text-white/70 md:text-lg">
