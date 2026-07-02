@@ -5,6 +5,7 @@ import { cn, hasObjectEntries, slugify } from '~/lib/utils'
 import { carData } from '~/data/cars'
 import { useModelComparison } from '~/contexts/ModelComparisonContext'
 import { openDataSourceModal } from '~/contexts/DataSourceModalContext'
+import { openVehicleDetailsModal } from '~/contexts/VehicleDetailsModalContext'
 import { SPECS_BY_CATEGORY } from '~/data/specs'
 import UpArrowSvg from '~/lib/icons/up-arrow.svg?raw'
 import RightArrowSvg from '~/lib/icons/right-arrow.svg?raw'
@@ -12,6 +13,7 @@ import RotateLeftSvg from '~/lib/icons/rotate-left.svg?raw'
 import ZoomOutSvg from '~/lib/icons/zoom-out.svg?raw'
 import VideoCameraSvg from '~/lib/icons/video-camera.svg?raw'
 import PlayVideoSvg from '~/lib/icons/play-video.svg?raw'
+import OpenFolderSvg from '~/lib/icons/open-folder.svg?raw'
 
 const MIN_CARS_FOR_COMPARISON = 2
 
@@ -428,7 +430,7 @@ export default function ComparePage() {
                           )}
                         >
                           {/* Car Info */}
-                          <div class="flex flex-col flex-grow p-2 border-b border-black">
+                          <div class="flex flex-col flex-grow p-2 border-b border-[#3d2b2f]">
                             <h3 class="text-sm font-bold leading-tight">{car.make}</h3>
                             <p class="text-xs font-semibold leading-tight text-white/75">{car.model}</p>
                             <p class="mt-0.5 text-xs text-white/55">{car.years}</p>
@@ -437,10 +439,22 @@ export default function ComparePage() {
                           {/* Action Buttons */}
                           <div class="flex">
                             <button
+                              type="button"
+                              onClick={() => openVehicleDetailsModal(car)}
+                              class={cn(
+                                'flex flex-1 items-center justify-center border-r border-[#3d2b2f] bg-[#2b2025] py-1.5 text-[#efe3e6]',
+                                'transition-colors duration-200 cursor-pointer hover:bg-[#3a2a30] hover:text-[#f1e7e9]',
+                              )}
+                              title="Open vehicle details"
+                            >
+                              <span class="h-4 w-4" innerHTML={OpenFolderSvg} />
+                            </button>
+                            <button
+                              type="button"
                               onClick={() => removeCar(car.id)}
                               class={cn(
-                                'flex flex-1 items-center justify-center py-1.5 bg-[#A07878] text-sm font-medium text-white',
-                                'transition-colors cursor-pointer hover:bg-[#8B6B6B]',
+                                'flex basis-[30%] shrink-0 items-center justify-center bg-[#7a5a61] py-1.5 text-[#f1e7e9]',
+                                'transition-colors duration-200 cursor-pointer hover:bg-[#8e6871]',
                               )}
                               title="Remove from comparison"
                             >
