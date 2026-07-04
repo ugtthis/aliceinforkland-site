@@ -1,16 +1,16 @@
 import type { Component } from 'solid-js'
 import { createSignal } from 'solid-js'
 
-import FilterSvg from '~/lib/icons/filter.svg?raw'
 import SearchGlassSvg from '~/lib/icons/search-glass.svg?raw'
+import WarningRedSwirlIcon from '~/lib/icons/warning-red-swirl-button.png'
 import AifLogo from '~/lib/icons/alice-in-forkland.png'
 import ShineBorder from '~/components/ui/ShineBorder'
-import FilterModal from '~/components/FilterModal'
+import WarningModal from '~/components/WarningModal'
 import { useFilter } from '~/contexts/FilterContext'
 import { cn } from '~/lib/utils'
 
 const Header: Component = () => {
-  const [isFilterOpen, setIsFilterOpen] = createSignal(false)
+  const [isWarningOpen, setIsWarningOpen] = createSignal(false)
   const { searchQuery, setSearchQuery } = useFilter()
 
   return (
@@ -58,19 +58,23 @@ const Header: Component = () => {
 
             <button
               type="button"
-              onClick={() => setIsFilterOpen(true)}
-              class={cn(
-                'grid place-items-center size-[48px] flex-shrink-0 px-0 py-0 border-7 border-[#6a4d54]',
-                'bg-[#2d2227] transition-colors cursor-pointer hover:bg-[#3a2a30]',
-              )}
+              onClick={() => setIsWarningOpen(true)}
+              aria-label="Open warning information"
+              class="group size-14 shrink-0 cursor-pointer"
             >
-              <div class="size-5 text-[#efe3e6df]" innerHTML={FilterSvg} />
+              <img
+                src={WarningRedSwirlIcon}
+                alt=""
+                width={100}
+                height={100}
+                class="block size-full animate-warning-spin group-hover:[animation-play-state:running] motion-reduce:animate-none"
+              />
             </button>
           </div>
         </div>
       </header>
 
-      <FilterModal open={isFilterOpen()} onOpenChange={setIsFilterOpen} />
+      <WarningModal open={isWarningOpen()} onOpenChange={setIsWarningOpen} />
     </>
   )
 }

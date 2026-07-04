@@ -12,6 +12,14 @@
   --color-border-soft: #5c4247;
   --spacing-card-height: 600px;
   --spacing-row-height: 80px;
+
+  --animate-warning-spin: warning-button-spin 8s linear infinite paused;
+
+  @keyframes warning-button-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 :root {
