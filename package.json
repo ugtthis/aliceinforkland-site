@@ -1,5 +1,5 @@
 {
-  "name": "opendbc-site",
+  "name": "aliceinforkland-site",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",

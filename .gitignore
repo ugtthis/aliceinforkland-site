@@ -22,6 +22,3 @@ tsconfig.tsbuildinfo
 # System Files
 .DS_Store
 Thumbs.db
-
-# opendbc repository (used only during workflow)
-opendbc/
