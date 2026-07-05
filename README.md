@@ -10,10 +10,7 @@
 
 ---
 
-<br>
-
-This is a web interface for browsing and comparing vehicle compatibility data from the [opendbc community data](https://github.com/ugtthis/opendbc-community-data) repository.
-The data catalogs contain vehicle specifications for cars and info about their current capabilities with comma's [openpilot](https://github.com/commaai/openpilot) driver assistance system.
+RC Cars to Rivians to a 1988 Volkswagen Vanagon. openpilot can support it to the degree your willing to make it work. The only limit is skill. Explore the different experiences that range from super experimental to WIP to popular community forks in one place that.
 
 
 ## Quick Start
