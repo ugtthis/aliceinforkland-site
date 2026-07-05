@@ -1,4 +1,4 @@
-import { type Component, Show, createSignal } from 'solid-js'
+import { type Component, Show, createEffect, createSignal } from 'solid-js'
 
 import ResponsiveModal from '~/components/ui/ResponsiveModal'
 import DownChevronSvg from '~/lib/icons/down-chevron.svg?raw'
@@ -13,6 +13,12 @@ type WarningModalProps = {
 
 const WarningModal: Component<WarningModalProps> = (props) => {
   const [isResourcesExpanded, setIsResourcesExpanded] = createSignal(false)
+
+  createEffect(() => {
+    if (!props.open) {
+      setIsResourcesExpanded(false)
+    }
+  })
 
   return (
     <ResponsiveModal
