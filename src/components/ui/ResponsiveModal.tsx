@@ -64,7 +64,7 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
         <Drawer.Portal>
           <Drawer.Overlay
             class={cn(
-              'fixed inset-0 z-40 bg-black/50',
+              'fixed inset-0 z-[60] bg-black/50',
               'data-[transitioning]:transition-all data-[transitioning]:duration-300',
             )}
             style={{
@@ -73,7 +73,7 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
           />
           <Drawer.Content
             class={cn(
-              'mobile-drawer-viewport-safe fixed inset-x-0 bottom-0 z-50 flex flex-col',
+              'mobile-drawer-viewport-safe fixed inset-x-0 bottom-0 z-[70] flex flex-col',
               'rounded-t-4xl bg-surface text-white shadow-[0_-6px_20px_rgba(0,0,0,0.6)]',
               'data-[transitioning]:transition-transform data-[transitioning]:duration-300',
               'data-[transitioning]:ease-[cubic-bezier(0.32,0.72,0,1)]',
@@ -119,14 +119,14 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
       <Dialog.Portal>
         <Dialog.Overlay
           class={cn(
-            'fixed inset-0 z-40 bg-black/50',
+            'fixed inset-0 z-[60] bg-black/50',
             'data-[opening]:animate-in data-[opening]:fade-in-0',
             'data-[closing]:animate-out data-[closing]:fade-out-0',
           )}
         />
         <Dialog.Content
           class={cn(
-            'fixed left-1/2 top-1/2 z-50 flex w-full max-w-2xl flex-col',
+            'fixed left-1/2 top-1/2 z-[70] flex w-full max-w-2xl flex-col',
             '-translate-x-1/2 -translate-y-1/2',
             'border-4 border-black bg-surface text-white',
             'max-h-[85vh] shadow-[0_6px_20px_rgba(0,0,0,0.6)]',
