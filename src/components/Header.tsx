@@ -3,7 +3,6 @@ import { createSignal } from 'solid-js'
 
 import SearchGlassSvg from '~/lib/icons/search-glass.svg?raw'
 import WarningRedSwirlIcon from '~/lib/icons/warning-red-swirl-button.png'
-import AifLogo from '~/lib/icons/alice-in-forkland.png'
 import ShineBorder from '~/components/ui/ShineBorder'
 import WarningModal from '~/components/WarningModal'
 import { useFilter } from '~/contexts/FilterContext'
@@ -23,7 +22,7 @@ const Header: Component = () => {
         )}
       >
         <img
-          src={AifLogo}
+          src="/logo.png"
           alt="Alice in Forkland"
           width={782}
           height={127}

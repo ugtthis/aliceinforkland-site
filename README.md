@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="/">
-    <img src="src/lib/icons/alice-in-forkland.png" alt="Alice in Forkland" width="300">
+    <img src="public/logo.png" alt="Alice in Forkland" width="300">
   </a>
 
   Built with data from [https://github.com/ugtthis/opendbc-community-data](https://github.com/ugtthis/opendbc-community-data)
