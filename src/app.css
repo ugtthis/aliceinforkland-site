@@ -25,6 +25,10 @@
 :root {
   --background-rgb: 9 5 6;
   --foreground-rgb: 231 218 221;
+  /* Solid dark base + declared scheme so browser chrome (iOS Safari status bar,
+     bottom toolbar, and overscroll backdrop) render dark instead of white. */
+  color-scheme: dark;
+  background-color: rgb(var(--background-rgb));
 }
 
 /* Base defaults */
