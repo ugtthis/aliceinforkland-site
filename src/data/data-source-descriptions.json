@@ -26,7 +26,7 @@
     ]
   },
   "bluepilot": {
-    "summary": "BluePilot is a fork of openpilot specifically developed for Ford vehicles. It works by directly tapping into the IPMA, bypassing the limitations of the stock Lane Centering features.",
+    "summary": "bluepilot is a fork of openpilot specifically developed for Ford vehicles. It works by directly tapping into the IPMA, bypassing the limitations of the stock Lane Centering features.",
     "resources": [
       {
         "label": "Github",
