@@ -36,7 +36,7 @@ const Header: Component = () => {
               <ShineBorder>
                 <input
                   type="text"
-                  placeholder="Search models"
+                  placeholder="Search vehicles"
                   value={searchQuery()}
                   onInput={(e) => setSearchQuery(e.currentTarget.value)}
                   onKeyDown={(e) => {
@@ -47,7 +47,7 @@ const Header: Component = () => {
                   maxLength={45}
                   class={cn(
                     'h-12 w-[400px] max-w-full border border-[#6a4d54] bg-[#171215] pl-12 pr-6 text-[#f1e7e9]',
-                    'font-sans text-xs placeholder:text-[#b9a8ad] outline-none sm:text-sm md:text-base',
+                    'font-sans text-xs placeholder:text-[#5e5353] outline-none sm:text-sm md:text-base',
                   )}
                 />
                 <span class="absolute inset-y-0 left-0 grid w-12 place-items-center text-gray-500" aria-hidden="true">
