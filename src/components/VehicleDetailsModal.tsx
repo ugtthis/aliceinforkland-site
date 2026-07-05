@@ -223,6 +223,61 @@ const ResourceSection: Component<{
   </Show>
 )
 
+const FeedbackSection: Component<{
+  isExpanded: boolean
+  onToggle: () => void
+}> = (props) => (
+  <section class="border-2 border-[#5c4247] bg-[#181416] text-[#eee2e5] md:col-span-2">
+    <button
+      type="button"
+      onClick={props.onToggle}
+      class={cn(
+        'flex w-full items-center justify-between border-b border-[#6a4d54] bg-[#2d2227] px-3 py-3 text-left',
+        'transition-colors duration-200 cursor-pointer hover:bg-[#3a2a30]',
+      )}
+      aria-expanded={props.isExpanded}
+    >
+      <h3 class="text-xs font-semibold uppercase tracking-wide text-[#c9bbbf]">Have feedback?</h3>
+      <span
+        class={cn('h-2 w-2', props.isExpanded && 'rotate-180')}
+        innerHTML={DownChevronSvg}
+      />
+    </button>
+    <Show when={props.isExpanded}>
+      <div class="grid gap-2.5 p-2.5 min-[520px]:grid-cols-2">
+        <a
+          href="https://github.com/ugtthis/opendbc-community-data/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={cn(
+            'group flex h-full items-center justify-between gap-3 border border-[#5c4247] bg-[#21191d] px-3 py-3',
+            'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
+          )}
+        >
+          <span class="min-w-0 whitespace-normal break-words text-sm font-semibold leading-tight text-[#f1e7e9]">
+            Report data issue
+          </span>
+          <span class="h-3.5 w-3.5 shrink-0 text-[#efe3e6]" innerHTML={LinkIcon} />
+        </a>
+        <a
+          href="https://aliceinforkland.userjot.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={cn(
+            'group flex h-full items-center justify-between gap-3 border border-[#5c4247] bg-[#21191d] px-3 py-3',
+            'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
+          )}
+        >
+          <span class="min-w-0 whitespace-normal break-words text-sm font-semibold leading-tight text-[#f1e7e9]">
+            General Feedback
+          </span>
+          <span class="h-3.5 w-3.5 shrink-0 text-[#efe3e6]" innerHTML={LinkIcon} />
+        </a>
+      </div>
+    </Show>
+  </section>
+)
+
 // Generic expandable detail tile with label/value and description.
 const ExpandableDetailTile: Component<{
   label: string
@@ -769,6 +824,11 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
                 />
 
                 <VideoLinksTile car={car()} />
+
+                <FeedbackSection
+                  isExpanded={isDetailExpanded('feedback')}
+                  onToggle={() => toggleDetail('feedback')}
+                />
               </div>
             </div>
           </div>
