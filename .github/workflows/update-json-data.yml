@@ -1,0 +1,68 @@
+name: Update JSON Data
+
+on:
+  schedule:
+    - cron: '5 8 * * *' # Run daily at 12:05am PST
+  workflow_dispatch:
+
+jobs:
+  update-json-data:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Checkout opendbc-community-data repo
+        uses: actions/checkout@v4
+        with:
+          repository: ugtthis/opendbc-community-data
+          path: opendbc-community-data
+          sparse-checkout: data
+
+      - name: Sync JSON data
+        run: |
+          set -euo pipefail
+
+          rm -f src/data/cars/*.json
+          cp opendbc-community-data/data/*.json src/data/cars/
+
+      - name: Report new sources
+        id: new-sources
+        run: |
+          set -euo pipefail
+
+          new_files="$(git ls-files --others --exclude-standard src/data/cars/*.json)"
+          if [ -n "$new_files" ]; then
+            {
+              echo "body<<EOF"
+              echo "New source(s) detected:"
+              echo
+              while IFS= read -r file; do
+                echo "- $file"
+              done <<< "$new_files"
+              echo
+              echo "Add these new sources to:"
+              echo "- src/data/cars/index.ts"
+              echo "- src/data/data-source-descriptions.json"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7.0.11
+        with:
+          commit-message: 'data: update JSON data'
+          author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
+          committer: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
+          title: '[bot] Scheduled JSON data update'
+          body: |
+            Automated JSON data update from ugtthis/opendbc-community-data.
+
+            ${{ steps.new-sources.outputs.body }}
+          branch: update-json-data
+          base: main
+          delete-branch: true
