@@ -9,10 +9,31 @@ export default createHandler(() => (
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.svg" />
-          <meta property="og:title" content="opendbc.com" />
-          <meta property="og:image" content="https://opendbc.com/opendbc-social-share.png" />
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:image" content="https://opendbc.com/opendbc-social-share.png" />
+          <meta
+            name="description"
+            content="Explore experimental, WIP, and community openpilot-supported vehicle projects in one place."
+          />
+          <meta property="og:title" content="Alice in Forkland" />
+          <meta
+            property="og:description"
+            content="Explore experimental, WIP, and community openpilot-supported vehicle projects in one place."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://aliceinforkland.com" />
+          <meta property="og:image" content="https://aliceinforkland.com/social-share.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Alice in Forkland social share image" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Alice in Forkland" />
+          <meta
+            name="twitter:description"
+            content="Explore experimental, WIP, and community openpilot-supported vehicle projects in one place."
+          />
+          <meta name="twitter:image" content="https://aliceinforkland.com/social-share.png" />
+          <meta name="twitter:image:alt" content="Alice in Forkland social share image" />
+          <title>Alice in Forkland</title>
           <script async src="https://plausible.io/js/pa-vfDsbF0-tA72L6Wnf0rXO.js"></script>
           <script>
             {`window.plausible = window.plausible || function() { (plausible.q = plausible.q || []).push(arguments) },
