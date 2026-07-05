@@ -33,10 +33,10 @@ const WarningModal: Component<WarningModalProps> = (props) => {
           <div class="flex items-center gap-1.5">
             <span
               aria-hidden="true"
-              class="size-7 shrink-0 text-[#ff6b7a]"
+              class="size-7 shrink-0 text-[#db2d3f]"
               innerHTML={WarningTriangleSvg}
             />
-            <p class="text-xl font-bold uppercase tracking-[0.10em] text-[#ff6b7a]">
+            <p class="text-xl font-bold uppercase tracking-[0.10em] text-[#db2d3f]">
               WARNING
             </p>
           </div>
