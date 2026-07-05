@@ -10,7 +10,7 @@
 
 ---
 
-RC Cars to Rivians to a 1988 Volkswagen Vanagon. openpilot can support it to the degree your willing to make it work. The only limit is skill. Explore the different experiences that range from super experimental to WIP to popular community forks in one place that.
+RC Cars to Rivians to a 1988 Volkswagen Vanagon. [openpilot](https://github.com/commaai/openpilot) can support it to the degree your willing to make it work. The only limit is skill. Explore the different experiences that range from super experimental to WIP to popular community forks in one place that.
 
 
 ## Quick Start
