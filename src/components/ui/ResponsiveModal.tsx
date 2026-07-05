@@ -47,7 +47,7 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
 
   const shouldUseDesktop = () => openedAsDesktop() ?? isDesktop()
   const CLOSE_BUTTON_CLASS = cn(
-    'flex items-center justify-center size-8',
+    'flex size-8 shrink-0 items-center justify-center',
     'bg-surface-secondary border border-white/20',
     'text-lg font-bold text-white transition-colors cursor-pointer',
     'hover:bg-[#3a2b2f]',
@@ -84,7 +84,7 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
                 <div class="w-12 h-1.5 rounded-full bg-[#8a7076]" />
               </div>
 
-              <div class="flex items-center justify-between border-b border-black pb-4 px-6">
+              <div class="flex items-center justify-between gap-4 border-b border-black pb-4 px-6">
                 <Drawer.Label class="min-w-0 flex-1 text-white">
                   <Show when={hasSubtitle()}>
                     <span class="block text-lg font-semibold uppercase tracking-wide text-[#c9bbbf]">
@@ -92,8 +92,8 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
                     </span>
                   </Show>
                   <span class={cn(
-                    'block break-words leading-tight',
-                    hasSubtitle() ? 'text-lg font-bold sm:text-xl' : 'text-xl font-bold',
+                    'block break-words leading-tight text-base font-bold min-[420px]:text-lg',
+                    hasSubtitle() && 'sm:text-xl',
                   )}>
                     {props.title}
                   </span>
@@ -139,7 +139,7 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
             'max-height': `min(85vh, ${desktopMaxHeight()})`,
           }}
         >
-          <div class="gradient-dark-red-soft flex flex-shrink-0 items-center justify-between border-b border-black py-4 px-6">
+          <div class="gradient-dark-red-soft flex flex-shrink-0 items-center justify-between gap-4 border-b border-black py-4 px-6">
             <Dialog.Label class="min-w-0 flex-1 text-white">
               <Show when={hasSubtitle()}>
                 <span class="block text-lg font-semibold uppercase tracking-wide text-[#c9bbbf]">
@@ -147,8 +147,7 @@ const ResponsiveModal: Component<ResponsiveModalProps> = (props) => {
                 </span>
               </Show>
               <span class={cn(
-                'block break-words leading-tight',
-                hasSubtitle() ? 'text-lg font-bold sm:text-xl' : 'text-xl font-bold',
+                'block break-words leading-tight text-xl font-bold',
               )}>
                 {props.title}
               </span>
