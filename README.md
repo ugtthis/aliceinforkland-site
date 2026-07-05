@@ -1,9 +1,10 @@
 <div align="center">
 
-  # [opendbc.com](https://opendbc.com)
+  <a href="/">
+    <img src="src/lib/icons/alice-in-forkland.png" alt="Alice in Forkland" width="300">
+  </a>
 
-  **Web experience for exploring vehicle specs and compatability with [openpilot](https://github.com/commaai/openpilot)** <br>
-  Built with data from [https://github.com/commaai/opendbc](https://github.com/commaai/opendbc)
+  Built with data from [https://github.com/ugtthis/opendbc-community-data](https://github.com/ugtthis/opendbc-community-data)
 
   [![SolidJS](https://img.shields.io/badge/SolidJS-1.9.5-blue.svg)](https://www.solidjs.com/)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -14,8 +15,8 @@
 
 <br>
 
-This is a web interface for browsing and comparing vehicle compatibility data from the [opendbc](https://github.com/commaai/opendbc) repository.
-opendbc contains vehicle specifications for cars and info about their current capabilities with comma's [openpilot](https://github.com/commaai/openpilot) driver assistance system.
+This is a web interface for browsing and comparing vehicle compatibility data from the [opendbc community data](https://github.com/ugtthis/opendbc-community-data) repository.
+The data catalogs contain vehicle specifications for cars and info about their current capabilities with comma's [openpilot](https://github.com/commaai/openpilot) driver assistance system.
 
 
 ## Quick Start
@@ -33,8 +34,7 @@ bun run build
 
 ## Data Source
 
-Vehicle data comes from the [opendbc repository](https://github.com/commaai/opendbc). We pull the latest info using the
-`scripts/get_metadata.py` script. Report any inaccurate specs via [Discord](https://discord.com/channels/469524606043160576/1301587815728943144), [Github Issues](https://github.com/ugtthis/opendbc-site/issues), or [https://opendbc.userjot.com/](https://opendbc.userjot.com/)
+Vehicle data comes from the top-level JSON files in the [opendbc-community-data `data` directory](https://github.com/ugtthis/opendbc-community-data/tree/main/data). Report any inaccurate specs via [Discord](https://discord.com/channels/469524606043160576/1301587815728943144), [Github Issues](https://github.com/ugtthis/opendbc-site/issues), or [https://opendbc.userjot.com/](https://opendbc.userjot.com/)
 
 ## Contributing
 
