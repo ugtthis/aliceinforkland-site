@@ -35,13 +35,13 @@ export default function Home() {
             {uniqueFilteredCount()} of {uniqueTotalCount()} cars
           </div>
 
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3">
             <button
               type="button"
               onClick={() => setIsFilterOpen(true)}
               aria-label="Open filters"
               class={cn(
-                'flex items-center justify-center p-2 border-5 border-[#2a1d20] bg-[#0b0708] shadow-sm',
+                'flex size-[54px] items-center justify-center border-5 border-[#2a1d20] bg-[#0b0708] p-2 shadow-sm',
                 'transition-colors cursor-pointer hover:bg-[#1a1214]',
               )}
             >
