@@ -55,6 +55,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
+          add-paths: |
+            src/data/cars/*.json
           commit-message: 'data: update JSON data'
           author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
           committer: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
