@@ -8,6 +8,8 @@ type SearchableCar = Car & {
   searchText: string
 }
 
+export type SortOrder = 'ASC' | 'DESC'
+
 function buildSearchText(car: Car): string {
   return [
     car.name,
@@ -39,6 +41,40 @@ function getRelevanceScore(car: Car, normalizedQuery: string): number {
   return 0
 }
 
+function compareNumbers(a: number, b: number): number {
+  return a < b ? -1 : a > b ? 1 : 0
+}
+
+function getYearRangeSortValues(car: Pick<Car, 'year_list'>): { startYear: number; endYear: number } {
+  return {
+    startYear: car.year_list[0] ?? 0,
+    endYear: car.year_list.at(-1) ?? 0,
+  }
+}
+
+export function compareCarsByYearRange(
+  a: Pick<Car, 'years' | 'year_list'>,
+  b: Pick<Car, 'years' | 'year_list'>,
+  order: SortOrder,
+): number {
+  const aYearMissing = a.years.trim().toUpperCase() === 'N/A' || a.year_list.length === 0
+  const bYearMissing = b.years.trim().toUpperCase() === 'N/A' || b.year_list.length === 0
+
+  // Keep unknown year values at the end for both ASC and DESC sorts.
+  if (aYearMissing !== bYearMissing) {
+    return aYearMissing ? 1 : -1
+  }
+
+  const aYears = getYearRangeSortValues(a)
+  const bYears = getYearRangeSortValues(b)
+
+  return order === 'ASC'
+    ? compareNumbers(aYears.startYear, bYears.startYear) ||
+        compareNumbers(aYears.endYear, bYears.endYear)
+    : compareNumbers(bYears.endYear, aYears.endYear) ||
+        compareNumbers(bYears.startYear, aYears.startYear)
+}
+
 export type FilterState = {
   source: string
   make: string
@@ -61,7 +97,7 @@ export type SortField = 'make' | 'source' | 'years'
 
 export type SortConfig = {
   field: SortField
-  order: 'ASC' | 'DESC'
+  order: SortOrder
 }
 
 type FilterContextValue = {
@@ -153,25 +189,18 @@ export const FilterProvider = (props: ParentProps) => {
         if (scoreA !== scoreB) return scoreB - scoreA
       }
       const field: SortField = sort.field
-      let aVal: string | number = a[field]
-      let bVal: string | number = b[field]
+      let sortResult: number
 
       if (field === 'years') {
-        const aYearMissing = a.years.trim().toUpperCase() === 'N/A' || a.year_list.length === 0
-        const bYearMissing = b.years.trim().toUpperCase() === 'N/A' || b.year_list.length === 0
+        sortResult = compareCarsByYearRange(a, b, sort.order)
+      } else {
+        const aVal: string | number = a[field]
+        const bVal: string | number = b[field]
 
-        // Keep unknown year values(comma body) at the end for both ASC and DESC sorts
-        if (aYearMissing !== bYearMissing) {
-          return aYearMissing ? 1 : -1
-        }
-
-        aVal = parseInt((a.year_list[0]?.toString() ?? '0'), 10)
-        bVal = parseInt((b.year_list[0]?.toString() ?? '0'), 10)
+        sortResult = typeof aVal === 'string' && typeof bVal === 'string'
+          ? sortAlphabetically(aVal, bVal)
+          : aVal < bVal ? -1 : aVal > bVal ? 1 : 0
       }
-
-      const sortResult = typeof aVal === 'string' && typeof bVal === 'string'
-        ? sortAlphabetically(aVal, bVal)
-        : aVal < bVal ? -1 : aVal > bVal ? 1 : 0
 
       return sort.order === 'ASC' ? sortResult : -sortResult
     })
