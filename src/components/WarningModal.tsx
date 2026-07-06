@@ -13,6 +13,24 @@ type WarningModalProps = {
 
 const WarningModal: Component<WarningModalProps> = (props) => {
   const [isResourcesExpanded, setIsResourcesExpanded] = createSignal(false)
+  const toggleResources = () => {
+    setIsResourcesExpanded((expanded) => {
+      const nextExpanded = !expanded
+      if (nextExpanded) {
+        window.plausible?.('Warning Resources Expanded')
+      }
+
+      return nextExpanded
+    })
+  }
+  const trackResourceLinkClick = (resource: string, url: string) => {
+    window.plausible?.('Warning Resource Link Click', {
+      props: {
+        resource,
+        url,
+      },
+    })
+  }
 
   createEffect(() => {
     if (!props.open) {
@@ -50,7 +68,7 @@ const WarningModal: Component<WarningModalProps> = (props) => {
         <section class="border-2 border-[#5c4247] bg-[#181416] text-[#eee2e5]">
           <button
             type="button"
-            onClick={() => setIsResourcesExpanded((expanded) => !expanded)}
+            onClick={toggleResources}
             class={cn(
               'flex w-full items-center justify-between border-b border-[#6a4d54] bg-[#2d2227] px-3 py-3 text-left',
               'transition-colors duration-200 cursor-pointer hover:bg-[#3a2a30]',
@@ -77,6 +95,7 @@ const WarningModal: Component<WarningModalProps> = (props) => {
                   href="https://docs.comma.ai/concepts/safety/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackResourceLinkClick('safety.md', 'https://docs.comma.ai/concepts/safety/')}
                   class={cn(
                     'block border border-[#5c4247] bg-[#21191d] p-3 text-[#eee2e5]',
                     'cursor-pointer transition-colors hover:bg-[#2a2024]',
@@ -93,6 +112,7 @@ const WarningModal: Component<WarningModalProps> = (props) => {
                   href="http://www.catb.org/esr/faqs/smart-questions.html"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackResourceLinkClick('Read this', 'http://www.catb.org/esr/faqs/smart-questions.html')}
                   class={cn(
                     'block border border-[#5c4247] bg-[#21191d] p-3 text-[#eee2e5]',
                     'cursor-pointer transition-colors hover:bg-[#2a2024]',

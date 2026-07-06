@@ -11,6 +11,10 @@ import { cn } from '~/lib/utils'
 const Header: Component = () => {
   const [isWarningOpen, setIsWarningOpen] = createSignal(false)
   const { searchQuery, setSearchQuery } = useFilter()
+  const openWarningModal = () => {
+    window.plausible?.('Warning Button Click')
+    setIsWarningOpen(true)
+  }
 
   return (
     <>
@@ -57,7 +61,7 @@ const Header: Component = () => {
 
             <button
               type="button"
-              onClick={() => setIsWarningOpen(true)}
+              onClick={openWarningModal}
               aria-label="Open warning information"
               class="group size-14 shrink-0 cursor-pointer"
             >
