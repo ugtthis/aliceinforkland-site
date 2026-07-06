@@ -14,7 +14,7 @@ import {
 import { carData } from '~/data/cars'
 import type { Car } from '~/types/CarDataTypes'
 import ResponsiveModal from '~/components/ui/ResponsiveModal'
-import { cn } from '~/lib/utils'
+import { cn, sortAlphabetically } from '~/lib/utils'
 import LinkIcon from '~/lib/icons/link-new-window.svg?raw'
 import ChevronIcon from '~/lib/icons/down-chevron.svg?raw'
 
@@ -29,7 +29,7 @@ const DATA_SOURCE_ORDER = [
     ...Object.keys(DATA_SOURCE_CONTENT),
     ...(carData as Car[]).map((car) => car.source).filter(Boolean),
   ]),
-].sort()
+].sort(sortAlphabetically)
 
 const ExternalLinkButton: Component<{ label: string; url: string }> = (props) => (
   <a

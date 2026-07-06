@@ -12,7 +12,7 @@ import { useFilter, type SortField } from '~/contexts/FilterContext'
 import type { Car } from '~/types/CarDataTypes'
 import { carData } from '~/data/cars'
 
-import { cn } from '~/lib/utils'
+import { cn, sortAlphabetically } from '~/lib/utils'
 import sortOrderIcon from '~/lib/icons/sort-order-icon.svg?url'
 import rotateLeftIcon from '~/lib/icons/rotate-left.svg?url'
 import downChevronIcon from '~/lib/icons/down-chevron.svg?url'
@@ -24,8 +24,6 @@ type FilterModalProps = {
 }
 
 const PINNED_SOURCE = 'WIP'
-const sortAlphabetically = (a: string, b: string) =>
-  a.localeCompare(b, undefined, { sensitivity: 'base' })
 
 const FilterModal: Component<FilterModalProps> = (props) => {
   const {
@@ -46,7 +44,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
       .filter((source) => source !== PINNED_SOURCE)
       .sort(sortAlphabetically),
   ]
-  const makes = [...new Set(typedCarData.map((car) => car.make))].sort()
+  const makes = [...new Set(typedCarData.map((car) => car.make))].sort(sortAlphabetically)
   const years: string[] = [
     ...new Set(typedCarData.flatMap((car) => car.year_list.map(String))),
   ].sort()

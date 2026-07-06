@@ -16,6 +16,9 @@ export function normalize(text: string): string {
     .replace(/[\u0300-\u036f]/g, '')
 }
 
+export const sortAlphabetically = (a: string, b: string) =>
+  a.localeCompare(b, undefined, { sensitivity: 'base' })
+
 export function slugify(text: string): string {
   return normalize(text)
     .replace(/[^a-z0-9]+/g, '-')

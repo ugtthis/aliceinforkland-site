@@ -1,7 +1,7 @@
 import { createContext, useContext, type ParentProps } from 'solid-js'
 import { createSignal, type Accessor, type Setter, createMemo } from 'solid-js'
 import type { Car } from '~/types/CarDataTypes'
-import { normalize } from '~/lib/utils'
+import { normalize, sortAlphabetically } from '~/lib/utils'
 import { carData } from '~/data/cars'
 
 type SearchableCar = Car & {
@@ -169,11 +169,11 @@ export const FilterProvider = (props: ParentProps) => {
         bVal = parseInt((b.year_list[0]?.toString() ?? '0'), 10)
       }
 
-      if (sort.order === 'ASC') {
-        return aVal < bVal ? -1 : aVal > bVal ? 1 : 0
-      } else {
-        return aVal < bVal ? 1 : aVal > bVal ? -1 : 0
-      }
+      const sortResult = typeof aVal === 'string' && typeof bVal === 'string'
+        ? sortAlphabetically(aVal, bVal)
+        : aVal < bVal ? -1 : aVal > bVal ? 1 : 0
+
+      return sort.order === 'ASC' ? sortResult : -sortResult
     })
 
     return result
