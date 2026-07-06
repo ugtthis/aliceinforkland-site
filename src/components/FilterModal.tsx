@@ -24,6 +24,8 @@ type FilterModalProps = {
 }
 
 const PINNED_SOURCE = 'wip'
+const sortAlphabetically = (a: string, b: string) =>
+  a.localeCompare(b, undefined, { sensitivity: 'base' })
 
 const FilterModal: Component<FilterModalProps> = (props) => {
   const {
@@ -42,7 +44,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
     PINNED_SOURCE,
     ...[...new Set(typedCarData.map((car) => car.source))]
       .filter((source) => source !== PINNED_SOURCE)
-      .sort(),
+      .sort(sortAlphabetically),
   ]
   const makes = [...new Set(typedCarData.map((car) => car.make))].sort()
   const years: string[] = [
