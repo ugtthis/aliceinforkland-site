@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout opendbc-community-data repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: ugtthis/opendbc-community-data
           path: opendbc-community-data
@@ -53,7 +53,7 @@ jobs:
           fi
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7.0.11
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: 'data: update JSON data'
           author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
