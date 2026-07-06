@@ -81,6 +81,7 @@ const WipBranchTile: Component<{
   branchName: string
   branchDescription: string
   branchUrl: string
+  onBranchClick: (branchName: string, branchUrl: string) => void
   class?: string
 }> = (props) => {
   const isBranchNameUnavailable = () => props.branchName.trim().toUpperCase() === 'N/A'
@@ -122,6 +123,7 @@ const WipBranchTile: Component<{
             rel="noopener noreferrer"
             title={`Open branch ${props.branchName} on GitHub`}
             aria-label={`Open branch ${props.branchName} on GitHub`}
+            onClick={() => props.onBranchClick(props.branchName, props.branchUrl)}
             class={cn(
               'group h-full w-full self-stretch flex items-center justify-center border-l border-[#8b6d75] bg-[#33272b]',
               'text-[#f5eaed] transition-colors hover:bg-[#3f2f35] cursor-pointer',
@@ -154,7 +156,10 @@ const UpstreamStatusTile: Component<{ yearsNotInUpstream: number[] }> = (props) 
 }
 
 // Card-style external resource link.
-const ResourceCard: Component<{ resource: VehicleResource }> = (props) => {
+const ResourceCard: Component<{
+  resource: VehicleResource
+  onClick?: () => void
+}> = (props) => {
   const isGithubResource = () =>
     props.resource.title.toLowerCase().includes('github') ||
     props.resource.url.toLowerCase().includes('github.com')
@@ -168,6 +173,7 @@ const ResourceCard: Component<{ resource: VehicleResource }> = (props) => {
       href={props.resource.url}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={props.onClick}
       class={cn(
         'group block border border-[#5c4247] bg-[#21191d] p-3 text-[#eee2e5]',
         'transition-colors hover:bg-[#2a2024] cursor-pointer',
@@ -226,6 +232,7 @@ const ResourceSection: Component<{
 const FeedbackSection: Component<{
   isExpanded: boolean
   onToggle: () => void
+  onFeedbackClick: (feedbackType: string, url: string) => void
 }> = (props) => (
   <section class="border-2 border-[#5c4247] bg-[#181416] text-[#eee2e5] md:col-span-2">
     <button
@@ -249,6 +256,7 @@ const FeedbackSection: Component<{
           href="https://github.com/ugtthis/opendbc-community-data/issues/new"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => props.onFeedbackClick('Report data issue', 'https://github.com/ugtthis/opendbc-community-data/issues/new')}
           class={cn(
             'group flex h-full items-center justify-between gap-3 border border-[#5c4247] bg-[#21191d] px-3 py-3',
             'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
@@ -263,6 +271,7 @@ const FeedbackSection: Component<{
           href="https://aliceinforkland.userjot.com/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => props.onFeedbackClick('General Feedback', 'https://aliceinforkland.userjot.com/')}
           class={cn(
             'group flex h-full items-center justify-between gap-3 border border-[#5c4247] bg-[#21191d] px-3 py-3',
             'text-[#eee2e5] transition-colors hover:bg-[#2a2024] cursor-pointer',
@@ -519,7 +528,10 @@ const ResumeTile: Component<{
 )
 
 // Optional video links tile for user/setup videos.
-const VideoLinksTile: Component<{ car: Car }> = (props) => {
+const VideoLinksTile: Component<{
+  car: Car
+  onVideoClick: (videoType: string, url: string) => void
+}> = (props) => {
   const hasAnyVideo = createMemo(() => Boolean(props.car.video || props.car.setup_video))
 
   return (
@@ -552,6 +564,7 @@ const VideoLinksTile: Component<{ car: Car }> = (props) => {
                 description: 'Watch a user-submitted video for this supported vehicle.',
                 url: props.car.video!,
               }}
+              onClick={() => props.onVideoClick('User video', props.car.video!)}
             />
           </Show>
 
@@ -578,6 +591,7 @@ const VideoLinksTile: Component<{ car: Car }> = (props) => {
                 description: 'Open setup or install guidance for this vehicle.',
                 url: props.car.setup_video!,
               }}
+              onClick={() => props.onVideoClick('Setup video', props.car.setup_video!)}
             />
           </Show>
         </div>
@@ -703,6 +717,46 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
     ]
   })
   const isDetailExpanded = (detailId: string) => expandedDetails().has(detailId)
+  const vehicleAnalyticsProps = () => {
+    const car = props.car
+    if (!car) return {}
+
+    return {
+      vehicle_id: car.id,
+      vehicle: carTitle(car),
+      make: car.make,
+      model: car.model,
+      years: car.years,
+      source: (car.source ?? '').trim(),
+    }
+  }
+  const trackFeedbackClick = (feedbackType: string, url: string) => {
+    window.plausible?.('Vehicle Feedback Button Click', {
+      props: {
+        feedback_type: feedbackType,
+        url,
+        ...vehicleAnalyticsProps(),
+      },
+    })
+  }
+  const trackVideoClick = (videoType: string, url: string) => {
+    window.plausible?.('Vehicle Video Link Click', {
+      props: {
+        video_type: videoType,
+        url,
+        ...vehicleAnalyticsProps(),
+      },
+    })
+  }
+  const trackWipBranchClick = (branchName: string, branchUrl: string) => {
+    window.plausible?.('Vehicle WIP Branch Link Click', {
+      props: {
+        branch_name: branchName,
+        branch_url: branchUrl,
+        ...vehicleAnalyticsProps(),
+      },
+    })
+  }
   const toggleDetail = (detailId: string) => {
     setExpandedDetails((previous) => {
       const next = new Set(previous)
@@ -710,6 +764,11 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
         next.delete(detailId)
       } else {
         next.add(detailId)
+        if (detailId === 'feedback') {
+          window.plausible?.('Vehicle Feedback Expanded', {
+            props: vehicleAnalyticsProps(),
+          })
+        }
       }
       return next
     })
@@ -777,6 +836,7 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
                       branchName={wipDetails().branch_name || 'N/A'}
                       branchDescription={wipDetails().branch_desc || 'No branch notes provided.'}
                       branchUrl={wipDetails().branch_url}
+                      onBranchClick={trackWipBranchClick}
                       class="md:col-span-2"
                     />
                   )}
@@ -823,11 +883,12 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
                   onToggle={() => toggleDetail('resume')}
                 />
 
-                <VideoLinksTile car={car()} />
+                <VideoLinksTile car={car()} onVideoClick={trackVideoClick} />
 
                 <FeedbackSection
                   isExpanded={isDetailExpanded('feedback')}
                   onToggle={() => toggleDetail('feedback')}
+                  onFeedbackClick={trackFeedbackClick}
                 />
               </div>
             </div>
