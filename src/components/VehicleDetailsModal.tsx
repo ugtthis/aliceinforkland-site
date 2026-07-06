@@ -7,10 +7,10 @@ import {
   createSignal,
 } from 'solid-js'
 
-import { footnoteDefinitionsBySource } from '~/data/cars'
 import { DATA_SOURCE_CONTENT } from '~/data/dataSourceDescriptions'
 import { getACCDescription, getAutoResumeDescription } from '~/data/featureDescriptions'
 import type { Car } from '~/types/CarDataTypes'
+import { getImportantNotes } from '~/utils/carNotes'
 import { sanitizeTrustedFootnoteHtml } from '~/utils/sanitizeTrustedFootnoteHtml'
 import ResponsiveModal from '~/components/ui/ResponsiveModal'
 import { cn } from '~/lib/utils'
@@ -631,30 +631,7 @@ const VehicleDetailsModal: Component<VehicleDetailsModalProps> = (props) => {
   const modalTitle = createMemo(() => (props.car ? carTitle(props.car) : 'Vehicle Details'))
   const importantNotes = createMemo<string[]>(() => {
     const car = props.car
-    if (!car) return []
-
-    const wipNotes = (car.wip_details?.important_notes ?? [])
-      .map((note) => note.trim())
-      .filter((note) => note.length > 0)
-    if (wipNotes.length > 0) return wipNotes
-
-    const footnoteDefinitions = footnoteDefinitionsBySource[(car.source ?? '').trim()] ?? {}
-    const footnoteEntries = Object.values(car.footnotes ?? {})
-    const seen = new Set<string>()
-    const resolvedNotes: string[] = []
-
-    for (const entries of footnoteEntries) {
-      for (const entry of entries) {
-        const key = String(entry).trim()
-        if (!key || seen.has(key)) continue
-        seen.add(key)
-
-        const resolved = footnoteDefinitions[key]?.trim()
-        if (resolved) resolvedNotes.push(resolved)
-      }
-    }
-
-    return resolvedNotes
+    return car ? getImportantNotes(car) : []
   })
   const hasAdditionalResource = createMemo(
     () => (props.car?.wip_details?.extra_resource_url ?? '').trim().length > 0,

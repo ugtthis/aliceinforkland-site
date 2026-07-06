@@ -2,6 +2,7 @@ import { createContext, useContext, type ParentProps } from 'solid-js'
 import { createSignal, type Accessor, type Setter, createMemo } from 'solid-js'
 import type { Car } from '~/types/CarDataTypes'
 import { normalize, sortAlphabetically } from '~/lib/utils'
+import { getImportantNotes } from '~/utils/carNotes'
 import { carData } from '~/data/cars'
 
 type SearchableCar = Car & {
@@ -21,6 +22,8 @@ function buildSearchText(car: Car): string {
     car.no_acc_below,
     car.no_alc_below,
     car.years,
+    car.wip_details?.branch_desc,
+    ...getImportantNotes(car),
     ...car.year_list.map(String),
   ].join(' ')
 }
