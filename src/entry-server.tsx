@@ -9,7 +9,9 @@ export default createHandler(() => (
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
           <meta name="theme-color" content="#090708" />
-          <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
           <meta
             name="description"
             content="Explore experimental, WIP, and community openpilot-supported vehicle projects in one place."
