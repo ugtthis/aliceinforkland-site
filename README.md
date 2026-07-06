@@ -10,7 +10,7 @@
 
 ---
 
-RC Cars to [Billy the robot](https://blog.comma.ai/a-drive-in-the-office/) to a 1988 Volkswagen Vanagon. [openpilot](https://github.com/commaai/openpilot) can support it to the degree your willing to make it work. The only limit is skill. Explore the different experiences that range from super experimental to WIP to popular community forks in one place.
+[RC Car](https://x.com/simcity99/status/1973902693165879596) to [Billy the robot](https://blog.comma.ai/a-drive-in-the-office/) to a [1988 Volkswagen Vanagon](https://www.youtube.com/watch?v=emKcwWaTjyg). [openpilot](https://github.com/commaai/openpilot) can support it to the degree your willing to make it work. The only limit is skill. Explore the different experiences that range from super experimental to WIP to popular community forks in one place.
 
 
 ## Quick Start
