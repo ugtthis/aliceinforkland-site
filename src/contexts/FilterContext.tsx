@@ -129,7 +129,7 @@ export const FilterProvider = (props: ParentProps) => {
   const [searchQuery, setSearchQuery] = createSignal('')
 
   const [sortConfig, setSortConfig] = createSignal<SortConfig>({
-    field: 'make',
+    field: 'years',
     order: 'ASC',
   })
 
