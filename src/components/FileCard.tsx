@@ -28,6 +28,22 @@ const Card: Component<CardProps> = (props) => {
       ? `${props.car.make} ${props.car.model} ${variant}`
       : `${props.car.make} ${props.car.model}`
   }
+  const trackVehicleClick = () => {
+    window.plausible?.('Vehicle Click', {
+      props: {
+        vehicle_id: props.car.id,
+        vehicle: carTitle(),
+        make: props.car.make,
+        model: props.car.model,
+        years: props.car.years,
+        source: sourceLabel,
+      },
+    })
+  }
+  const openVehicleDetails = () => {
+    trackVehicleClick()
+    openVehicleDetailsModal(props.car)
+  }
 
   // Memoize the selected state to avoid unnecessary reactive dependencies
   const isSelected = createMemo(() => selectedCars().includes(props.car.id))
@@ -208,7 +224,7 @@ const Card: Component<CardProps> = (props) => {
 
         <button
           type="button"
-          onClick={() => openVehicleDetailsModal(props.car)}
+          onClick={openVehicleDetails}
           aria-label={`Open details for ${carTitle()}`}
           class={cn(
             'mt-auto flex w-full items-center justify-center gap-2 border-t border-[#6a4d54] bg-[#2b2025] px-4 py-2.5',
