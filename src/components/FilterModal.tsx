@@ -23,6 +23,8 @@ type FilterModalProps = {
   onOpenChange: (open: boolean) => void
 }
 
+const PINNED_SOURCE = 'wip'
+
 const FilterModal: Component<FilterModalProps> = (props) => {
   const {
     filters,
@@ -36,7 +38,12 @@ const FilterModal: Component<FilterModalProps> = (props) => {
 
   // Get unique values for dropdowns
   const typedCarData = carData as Car[]
-  const sources = [...new Set(typedCarData.map((car) => car.source))].sort()
+  const sources = [
+    PINNED_SOURCE,
+    ...[...new Set(typedCarData.map((car) => car.source))]
+      .filter((source) => source !== PINNED_SOURCE)
+      .sort(),
+  ]
   const makes = [...new Set(typedCarData.map((car) => car.make))].sort()
   const years: string[] = [
     ...new Set(typedCarData.flatMap((car) => car.year_list.map(String))),
