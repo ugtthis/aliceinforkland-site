@@ -75,6 +75,17 @@ const FilterModal: Component<FilterModalProps> = (props) => {
     { label: 'Year', value: 'years' },
     { label: 'Source', value: 'source' },
   ]
+  const updateSourceFilter = (value: string) => {
+    if (value) {
+      window.plausible?.('Source Filter Selected', {
+        props: {
+          source: value,
+        },
+      })
+    }
+
+    setFilters((prev) => ({ ...prev, source: value }))
+  }
 
   const ModalContent = () => (
     <>
@@ -165,9 +176,7 @@ const FilterModal: Component<FilterModalProps> = (props) => {
               label="Source"
               options={sources}
               value={filters().source}
-              onChange={(value) =>
-                setFilters((prev) => ({ ...prev, source: value }))
-              }
+              onChange={updateSourceFilter}
             />
 
             <CustomDropdown
