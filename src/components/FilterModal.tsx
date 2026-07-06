@@ -23,7 +23,7 @@ type FilterModalProps = {
   onOpenChange: (open: boolean) => void
 }
 
-const PINNED_SOURCE = 'wip'
+const PINNED_SOURCE = 'WIP'
 const sortAlphabetically = (a: string, b: string) =>
   a.localeCompare(b, undefined, { sensitivity: 'base' })
 

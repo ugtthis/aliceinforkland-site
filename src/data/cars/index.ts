@@ -1,9 +1,9 @@
 import bluepilotData from './bluepilot.json'
-import frogpilotData from './frogpilot.json'
+import frogpilotData from './FrogPilot.json'
 import openpilotData from './openpilot.json'
-import starpilotData from './starpilot.json'
+import starpilotData from './StarPilot.json'
 import sunnypilotData from './sunnypilot.json'
-import wipData from './wip.json'
+import wipData from './WIP.json'
 import type { Car } from '~/types/CarDataTypes'
 
 type CatalogInput = {
@@ -79,7 +79,7 @@ const buildCarRecord = (car: CarRecord, source: string, sourceUrl: string): Car 
     .map((name) => name.trim())
     .filter((name) => name.length > 0)
 
-  const wip_details = source === 'wip'
+  const wip_details = source === 'WIP'
     ? {
         key: car.key!,
         branch_name: car.branch_name!,

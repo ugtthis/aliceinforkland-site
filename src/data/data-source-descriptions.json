@@ -12,7 +12,7 @@
       }
     ]
   },
-  "frogpilot": {
+  "FrogPilot": {
     "summary": "FrogPilot is a fully open-source, frog-themed, and highly customizable fork of openpilot. Built with clean commits and a strong focus on serving the community. Shaped by both user and developer contributions, FrogPilot embraces collaborative, community-driven development to deliver a cutting-edge openpilot experience for everyone.",
     "resources": [
       {
@@ -38,7 +38,7 @@
       }
     ]
   },
-  "starpilot": {
+  "StarPilot": {
     "summary": "StarPilot is an openpilot fork focused on expanded vehicle support and fork-specific compatibility changes while building on openpilot's driver assistance foundation.",
     "resources": [
       {
@@ -64,7 +64,7 @@
       }
     ]
   },
-  "wip": {
+  "WIP": {
     "summary": "Work in Progress(WIP) cars range from experimental experiences to almost fully supported cars that are not yet in upstream openpilot. These cars are not fully tested and can be highly unstable. Try at your own risk.",
     "resources": [
       {
