@@ -35,7 +35,7 @@ export default createHandler(() => (
           <meta name="twitter:image" content="https://aliceinforkland.com/social-share.png" />
           <meta name="twitter:image:alt" content="Alice in Forkland social share image" />
           <title>Alice in Forkland</title>
-          <script async src="https://plausible.io/js/pa-r0g78luI0EJsq8nLJI-Cl.js"></script>
+          <script async src="https://plausible.io/js/pa-Iqv-o2CHj8PoY7GCMaDZ1.js"></script>
           <script>
             {`window.plausible = window.plausible || function() { (plausible.q = plausible.q || []).push(arguments) },
             plausible.init = plausible.init || function(i) { plausible.o = i || {} }; plausible.init();`}
