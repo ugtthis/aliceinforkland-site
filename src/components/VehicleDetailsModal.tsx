@@ -35,7 +35,7 @@ type VehicleResource = {
 }
 
 const RED_PNG_FILTER = 'brightness(0) saturate(90%) invert(23%) sepia(89%) saturate(3520%) hue-rotate(352deg) brightness(85%) contrast(95%)'
-const WIP_DATA_SOURCE_BASE_URL = 'https://github.com/ugtthis/opendbc-community-data/tree/main/data/wip'
+const WIP_DATA_SOURCE_BASE_URL = 'https://github.com/ugtthis/opendbc-community-data/tree/main/data/WIP'
 
 const getWipMakeTomlUrl = (make: string | null | undefined): string => {
   const normalizedMake = (make ?? '')
