@@ -5,6 +5,7 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
+    "test": "bun test",
     "format": "biome format --write",
     "lint": "biome lint --write",
     "check": "biome check --write",

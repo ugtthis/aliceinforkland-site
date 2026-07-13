@@ -103,6 +103,19 @@ export type SortConfig = {
   order: SortOrder
 }
 
+export function compareCarsForSort(
+  a: Pick<Car, SortField | 'year_list'>,
+  b: Pick<Car, SortField | 'year_list'>,
+  sort: SortConfig,
+): number {
+  if (sort.field === 'years') {
+    return compareCarsByYearRange(a, b, sort.order)
+  }
+
+  const sortResult = sortAlphabetically(a[sort.field], b[sort.field])
+  return sort.order === 'ASC' ? sortResult : -sortResult
+}
+
 type FilterContextValue = {
   filters: Accessor<FilterState>
   setFilters: Setter<FilterState>
@@ -191,21 +204,7 @@ export const FilterProvider = (props: ParentProps) => {
         const scoreB = getRelevanceScore(b, normalizedQuery)
         if (scoreA !== scoreB) return scoreB - scoreA
       }
-      const field: SortField = sort.field
-      let sortResult: number
-
-      if (field === 'years') {
-        sortResult = compareCarsByYearRange(a, b, sort.order)
-      } else {
-        const aVal: string | number = a[field]
-        const bVal: string | number = b[field]
-
-        sortResult = typeof aVal === 'string' && typeof bVal === 'string'
-          ? sortAlphabetically(aVal, bVal)
-          : aVal < bVal ? -1 : aVal > bVal ? 1 : 0
-      }
-
-      return sort.order === 'ASC' ? sortResult : -sortResult
+      return compareCarsForSort(a, b, sort)
     })
 
     return result

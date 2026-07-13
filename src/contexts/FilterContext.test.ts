@@ -1,19 +1,27 @@
 import { describe, expect, test } from 'bun:test'
-import { compareCarsByYearRange, type SortOrder } from './FilterContext'
+import {
+  compareCarsForSort,
+  type SortField,
+  type SortOrder,
+} from './FilterContext'
 import type { Car } from '~/types/CarDataTypes'
 
-type YearSortCar = Pick<Car, 'name' | 'years' | 'year_list'>
+type SortableCar = Pick<Car, 'name' | SortField | 'year_list'>
 
-const car = (name: string, years: string, yearList: number[]): YearSortCar => ({
+const car = (name: string, years: string, yearList: number[]): SortableCar => ({
   name,
+  make: name,
+  source: name,
   years,
   year_list: yearList,
 })
 
-const sortByYearRange = (cars: YearSortCar[], order: SortOrder) =>
-  [...cars].sort((a, b) => compareCarsByYearRange(a, b, order)).map((item) => item.name)
+const sortCars = (cars: SortableCar[], field: SortField, order: SortOrder) =>
+  [...cars]
+    .sort((a, b) => compareCarsForSort(a, b, { field, order }))
+    .map((item) => item.name)
 
-describe('compareCarsByYearRange', () => {
+describe('compareCarsForSort', () => {
   test('sorts ascending by oldest start year, then earliest end year', () => {
     const cars = [
       car('2025', '2025', [2025]),
@@ -23,7 +31,7 @@ describe('compareCarsByYearRange', () => {
       car('N/A', 'N/A', []),
     ]
 
-    expect(sortByYearRange(cars, 'ASC')).toEqual([
+    expect(sortCars(cars, 'years', 'ASC')).toEqual([
       '2020-25',
       '2024',
       '2024-25',
@@ -41,7 +49,7 @@ describe('compareCarsByYearRange', () => {
       car('2025', '2025', [2025]),
     ]
 
-    expect(sortByYearRange(cars, 'DESC')).toEqual([
+    expect(sortCars(cars, 'years', 'DESC')).toEqual([
       '2025',
       '2024-25',
       '2020-25',
@@ -50,4 +58,13 @@ describe('compareCarsByYearRange', () => {
     ])
   })
 
+  test('applies descending order once for other fields', () => {
+    const cars = [
+      car('Alpha', '2024', [2024]),
+      car('Charlie', '2025', [2025]),
+      car('Bravo', '2023', [2023]),
+    ]
+
+    expect(sortCars(cars, 'make', 'DESC')).toEqual(['Charlie', 'Bravo', 'Alpha'])
+  })
 })

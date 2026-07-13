@@ -18,6 +18,8 @@ pre-push:
       stage_fixed: true
     build:
       run: bun run build
+    test:
+      run: bun run test
 
 # Custom task for manual running
 fix:
